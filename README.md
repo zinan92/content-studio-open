@@ -188,4 +188,4 @@ node --test tests/test_*ui*.js
 
 ## 想省事
 
-不想装、不想配？线上版[选题工作台](https://xuanti.park-ai-intel.com)每天帮你从对标里挑爆款、拆开，一路拿到口播稿，¥19.9 试 3 天。
+不想装、不想配？线上版[选题工作台](https://xuanti.park-ai-intel.com)每天帮你从对标里挑爆款、拆开，一路拿到口播稿，¥9.9 试 3 天。

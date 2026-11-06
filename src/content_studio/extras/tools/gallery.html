@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>风格画廊</title>
+<script>try { const t = localStorage.getItem('cs-theme'); if (t) document.documentElement.dataset.theme = t; } catch (_) { /* ignore */ }</script>
+<link rel="icon" href="/static/brand/app-icon.svg">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/tools/gallery.css">
+</head>
+<body class="gl-body">
+<header class="gl-top">
+  <a class="gl-back" href="/tools">← 单点功能</a>
+  <div class="gl-top-r">
+    <span class="gl-live" id="live" hidden></span>
+    <button type="button" class="gl-theme" id="theme" title="切换深浅色" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+
+<main class="gl">
+  <section class="gl-head">
+    <p class="gl-eyebrow" id="eyebrow">风格画廊</p>
+    <h1>先挑一个画风，<br>再画你要的。</h1>
+    <p class="gl-lede">同一个主题「<b id="topic"></b>」，每种风格各画一张。下面每一张都是真画出来的，没有修过。</p>
+  </section>
+
+  <nav class="gl-bar" aria-label="筛选">
+    <div class="gl-fns" id="fns" role="tablist"></div>
+    <div class="gl-row">
+      <input class="gl-q" id="q" type="search" placeholder="搜风格：手绘、水彩、海报、漫画……">
+      <label class="gl-toggle" id="onlyWrap"><input type="checkbox" id="only" checked> 只看有样图的</label>
+    </div>
+    <div class="gl-cats" id="cats"></div>
+    <div class="gl-rev" id="rev" hidden></div>
+  </nav>
+
+  <section class="gl-grid" id="grid" aria-live="polite"></section>
+  <p class="gl-more" id="more" hidden><button type="button" class="btn" id="moreBtn">再看 60 个</button></p>
+</main>
+
+<dialog class="gl-box" id="box" aria-label="风格详情"></dialog>
+<div class="gl-toast" id="toast" role="status"></div>
+<script src="/tools/gallery.js"></script>
+</body>
+</html>

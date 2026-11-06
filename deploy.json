@@ -1,0 +1,75 @@
+{
+  "_说明": "装机和更新用的依赖清单。装机脚本按它把东西拉到 path，links 里的位置建成指向它的链接；工作台的「检查更新」只更新 content-studio 自己，其余只报告装没装。",
+  "app": {
+    "repo": "https://github.com/zinan92/content-studio-open.git",
+    "customer_branch": "main"
+  },
+  "deps": [
+    {
+      "name": "content-downloader",
+      "feature": "抖音作品下载、对标拆解",
+      "repo": "https://github.com/zinan92/content-downloader.git",
+      "ref": "main",
+      "path": "~/work/content-downloader",
+      "access": "public",
+      "required": true
+    },
+    {
+      "name": "content-toolkit",
+      "feature": "视频号、B 站的登录和检查；抖音半自动上传（填好停在发布前）",
+      "repo": "https://github.com/zinan92/content-toolkit.git",
+      "ref": "main",
+      "path": "~/content-toolkit",
+      "access": "public",
+      "required": true
+    },
+    {
+      "name": "content-ops",
+      "feature": "视频号、B 站、YouTube 上传",
+      "repo": "https://github.com/zinan92/content-ops.git",
+      "ref": "codex/workbench-p0-response-contract",
+      "path": "~/work/content-ops",
+      "access": "public",
+      "required": true
+    },
+    {
+      "name": "ian-xiaohei-illustrations",
+      "feature": "文章配图风格",
+      "repo": "https://github.com/zinan92/ian-xiaohei-illustrations.git",
+      "ref": "main",
+      "path": "~/.agents/skill-sources/ian-xiaohei-illustrations",
+      "access": "fork",
+      "required": false,
+      "upstream": "https://github.com/helloianneo/ian-xiaohei-illustrations",
+      "links": [
+        {
+          "at": "~/.claude/skills/ian-xiaohei-illustrations",
+          "to": "ian-xiaohei-illustrations"
+        },
+        {
+          "at": "~/.codex/skills/ian-xiaohei-illustrations",
+          "to": "ian-xiaohei-illustrations"
+        }
+      ]
+    },
+    {
+      "name": "park-video-v2",
+      "feature": "口播剪辑：标 Hook、切 Hook、加动效",
+      "repo": "https://github.com/zinan92/park-video-v2.git",
+      "ref": "main",
+      "path": "~/.claude/skills/park-video-v2",
+      "access": "public",
+      "required": false
+    },
+    {
+      "name": "video-shotcraft",
+      "feature": "镜头方案检查",
+      "repo": "https://github.com/zinan92/video-shotcraft.git",
+      "ref": "main",
+      "path": "~/.agents/skills/video-shotcraft",
+      "access": "fork",
+      "required": false,
+      "upstream": "https://github.com/Vincentwei1021/video-shotcraft"
+    }
+  ]
+}

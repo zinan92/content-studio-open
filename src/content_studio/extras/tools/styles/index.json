@@ -1,0 +1,2258 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-10",
+  "counting": "styles excludes grammars; listed/unlisted count retained styles; grammar_listed/grammar_unlisted count grammars separately; unlisted_reasons count overlapping needs; skipped means excluded during initial import",
+  "totals": {
+    "candidates": 2010,
+    "styles": 1789,
+    "grammars": 9,
+    "skipped": 221,
+    "needs": 840,
+    "grammar_needs": 1,
+    "listed": 949,
+    "unlisted": 840,
+    "grammar_listed": 8,
+    "grammar_unlisted": 1
+  },
+  "sources": {
+    "huashu-art-motion.json": {
+      "repo": "alchaincyf/huashu-art-motion",
+      "function": "motion",
+      "candidates": 35,
+      "styles": 35,
+      "grammars": 9,
+      "skipped": 0,
+      "needs": 0,
+      "grammar_needs": 1,
+      "categories": {
+        "时代标本": 18,
+        "材料层": 17
+      },
+      "listed": 35,
+      "unlisted": 0,
+      "grammar_listed": 8,
+      "grammar_unlisted": 1,
+      "unlisted_reasons": {},
+      "grammar_unlisted_reasons": {
+        "character-frames": 1,
+        "voiceover": 1
+      }
+    },
+    "opus-videos.json": {
+      "repo": "yihui-dev/awesome-opus5-5-videos",
+      "function": "video",
+      "candidates": 513,
+      "styles": 513,
+      "grammars": 0,
+      "skipped": 0,
+      "needs": 332,
+      "grammar_needs": 0,
+      "categories": {
+        "动效图形": 317,
+        "讲解": 67,
+        "小游戏互动": 70,
+        "3D 场景": 59
+      },
+      "listed": 181,
+      "unlisted": 332,
+      "grammar_listed": 0,
+      "grammar_unlisted": 0,
+      "unlisted_reasons": {
+        "prompt": 324,
+        "reference": 51,
+        "summary": 79,
+        "name": 39
+      },
+      "grammar_unlisted_reasons": {}
+    },
+    "ai-motion.json": {
+      "repo": "gongnyang/awesome-ai-motion",
+      "function": "motion",
+      "candidates": 637,
+      "styles": 637,
+      "grammars": 0,
+      "skipped": 0,
+      "needs": 271,
+      "grammar_needs": 0,
+      "categories": {
+        "运动基本功": 26,
+        "入场与退场": 38,
+        "强调与注意": 22,
+        "文字排版": 33,
+        "转场与剪辑": 98,
+        "虚拟镜头": 22,
+        "数据动画": 74,
+        "界面演示": 47,
+        "原理图解": 48,
+        "图形与路径": 32,
+        "纹理与画面风格": 59,
+        "粒子与生成": 47,
+        "三维与景深": 33,
+        "循环与氛围": 44,
+        "字幕与落款": 14
+      },
+      "listed": 366,
+      "unlisted": 271,
+      "grammar_listed": 0,
+      "grammar_unlisted": 0,
+      "unlisted_reasons": {
+        "source-inputs": 71,
+        "file": 162,
+        "keyframes": 20,
+        "scene-pair": 39,
+        "prompt": 83,
+        "topic-specific-story": 3
+      },
+      "grammar_unlisted_reasons": {}
+    },
+    "mg-styles.json": {
+      "repo": "Vincentwei1021/mg-styles-15",
+      "function": "motion",
+      "candidates": 15,
+      "styles": 15,
+      "grammars": 0,
+      "skipped": 0,
+      "needs": 0,
+      "grammar_needs": 0,
+      "categories": {
+        "动效风格": 15
+      },
+      "listed": 15,
+      "unlisted": 0,
+      "grammar_listed": 0,
+      "grammar_unlisted": 0,
+      "unlisted_reasons": {},
+      "grammar_unlisted_reasons": {}
+    },
+    "handraw.json": {
+      "repo": "yang0/handraw-style",
+      "function": "image",
+      "candidates": 327,
+      "styles": 327,
+      "grammars": 0,
+      "skipped": 0,
+      "needs": 45,
+      "grammar_needs": 0,
+      "categories": {
+        "国际社论幽默": 40,
+        "经典绘本叙事": 66,
+        "现代平面艺术": 31,
+        "日本当代插画": 42,
+        "新国风与传统工艺": 67,
+        "3D黏土毛毡与纸雕": 17,
+        "动漫和赛璐璐": 21,
+        "先锋实验与综合媒介": 43
+      },
+      "listed": 282,
+      "unlisted": 45,
+      "grammar_listed": 0,
+      "grammar_unlisted": 0,
+      "unlisted_reasons": {
+        "prompt": 45,
+        "summary": 11
+      },
+      "grammar_unlisted_reasons": {}
+    },
+    "gpt-image.json": {
+      "repo": "EvoLinkAI/awesome-gpt-image-2-API-and-Prompts",
+      "function": "image",
+      "candidates": 483,
+      "styles": 262,
+      "grammars": 0,
+      "skipped": 221,
+      "needs": 192,
+      "grammar_needs": 0,
+      "categories": {
+        "电商": 4,
+        "广告创意": 7,
+        "人像与摄影": 70,
+        "海报与插画": 113,
+        "角色设计": 12,
+        "界面与社交媒体样机": 44,
+        "对比与社区示例": 12
+      },
+      "listed": 70,
+      "unlisted": 192,
+      "grammar_listed": 0,
+      "grammar_unlisted": 0,
+      "unlisted_reasons": {
+        "reference_image": 61,
+        "prompt": 162,
+        "aspect": 22
+      },
+      "grammar_unlisted_reasons": {}
+    }
+  },
+  "functions": {
+    "motion": 687,
+    "video": 513,
+    "image": 589
+  },
+  "categories": {
+    "image": {
+      "国际社论幽默": 40,
+      "经典绘本叙事": 66,
+      "现代平面艺术": 31,
+      "日本当代插画": 42,
+      "新国风与传统工艺": 67,
+      "3D黏土毛毡与纸雕": 17,
+      "动漫和赛璐璐": 21,
+      "先锋实验与综合媒介": 43,
+      "电商": 4,
+      "广告创意": 7,
+      "人像与摄影": 70,
+      "海报与插画": 113,
+      "角色设计": 12,
+      "界面与社交媒体样机": 44,
+      "对比与社区示例": 12
+    },
+    "video": {
+      "动效图形": 317,
+      "讲解": 67,
+      "小游戏互动": 70,
+      "3D 场景": 59
+    },
+    "motion": {
+      "时代标本": 18,
+      "材料层": 17,
+      "运动基本功": 26,
+      "入场与退场": 38,
+      "强调与注意": 22,
+      "文字排版": 33,
+      "转场与剪辑": 98,
+      "虚拟镜头": 22,
+      "数据动画": 74,
+      "界面演示": 47,
+      "原理图解": 48,
+      "图形与路径": 32,
+      "纹理与画面风格": 59,
+      "粒子与生成": 47,
+      "三维与景深": 33,
+      "循环与氛围": 44,
+      "字幕与落款": 14,
+      "动效风格": 15
+    }
+  },
+  "grammar_categories": {
+    "动画语法": 9
+  },
+  "skipped_by_function": {
+    "image": 221,
+    "video": 0,
+    "motion": 0
+  },
+  "skipped_by_category": {
+    "image": {
+      "电商": 14,
+      "广告创意": 29,
+      "人像与摄影": 71,
+      "海报与插画": 60,
+      "角色设计": 8,
+      "界面与社交媒体样机": 16,
+      "对比与社区示例": 23
+    },
+    "video": {},
+    "motion": {}
+  },
+  "skipped_items": [
+    {
+      "case": 1,
+      "variant": 1,
+      "name_en": "E-commerce Main Image - Miniature Diorama Skincare Advertisement",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A hyper-realistic miniature diorama product advertisement featuring an oversized luxury skincare pump bottle labeled \"LUXEVEIL Skin Science - Radiance Nourishing Body Lotion\" in cream/beige with a polished gold pump top,"
+    },
+    {
+      "case": 2,
+      "variant": 1,
+      "name_en": "E-commerce Main Image - 9-Panel Product TVC Storyboard",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Using the provided reference image, transform the single casual product photo into a polished e-commerce TVC storyboard board for a {argument name=\"video duration\" default=\"15-second\"} ad in a {argument name=\"aspect rati"
+    },
+    {
+      "case": 3,
+      "variant": 1,
+      "name_en": "Burger hero image plus 9-cell ad storyboard",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a cinematic hero image of a gourmet cheeseburger on a dark stone surface with glossy brioche bun, melted cheese, crisp lettuce, tomato, grilled patty, sauce, realistic texture, appetizing steam, warm side light, s"
+    },
+    {
+      "case": 3,
+      "variant": 2,
+      "name_en": "Burger hero image plus 9-cell ad storyboard",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a 9-cell hybrid keyframe-to-transition storyboard sheet for a 15-second gourmet burger ad, moving from empty surface to ingredient assembly to final macro hero shot. Use large S cells and smaller T cells, motion a"
+    },
+    {
+      "case": 4,
+      "variant": 1,
+      "name_en": "Döner Commercial Food Photography Set",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "prompt:\n\n8K UHD hyper-realistic commercial food photography, 3:4 aspect ratio. 6 scenes, each on its own solid or gradient background:\n\nScene 1, Döner slice explosion: Traditional Turkish döner (beef and lamb mix), paper"
+    },
+    {
+      "case": 6,
+      "variant": 1,
+      "name_en": "Ancient Palace Perfume Ad",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Full prompt:\n\nAncient Chinese palace perfume advertisement inspired by the legendary dancer Zhao Feiyan. A bronze bottle with gold-inlaid twisting lotus vines. Mysterious, cold, and haunting imperial harem atmosphere. Ve"
+    },
+    {
+      "case": 8,
+      "variant": 1,
+      "name_en": "VOLT Goal Celebration Ad",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A high-energy commercial product advertisement for VOLT Energy Drink. A beautiful young woman in her mid-20s, wearing a green and white football jersey, is caught in a euphoric goal celebration — arms wide open, head thr"
+    },
+    {
+      "case": 8,
+      "variant": 2,
+      "name_en": "VOLT Goal Celebration Ad",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "配套15秒视频生成提示词，不属于本来源的图片风格。",
+      "source_excerpt": "A beautiful young woman in a green and white football jersey is sitting in a packed stadium, casually drinking from a sleek VOLT Energy Drink can. Suddenly a goal is scored — she explodes into euphoric celebration, jumpi"
+    },
+    {
+      "case": 9,
+      "variant": 1,
+      "name_en": "Lightning Storm Supercar Ad",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Sports Car Made of Lightning\nPrompt: Supercar emerging from a storm cloud, body formed entirely from blue lightning bolts, wet reflective road, thunder exploding in background, cinematic action advertising, high-speed en"
+    },
+    {
+      "case": 11,
+      "variant": 1,
+      "name_en": "Miniature Brand Universe Shoe",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A high-performance running shoe transformed into a miniature brand universe. The shoe is the hero character, surrounded by floating speed trails, miniature running tracks, energetic mascot companions, stopwatch icons, cl"
+    },
+    {
+      "case": 12,
+      "variant": 1,
+      "name_en": "Romantic Smartphone Couple Scene Product Shot",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a cozy cinematic romantic scene featuring two black smartphones standing vertically on a rustic wooden table, positioned side by side and slightly angled inward. Each phone displays a video call.\n\nOn the left phon"
+    },
+    {
+      "case": 13,
+      "variant": 1,
+      "name_en": "Floral Serum Product Shot",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Minimalist studio product photography, a small transparent glass facial oil dropper bottle with a black rubber pipette cap, containing pale pink serum with suspended dried pink floral elements, centered on a natural raw "
+    },
+    {
+      "case": 14,
+      "variant": 1,
+      "name_en": "Ingredient Callout Ice Cream Ad",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "{\n  \"resolution\": \"8K\",\n  \"aspect_ratio\": \"3:4\",\n  \"image_type\": \"photorealistic commercial product render\",\n  \"scene_description\": {\n    \"main_subject\": \"A vertically centered ice cream bar mounted on a wooden stick\",\n "
+    },
+    {
+      "case": 15,
+      "variant": 1,
+      "name_en": "Spicy Chili Chutney Product Shot",
+      "path": "README.md",
+      "category": "电商",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Overhead shot of a glass jar of spicy tomato chili chutney on a dark stone surface, surrounded by whole red tomatoes, tomato halves, fresh red chili peppers, black peppercorns, and a small wooden bowl with chutney and a "
+    },
+    {
+      "case": 17,
+      "variant": 1,
+      "name_en": "Luxury Chronograph Watch Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A dramatic luxury product advertising image for a motorsport-inspired chronograph wristwatch in a dark studio. Center-left foreground, show a single stainless steel chronograph watch standing upright at a slight three-qu"
+    },
+    {
+      "case": 18,
+      "variant": 1,
+      "name_en": "Luxury chocolate campaign system",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a premium, square (1:1) product advertisement for a fictional luxury chocolate brand called Noirvelle Chocolat, inspired by high-end chocolate brands. The ad should feel like a high-end editorial campaign, combini"
+    },
+    {
+      "case": 20,
+      "variant": 1,
+      "name_en": "Luxury Fragrance Campaign Portrait",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Transform the uploaded portrait into a luxurious cinematic fragrance poster inspired by the dark seductive elegance of a high-fashion perfume campaign. Preserve her exact facial features, warm skin tone, confident expres"
+    },
+    {
+      "case": 21,
+      "variant": 1,
+      "name_en": "Berry Splash Cafe Campaign",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a vibrant lifestyle food ad set inside a colorful, trendy cafe. Show a smiling woman in a bright hot pink blazer seated at a wooden table, lifting a spoon as she eats an acai berry bowl topped with strawberries, b"
+    },
+    {
+      "case": 21,
+      "variant": 2,
+      "name_en": "Berry Splash Cafe Campaign",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a dynamic food product advertisement for \"Berry Loud\" mixed berry blend. Feature an acai smoothie bowl overflowing with strawberries, raspberries, blueberries, blackberries, banana slices, and granola. Surround it"
+    },
+    {
+      "case": 22,
+      "variant": 1,
+      "name_en": "Fast Food Hero Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A cinematic 9:16 vertical composition featuring a gourmet \"Smokey Obsidian\" burger.\nWHAT: A towering burger with a charcoal brioche bun, thick Wagyu beef patty with visible sear marks, melting aged gruyère dripping like "
+    },
+    {
+      "case": 23,
+      "variant": 1,
+      "name_en": "Matcha Granola Ad Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "(Matcha Granola Ad)\n\nUltra-realistic premium food advertisement poster for a healthy breakfast granola brand, centered matte pouch packaging labeled “Matcha Oat Granola”, green monochrome aesthetic, flat lay composition,"
+    },
+    {
+      "case": 23,
+      "variant": 2,
+      "name_en": "Matcha Granola Ad Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "(Berry Yogurt Cereal Ad)\n\nHigh-end commercial breakfast cereal advertisement, pastel pink aesthetic with centered standing pouch packaging labeled “Berry Yogurt Crunch Cereal”, surrounded by strawberries, blueberries, yo"
+    },
+    {
+      "case": 23,
+      "variant": 3,
+      "name_en": "Matcha Granola Ad Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "(Chocolate Protein Muesli Ad)\n\nPremium protein breakfast food advertisement poster featuring centered pouch package labeled “Chocolate Protein Muesli”, rich brown monochrome theme, surrounded by dark chocolate chunks, al"
+    },
+    {
+      "case": 25,
+      "variant": 1,
+      "name_en": "Foam Clogs Ad Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a premium vertical 4:5 commercial advertising poster for perforated foam clogs, making the shoes visually central, clean, and instantly legible. Use the uploaded portrait photo only for the woman’s appearance and "
+    },
+    {
+      "case": 26,
+      "variant": 1,
+      "name_en": "Energy Drink Stadium Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra realistic premium product advertising shot of a sleek aluminum energy drink can standing upright on a wet reflective surface inside a futuristic football stadium at night. The can design features vivid swirling rai"
+    },
+    {
+      "case": 28,
+      "variant": 1,
+      "name_en": "Adidas Futuristic Drop Ad Poster 9:16",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Full prompt:\n\nDesign a striking premium vertical advertising poster (9:16 format) for a fictional ultra-limited Adidas sneaker called \"ADIDAS AEROBLADE X - LIMITED DROP\". The creative direction should feel like a world-c"
+    },
+    {
+      "case": 29,
+      "variant": 1,
+      "name_en": "Luxury Linen Texture Editorial Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "GPT Image 2 on ChatGPT 🪄\n\nPROMPT ⬇\n\nA photorealistic luxury editorial poster, 3:4 portrait ratio. Full frame covered in premium off-white Italian linen paper wall texture — warm ivory tone, subtle grain, ultra-tactile su"
+    },
+    {
+      "case": 30,
+      "variant": 1,
+      "name_en": "Luxury Watch Dramatic Beam Product Shot",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A luxury watch emerges from darkness. Extreme macro shot of ticking gears and moving hands. Golden sparks and floating particles surround the watch. The camera circles the timepiece while dramatic light streaks reflect a"
+    },
+    {
+      "case": 31,
+      "variant": 1,
+      "name_en": "可口可乐百事雪碧品牌 KV 对比",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "品牌 KV 海报系列。使用统一提示词框架，针对不同饮料品牌调整视觉情绪色彩：可口可乐 → 热烈红色聚会感；百事可乐 → 年轻蓝色潮流感；雪碧 → 清爽绿色柠檬感。同一结构展现不同品牌 DNA。3 张对比输出。"
+    },
+    {
+      "case": 32,
+      "variant": 1,
+      "name_en": "Luxury Sneaker Editorial Grid",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Louis Vuitton luxury leather sneaker campaign. High-fashion editorial, avant-garde aesthetic. Aspect ratio 3:4.\n\nMaterials: Full-grain calf leather, Monogram Embossed Canvas, Polished Gold Hardware.\nColor palette: Cognac"
+    },
+    {
+      "case": 33,
+      "variant": 1,
+      "name_en": "Wireless Earbuds Lifestyle Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Design a 9:16 vertical product infographic for Bolt True Wireless Earbuds with a high-end lifestyle ad feel.\nComposition & Framing\nFull-body shot of a young woman whose face, skin tone, and hairstyle match the reference "
+    },
+    {
+      "case": 34,
+      "variant": 1,
+      "name_en": "Kinder Joy Swing Chair Scene",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Hyper-realistic 8k medium shot photograph with shallow depth of field, surreal indoor scene with cinematic lighting. A normal-sized woman sits cross-legged inside a massive, highly detailed Kinder Joy egg that's been con"
+    },
+    {
+      "case": 35,
+      "variant": 1,
+      "name_en": "Invisible Shield Sunscreen Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "SUNSCREEN AD, “THE INVISIBLE SHIELD”\n\nLuxury skincare advertising masterpiece, a colossal premium sunscreen bottle standing on a pristine tropical shoreline at golden hour, powerful beams of sunlight crashing down from t"
+    },
+    {
+      "case": 37,
+      "variant": 1,
+      "name_en": "SPLASH Liquid Logo Fashion Poster",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Hyper-realistic fashion campaign poster for brand \"SPLASH\". A girl (matching the reference photo exactly, same face) seated confidently atop a gleaming, water-like 3D SPLASH logo surrounded by dynamic water splash effect"
+    },
+    {
+      "case": 38,
+      "variant": 1,
+      "name_en": "OBSIDIAN Coffee Brand Campaign",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Generate four cohesive high-end realistic editorial visuals for OBSIDIAN coffee brand. Cinematic, dark, mature aesthetic inspired by luxury sportswear and premium coffee advertising. Studio lighting that's dramatic yet c"
+    },
+    {
+      "case": 39,
+      "variant": 1,
+      "name_en": "Coconut Paradise Skincare Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Minimal white bottle with golden pump surrounded by cracked coconuts, coconut milk splash and foam clouds, tropical luxury spa atmosphere, creamy textures, realistic bubbles floating in background, premium skincare comme"
+    },
+    {
+      "case": 41,
+      "variant": 1,
+      "name_en": "Grape Reveal Can Product Shot",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Product shot of a 330ml aluminum can called \"VINE GLOW – Natural Extract\" placed center-frame against a clean light grey studio background. The can is adorned with refined purple vine line illustrations. A dramatic horiz"
+    },
+    {
+      "case": 42,
+      "variant": 1,
+      "name_en": "Ray-Ban Giant Aviator Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Minimalist commercial ad featuring oversized Ray-Ban Aviator sunglasses, ultra-clean design. A young woman in all-white outfit leans casually against the giant sunglasses, relaxed confident pose, eyes closed, also holdin"
+    },
+    {
+      "case": 43,
+      "variant": 1,
+      "name_en": "Noir Elixir Perfume Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-cinematic luxury fragrance advertising photography of \"NOIR ÉLIXIR – Midnight Reserve\" perfume bottle. Faceted geometric crystal bottle with sharp elegant edges, deep smoked black gradient glass, polished reflectiv"
+    },
+    {
+      "case": 46,
+      "variant": 1,
+      "name_en": "STARKIDZ Cosmic Telescope Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A magical science advertisement poster. A curious young boy age 10 in a NASA tshirt gazes up in total wonder beside a giant shiny silver telescope 3x his height pointed toward a breathtaking galaxy view above, \"STARKIDZ\""
+    },
+    {
+      "case": 47,
+      "variant": 1,
+      "name_en": "Monumental Timepiece Fashion Ad",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Oversized luxury wristwatch as a modern sculpture centerpiece, fashion model leaning against the dial face, monumental \"TIME\" typography looming in the background, deep emerald studio environment, reflective polished flo"
+    },
+    {
+      "case": 48,
+      "variant": 1,
+      "name_en": "Doodle Escape Studio Sprint",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create an ultra-realistic editorial studio photograph set against a smooth off-white seamless backdrop with a bright, airy minimalist aesthetic.\n\nA fun-loving young woman with a pastel blue pixie cut is captured in a spo"
+    },
+    {
+      "case": 49,
+      "variant": 1,
+      "name_en": "Metro CCTV Thriller Frame",
+      "path": "README.md",
+      "category": "广告创意",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a cinematic surveillance-thriller image set inside a massive multi-level underground metro station. The camera should feel like a ceiling-mounted CCTV positioned high above at roughly a 40-degree angle, looking do"
+    },
+    {
+      "case": 51,
+      "variant": 1,
+      "name_en": "Coastal Daydream Film Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Coastal Daydream\nComposition: Three-quarter close-up captured from slightly behind the shoulder, with wind-swept hair creating organic movement across the frame while the coastline softly recedes into mist.\nPrompt:\nUsing"
+    },
+    {
+      "case": 52,
+      "variant": 1,
+      "name_en": "Convenience Store Neon Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "35mm film photography with harsh convenience store fluorescent lighting mixed with colorful neon signs from outside, authentic film grain, high contrast, slight color cast, cinematic street editorial style, intimate medi"
+    },
+    {
+      "case": 55,
+      "variant": 1,
+      "name_en": "Wimbledon Broadcast Crowd Shot",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A screenshot from a live Wimbledon TV broadcast during a packed Centre Court match. The camera cuts to the audience, an unbelievably attractive woman in her 20s with long black hair, flawless skin, elegant makeup, and a "
+    },
+    {
+      "case": 56,
+      "variant": 1,
+      "name_en": "Rainy Street Golden Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic cinematic street photography of a young man standing alone on a rainy urban sidewalk during golden hour sunset in Mumbai, India. He is leaning casually against a black metal roadside railing while looking"
+    },
+    {
+      "case": 59,
+      "variant": 1,
+      "name_en": "Retro Newsstand Fashion Scene",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A cinematic fashion editorial scene of 8 diverse young adults gathered around a vintage urban newsstand kiosk with a bold \"NEWSSTAND\" sign, set in a gritty indoor street environment with worn concrete floors, dark indust"
+    },
+    {
+      "case": 69,
+      "variant": 1,
+      "name_en": "Busan Travel Journal Illustration",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Dreamy Busan Korea travel journal illustration, cozy vintage scrapbook aesthetic, watercolor and ink art style, red-haired girl sitting at a seaside café writing in a notebook, cream knitted cardigan, floral dress, cinem"
+    },
+    {
+      "case": 70,
+      "variant": 1,
+      "name_en": "Cinematic Volleyball Sports Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic cinematic sports portrait of a young athletic woman playing volleyball outdoors on a sunny tropical day, captured mid-action while gently tossing/spinning a colorful volleyball upward with one hand. She i"
+    },
+    {
+      "case": 73,
+      "variant": 1,
+      "name_en": "Cozy Bedroom Korean Girl Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic cozy bedroom portrait of the same beautiful Korean girl from the previous images, maintaining identical facial appearance, silky long black hair, glossy eyes, soft blush makeup, youthful Korean beauty aes"
+    },
+    {
+      "case": 74,
+      "variant": 1,
+      "name_en": "Anime Brand Campaign Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Semi-realistic anime style young Korean woman in the uploaded image, ORBIT brand campaign, oversized nuclear orange and white technical jacket, wide black pants, futuristic sneakers, vivid orange seamless backdrop, chrom"
+    },
+    {
+      "case": 75,
+      "variant": 1,
+      "name_en": "Woman in Crystal Perfume Bottle",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic surreal conceptual portrait of a distressed middle-aged woman trapped inside an elegant transparent crystal perfume bottle filled halfway with pale pink perfume liquid. The bottle is upright and centered,"
+    },
+    {
+      "case": 76,
+      "variant": 1,
+      "name_en": "Summer Campus Tesla Lifestyle Poster",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a premium summer campus lifestyle Tesla poster focused mainly on an adult East Asian female model with a casual cute campus look. Use the uploaded portrait photo only for appearance and hairstyle, preserving face "
+    },
+    {
+      "case": 77,
+      "variant": 1,
+      "name_en": "Bubble-Tea Shop Action Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Use case: identity-preserve style-transfer\nAsset type: vertical photorealistic action portrait for social post\nPrimary request: create a dynamic bubble-tea shop action portrait using the uploaded portrait photo as the ap"
+    },
+    {
+      "case": 78,
+      "variant": 1,
+      "name_en": "Night Outdoor Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A medium-shot photograph of a young woman with wavy, light brown hair and soft, rosy makeup, posing outdoors at night. She is wearing a slightly oversized black t-shirt with small white text on the left chest, pulling th"
+    },
+    {
+      "case": 82,
+      "variant": 1,
+      "name_en": "Reference-Based Portrait Consistency",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "Use the uploaded reference image as the exact facial identity reference for the girl. Maintain the same facial structure, eyes, nose, lips, hairstyle, skin tone, beauty details, and overall appearance consistency through"
+    },
+    {
+      "case": 83,
+      "variant": 1,
+      "name_en": "London Fashion Street Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Photorealistic cinematic fashion video set on an elegant London shopping street inspired by Bond Street. A stylish British woman in her late 20s walks confidently past a luxury boutique. She wears gold earrings, a burgun"
+    },
+    {
+      "case": 84,
+      "variant": 1,
+      "name_en": "Travel Selfie Portrait Reference",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "Asset type: portrait image for social post\nPrimary request: create a photorealistic travel selfie portrait, using the uploaded portrait photo as the appearance reference for the person.\nScene/backdrop: an open alpine mea"
+    },
+    {
+      "case": 87,
+      "variant": 1,
+      "name_en": "Pixar 3D Character Design Sheet",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a Pixar 3D style character design sheet. Clean white background. Two characters side by side with a clean dividing line. Bold brushstroke-style title at the top: PAUL vs THE POLE VAULT. Subtitle beneath: One pole"
+    },
+    {
+      "case": 88,
+      "variant": 1,
+      "name_en": "Matcha Goddess Beauty Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "👇\n\nultra realistic surreal beauty editorial portrait, matcha goddess aesthetic, ethereal asian woman with glossy dewy skin, face covered in dripping liquid matcha cream, surreal cosmetic food fusion, floating matcha cube"
+    },
+    {
+      "case": 90,
+      "variant": 1,
+      "name_en": "写实感人物竖版照片",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "生成一张 9:16 竖版写实感人物照片，参考高级手机自拍质感，但不要完全普通生活照。整体像是用 iPhone 前置摄像头在温馨卧室中拍摄的精致自拍，保留柔和美型、干净构图和自然高级感。画质为真实手机照片质感，有轻微噪点、轻微柔焦和自然光感，但人物依然精致、漂亮、肤质自然干净，不要变成粗糙低质照片。\n\n画面中是一位成年东方女性，坐在温馨卧室床上，上半身近景自拍构图，镜头略微从上方俯拍，人物位于画面中央偏右，头部微微低下，视线安静看向右下方"
+    },
+    {
+      "case": 92,
+      "variant": 1,
+      "name_en": "Editorial Male Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic 8K editorial male portrait of the uploaded man, using his exact face as the ONLY identity reference — preserve 100% facial structure, jawline, hairstyle volume, beard texture, skin tone, eye shape, pores,"
+    },
+    {
+      "case": 95,
+      "variant": 1,
+      "name_en": "Korean Beauty Ultra-Realistic Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "low quality, blurry, distorted anatomy, extra fingers, bad hands, unrealistic smile, messy hair, cartoon, anime, watermark, logo, text, noisy image, oversaturated colors, poorly drawn face, low resolution, bad proportion"
+    },
+    {
+      "case": 100,
+      "variant": 1,
+      "name_en": "Cinematic Football Portrait Poster",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra realistic cinematic football poster of a stylish young South Asian male footballer with voluminous messy black hair, sharp jawline, trimmed beard, glowing fair skin, wearing Portugal national team red jersey with n"
+    },
+    {
+      "case": 101,
+      "variant": 1,
+      "name_en": "Switzerland Watercolor Travel Poster",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "(Switzerland Poster)"
+    },
+    {
+      "case": 102,
+      "variant": 1,
+      "name_en": "Cinematic Lifestyle Outdoor Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Cinematic lifestyle portrait of a cheerful young woman sitting on a rustic wooden bench in a lush botanical courtyard, holding an iced coffee in a clear plastic cup with straw, smiling naturally at camera, short wavy dar"
+    },
+    {
+      "case": 103,
+      "variant": 1,
+      "name_en": "Luxury Cycling Storyboard Poster",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "- Step 1: Generate storyboard with GPT Image 2"
+    },
+    {
+      "case": 105,
+      "variant": 1,
+      "name_en": "Cosmic Garden Fantasy Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic cinematic fantasy-science portrait of a beautiful young female scientist inside a futuristic bio-cosmic laboratory garden at night, inspired by dreamy sci-fi storytelling. She is leaning over a glowing ho"
+    },
+    {
+      "case": 107,
+      "variant": 1,
+      "name_en": "Cat-Eye Glasses Fashion Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A young woman with long, dark hair and striking cat-eye glasses is captured in a studio portrait against a solid blue background. She is turned away from the camera, looking over her shoulder with a confident gaze. Her m"
+    },
+    {
+      "case": 109,
+      "variant": 1,
+      "name_en": "Clean Tech Advertisement Poster",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "- A clean tech advertisement poster. A stylish young woman in a white minimalist outfit tilts her head with eyes closed enjoying music beside a giant white wireless earbud case 2.5x her height open and glowing softly, \"A"
+    },
+    {
+      "case": 111,
+      "variant": 1,
+      "name_en": "Korean Beauty Identity Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "Using the provided reference image, create an ultra-realistic Korean street-fashion editorial portrait of a stylish young woman posing outdoors beside a bold orange wall under bright natural sunlight. She is wearing an o"
+    },
+    {
+      "case": 112,
+      "variant": 1,
+      "name_en": "Hollywood Luxury Anime Fashion Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a premium 1:1 Hollywood-style luxury anime fashion editorial collage featuring the same stylish Japanese college male anime character with perfectly consistent facial identity across all frames. The character shou"
+    },
+    {
+      "case": 113,
+      "variant": 1,
+      "name_en": "Identity Reference Beauty Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "Use only my uploaded portrait photo as the identity reference. Accurately preserve my real face shape, facial proportions, facial contours, skin tone, hairstyle outline, hair volume, hairline, and overall natural presenc"
+    },
+    {
+      "case": 115,
+      "variant": 1,
+      "name_en": "Negative Prompt Portrait Template",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "low quality, blurry, distorted face, extra fingers, bad hands, duplicate facial features, unrealistic reflection, cartoon, anime, watermark, logo, text, noisy image, oversaturated colors, poorly drawn eyes, bad anatomy, "
+    },
+    {
+      "case": 117,
+      "variant": 1,
+      "name_en": "Pixar 3D Character Design Sheet",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a Pixar 3D style character design sheet. Clean white background. Two characters side by side with a clean dividing line. Bold brushstroke-style title at the top: STEVE VS THE PLANK. Subtitle beneath: 60 seconds. "
+    },
+    {
+      "case": 120,
+      "variant": 1,
+      "name_en": "Brand Identity Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "Use my uploaded portrait photo as the only identity reference. Preserve only the person’s real facial features, face shape, hairstyle, hair color, skin tone, and overall temperament. Generate an ultra-realistic close-up "
+    },
+    {
+      "case": 121,
+      "variant": 1,
+      "name_en": "Outdoor Lifestyle Open Sky Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Vibe: outdoor lifestyle · introspective · open sky"
+    },
+    {
+      "case": 123,
+      "variant": 1,
+      "name_en": "沙滩场景丰腴人物写真",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "写实风格，超高精细。20岁出头的成年女性，黑色自然长发，透明感的肌肤，可爱而华丽的面容，带着自然且略带羞涩的微笑。背景是南国度假地的黄昏海滩，白沙、平静的海面、淡粉色与橙色的天空，远景是椰子树。女性穿着米白色的优雅简约比基尼，肩上轻轻披着一件白色薄纱衬衫。她站在沙滩上，双手轻轻交叠在身前，对着镜头露出灿烂的笑容。充满幸福感和余韵的氛围。人物位于画面中央，占据较大比例，并留出少许黄昏天空的空白。不添加任何文字或标志。注重清纯、透明感、华丽"
+    },
+    {
+      "case": 124,
+      "variant": 1,
+      "name_en": "Photorealistic Editorial Seated Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Photorealistic editorial portrait of a relaxed young man seated on minimalist white stone stairs in soft directional sunlight, three-quarter full-body composition, centered framing with leading lines of the steps. He wea"
+    },
+    {
+      "case": 126,
+      "variant": 1,
+      "name_en": "Pakistan Miniature World Map Poster",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create an ultra-detailed hyper-realistic 9:16 cinematic miniature world map of Pakistan, designed as a premium luxury travel-poster masterpiece where the entire country appears as a massive handcrafted floating island ci"
+    },
+    {
+      "case": 127,
+      "variant": 1,
+      "name_en": "Japanese Film Aesthetic Airport Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Use case: photorealistic-natural. Asset type: editorial portrait variant, target composition 1600x1088 landscape.\n\nPrimary request: Japanese negative film aesthetic, summer, soft natural sunlight, slightly overexposed hi"
+    },
+    {
+      "case": 132,
+      "variant": 1,
+      "name_en": "Boho Stone-Wall Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create an ultra-photorealistic 3:4 editorial portrait of a young adult woman with Ana de Armas-inspired features, a fair natural complexion, a slender fit build, and long dark chestnut-brown hair in loose, slightly messy"
+    },
+    {
+      "case": 135,
+      "variant": 1,
+      "name_en": "Futuristic Martial Arts Heroine Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-photorealistic cinematic portrait of a legendary futuristic martial arts heroine standing in the center of a luxury fashion-editorial composition. She wears an elegant crimson and black combat outfit inspired by co"
+    },
+    {
+      "case": 136,
+      "variant": 1,
+      "name_en": "Under-Glass Worms-Eye Crowd Shot",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Camera placed directly beneath a completely transparent glass floor, pointing straight up. Pedestrians walk across the surface above. Pure blue sky fills the background. No buildings, walls, or edges in frame. The glass "
+    },
+    {
+      "case": 142,
+      "variant": 1,
+      "name_en": "Nightlife Restaurant Flash Collage",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Using the provided reference image, create an ultra-realistic candid nightlife fashion photoshoot of a beautiful young woman at a trendy upscale restaurant lounge at night.\n\nShe has a slim figure, long voluminous dark br"
+    },
+    {
+      "case": 146,
+      "variant": 1,
+      "name_en": "High Angle Cinematic Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Edit foto wanita tersebut menjadi potret High Angle Sinematik dari seorang wanita muda yang cantik dari sudut pandang belakang. Fokus utamanya adalah pada bahu, lengan, dan sebagian wajahnya yang menghadap ke samping den"
+    },
+    {
+      "case": 148,
+      "variant": 1,
+      "name_en": "Kawaii Character Side Profile Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a photorealistic editorial portrait of one 20-year-old Japanese or Korean female portrait subject with white frame, thin-frame glasses, worn normally on the face, lenses aligned over the eyes and small teardrop ge"
+    },
+    {
+      "case": 152,
+      "variant": 1,
+      "name_en": "Winter Wolf Cinematic Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "://t.co/1ZKQNHa8h4\n\nprompt:\n\nCinematic winter portrait of a young pale-skinned woman with long dark snow-dusted hair, standing closely behind a majestic gray wolf. She wears a fur-lined heavy winter coat, expression inte"
+    },
+    {
+      "case": 153,
+      "variant": 1,
+      "name_en": "Full Shot Man White Chair",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A full shot of a man sitting on a white chair with his legs crossed, wearing a dark button-down shirt, white pants, and white slides, uploaded face as reference, with an old-fashioned film camera on a tripod to his left,"
+    },
+    {
+      "case": 154,
+      "variant": 1,
+      "name_en": "Eiffel Tower Low Angle Fashion Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "에펠탑 중앙 하단에서 카메라를 아래로 당당하게 내려다보는 로우 앵글 포즈입니다. 상체는 프레임 우측을 향해 45도 틀어져 있고, 고개를 돌려 카메라를 내려다 보고 있습니다. 바람에 날리는 머리카락 사이로 세련되고 쿨한 표정을 짓고 있으며, 카메라를 아련하면서도 자신감 넘치는 눈빛으로 가만히 응시하고 있습니다.\n\n몸에 부드럽게 밀착되는 정갈하고 심플한 화이트 반소매 라운드넥 티셔츠를 입고 있습"
+    },
+    {
+      "case": 156,
+      "variant": 1,
+      "name_en": "Italian Summer Afternoon Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "prompt:\n\nUltra photorealistic portrait of a young woman with long straight dark brown hair, sun-kissed glowing skin, seated at an outdoor cafe table. She's wearing a white vintage Swiss dot corset mini dress with a sweet"
+    },
+    {
+      "case": 157,
+      "variant": 1,
+      "name_en": "Rainy Night Cinematic Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Full prompt:\n\nPhotorealistic cinematic close-up of a young woman in her early 30s, standing in a downpour at night with arms stretched wide and head tilted back, eyes shut, embracing the rain. Warm golden-orange backligh"
+    },
+    {
+      "case": 159,
+      "variant": 1,
+      "name_en": "Cozy Pastel Morning Overhead Lifestyle",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "prompt:\n\nOverhead lifestyle photo shot from a slightly tilted high angle, looking down at a cozy bed. A slim young woman lies on her back with a relaxed, lazy weekend morning energy. She has long, slightly tousled straig"
+    },
+    {
+      "case": 160,
+      "variant": 1,
+      "name_en": "Stylish Woman Outside Cozy Café Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "An ultra-realistic lifestyle portrait of a stylish young woman standing outside a modern cozy café during daytime, smiling warmly at the camera with a soft natural expression. She has short wavy platinum blonde hair styl"
+    },
+    {
+      "case": 161,
+      "variant": 1,
+      "name_en": "Luxury Streetwear Chrome Chair Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-premium fashion editorial poster, luxury streetwear aesthetic, 4:5 portrait composition. A confident young woman sitting casually on a modern chrome chair, wearing an oversized black leather bomber jacket, black ov"
+    },
+    {
+      "case": 162,
+      "variant": 1,
+      "name_en": "South Korea Graffiti Street Art Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a viral CapCut-style\nSouth korea graffiti image from\nthe uploaded person. Keep\nthe face consistent. Add\nSouth korea jersey, full-body pose,\ngiant hand-painted mural\nportrait in the background,\nSouth korea logo, So"
+    },
+    {
+      "case": 165,
+      "variant": 1,
+      "name_en": "Doll-ification Concept Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "prompt:\n\nUltra-realistic full-body portrait of a woman posed exactly as in the reference photo, stylized as a sleek female action figure. She stands with arms folded across her chest on top of a massive Microsoft Surface"
+    },
+    {
+      "case": 167,
+      "variant": 1,
+      "name_en": "Face-Reference Consistent Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "Use the attached reference image as the exclusive guide for facial identity, bone structure, body proportions, skin tone, facial features, and overall physical likeness. Create an ultra-realistic luxury fashion editorial"
+    },
+    {
+      "case": 168,
+      "variant": 1,
+      "name_en": "日本コンビニ店員 昼夜対比写真",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "上班山田😊\n\n下班田山🕶\n\nGPT- image 2 prompt👇\nDaytime Yamada cashier version, 3:4 vertical image. Create a realistic live-action portrait of an adult young Japanese woman, around 24 years old. She has fair skin, soft delicate facia"
+    },
+    {
+      "case": 170,
+      "variant": 1,
+      "name_en": "Face-Preserved Ultra-Realistic Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "重点是人物一致性、修图或身份约束，没有独立可复用的视觉风格。",
+      "source_excerpt": "low quality, blurry, distorted face, bad anatomy, extra limbs, stiff pose, unnatural selfie angle, overexposed skin, harsh flash, plastic skin, overly bright colors, cheap fabric, messy background, cartoon style, exagger"
+    },
+    {
+      "case": 172,
+      "variant": 1,
+      "name_en": "파리 가로등 기댄 감성 전신 포즈",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "[인물] 이미지1, 이미지2 참조. 파리의 길거리 표지판 기둥에 몸을 비스듬히 기대어 서 있는 전신 포즈입니다. 고개를 살짝 왼쪽으로 기울이고 눈을 감은 채 입술을 아주 약간 내밀며 나른하고 감성적인 표정을 짓고 있습니다. 왼손에는 테이크아웃 커피 컵을 가볍게 쥐고 있습니다. 배경: 파리 거리 분위기, 흐린 자연광."
+    },
+    {
+      "case": 173,
+      "variant": 1,
+      "name_en": "深夜调酒师暗红酒吧封面写真",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "深夜调酒师人物摄影：高级酒吧场景、暗红灯光、玻璃酒杯反光 + 黑衬衫、深酒红马甲、袖箍建立人物身份感 + 调酒动作、抬眼看镜头、金色边缘光建立封面气场。危险但克制的气质，深夜暗红酒吧封面风。"
+    },
+    {
+      "case": 175,
+      "variant": 1,
+      "name_en": "Airy Japanese Window Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "35mm film photo, airy Japanese aesthetic, soft natural window light from the side, slightly overexposed, muted pastel colors, low contrast, bright gentle highlights, quiet indoor room beside sheer white curtains, pale wa"
+    },
+    {
+      "case": 176,
+      "variant": 1,
+      "name_en": "作者 Bench Iced Coffee Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Beautiful young Japanese girl with long straight dark brown hair and soft full bangs, fair skin, bright natural smile, sitting casually on a wooden park bench while holding an iced coffee cup. Wearing a light beige windb"
+    },
+    {
+      "case": 177,
+      "variant": 1,
+      "name_en": "Curtain Bang Close-Up Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A photorealistic close-up portrait of a young girl filling almost the entire frame. Her head is slightly tilted to the side, with her cheek resting against her shoulder and partially hidden inside the long cream-colored "
+    },
+    {
+      "case": 178,
+      "variant": 1,
+      "name_en": "Cyborg Prosthetic Close-Up",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic cinematic close-up of a young woman with pale, freckled skin and wet dark hair. Her eyes are vivid blue-green and she wears a silver septum ring.\nCybernetics: A massive industrial robotic prosthetic arm w"
+    },
+    {
+      "case": 179,
+      "variant": 1,
+      "name_en": "Mediterranean Alley Sunlit Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic photo of a woman seated on stone steps in a vibrant Mediterranean alley with vivid blue-painted walls, stairs, and buildings with white accents. She wears a blue fitted sleeveless top and a long flowing w"
+    },
+    {
+      "case": 181,
+      "variant": 1,
+      "name_en": "Emerald Headwrap Editorial Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A cinematic close up side profile portrait of a beautiful Black woman with deep glowing skin, eyes closed peacefully, wearing a bold emerald green and black patterned headwrap and matching scarf. Minimal elegant white fa"
+    },
+    {
+      "case": 182,
+      "variant": 1,
+      "name_en": "Late-Night Office Flash Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "CCD flash photography style, late-night office setting, whiteboard covered in mathematical formulas in the background, black-rimmed glasses, white high-neck top, black high-waisted mini skirt, semi-matte cool-white porce"
+    },
+    {
+      "case": 183,
+      "variant": 1,
+      "name_en": "Late-Night Subway CCD Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "CCD flash photo with low-saturation black-pearl dark-gold tones, deep charcoal shadows, subtle dark-gold light reflections, soft frontal flash illuminating the subject, slight overexposure, fine grain, cool and moody lat"
+    },
+    {
+      "case": 186,
+      "variant": 1,
+      "name_en": "Forced-Perspective Sneaker Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A cinematic forced-perspective street photography scene where a giant worn-out sneaker appears enormous in the foreground, towering over a casually dressed young man leaning against it. The man wears a brown leather jack"
+    },
+    {
+      "case": 187,
+      "variant": 1,
+      "name_en": "Cloud-Bloom Editorial Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Photorealistic high-fashion editorial image, vertical 4:5. A young adult fashion model sitting calmly on the center of one enormous pink flower growing above the clouds, the flower stem rising from below and disappearing"
+    },
+    {
+      "case": 189,
+      "variant": 1,
+      "name_en": "Lantern Hiker Studio Portrait",
+      "path": "README.md",
+      "category": "人像与摄影",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "3D render, stylized full-body side-view portrait of an elderly male hiker with a long white beard, walking right. Solid seamless deep-teal studio background with soft floor reflections. He wears a brown wide-brim felt ha"
+    },
+    {
+      "case": 193,
+      "variant": 1,
+      "name_en": "Tea Estate Storybook Collage",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a whimsical, hand-painted storybook-style illustration inspired by three candid travel photos arranged vertically in a collage. Preserve the exact composition, poses, and framing from the reference: a young woman "
+    },
+    {
+      "case": 198,
+      "variant": 1,
+      "name_en": "Glowing Sailboat Night Illustration",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A luminous sailboat, outlined in glowing golden light, floats serenely on dark, rippling water under a starry night sky. The sails, translucent and faintly blue, catch the ethereal light, while the hull is a solid, dark "
+    },
+    {
+      "case": 199,
+      "variant": 1,
+      "name_en": "Istanbul Line-Art Travel Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a minimalist ultra-high-resolution travel poster in line-art style for ISTANBUL, portraying the city as a stylish everyday urban scene rather than a tourist postcard.\n\nMAIN COMPOSITION:\n\nCentral composition featur"
+    },
+    {
+      "case": 200,
+      "variant": 1,
+      "name_en": "Dark Western Outlaw Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "高级电影感西部亡命徒海报，竖版 2:3 构图，暗黑西部游戏角色设定海报风格。\n\n一个神秘蒙面牛仔与黑马站在荒漠边境，人物全身正面，宽檐牛仔帽压低，花纹面巾遮住下半张脸，深色长发，黑色皮革手套，黑色西部夹克与多层皮革装备，子弹带、左轮枪套、金属腰带扣、厚重长靴，肩上披着红棕色几何图案披毯，边缘破损飘动。人物姿态冷静危险，一只手靠近枪套。右侧黑马半身入镜，带白色额纹，缰绳细节清晰。\n\n背景是暴风雨中的西部荒漠，闪电、乌云、远处峡谷岩壁、枯树"
+    },
+    {
+      "case": 201,
+      "variant": 1,
+      "name_en": "Anime Streetwear Mascot Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Stylized anime streetwear brand poster of a fast-food mascot character, full-body dynamic pose, highly detailed manga/anime illustration, modern urban fashion outfit inspired by the restaurant brand colors and identity, "
+    },
+    {
+      "case": 205,
+      "variant": 1,
+      "name_en": "Bangkok Swiss Typography Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create an ultra-high-resolution Swiss modernist typography travel poster for BANGKOK THAILAND in a premium 16:9 layout.\n\nCORE CONCEPT:\nA massive bold condensed sans-serif word “BANGKOK” dominates the center composition.\n"
+    },
+    {
+      "case": 219,
+      "variant": 1,
+      "name_en": "星河入梦 3D CG 插画",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "一位成年东方幻想系女性角色，梦幻星河仙女风，3D CG 高精度插画质感，9:16 竖版构图，画面充满全息星河、流光粒子、银河丝带与柔雾光晕。\n\n人物位于画面中央偏左，半身到大腿视角，身体呈优雅的 S 型动态站姿。她的上半身微微向一侧倾斜，腰部自然收束并轻轻扭转，胯部向相反方向形成柔和弧线，一侧肩膀略微抬起，另一侧肩膀自然放松，整体姿态像在星河中缓慢旋转，既轻盈又具有女性柔美。头部微微低垂，脸部呈三分之二侧脸，眼神温柔、安静、梦幻，神情清"
+    },
+    {
+      "case": 226,
+      "variant": 1,
+      "name_en": "Pixar 3D Character Design Sheet",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a Pixar 3D style character design sheet. Clean white background. Two characters side by side with a clean dividing line. Bold brushstroke-style title at the top: CHAD VS THE GYM MIRROR. Subtitle beneath: One way "
+    },
+    {
+      "case": 232,
+      "variant": 1,
+      "name_en": "Viral Food Infographic Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a cinematic viral-style food poster for “Prediabetic Friendly Strawberry Cheesecake Overnight Oats” in a clean modern infographic aesthetic inspired by trendy TikTok and Pinterest recipe posters.\n\nThe poster shoul"
+    },
+    {
+      "case": 235,
+      "variant": 1,
+      "name_en": "Football Player Dynamic Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A dynamic mixed-media football poster featuring James Rodríguez in Colombia’s national team colors, designed with a bold street-art editorial aesthetic. The composition blends realistic sports photography with layered ur"
+    },
+    {
+      "case": 236,
+      "variant": 1,
+      "name_en": "Travel Food Advertisement Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-detailed premium travel-food advertisement poster for [CITY/COUNTRY], vertical composition, inspired by luxury Lay’s-style chips advertising. A realistic chips packet placed at the bottom center as the main hero ob"
+    },
+    {
+      "case": 238,
+      "variant": 1,
+      "name_en": "Retro Cafe Scrapbook Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Whimsical retro cafe scrapbook poster, dreamy pistachio rose latte aesthetic, layered iced pistachio drink with rose cream foam and milk gradients, ultra-realistic beverage photography blended with hand-drawn journal doo"
+    },
+    {
+      "case": 239,
+      "variant": 1,
+      "name_en": "Blueberry Lavender Soda Scrapbook Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Vintage-inspired blueberry lavender soda scrapbook poster, dreamy artisanal cafe advertisement aesthetic, sparkling layered blueberry soda with lavender cream foam and translucent ice cubes, ultra-realistic beverage phot"
+    },
+    {
+      "case": 241,
+      "variant": 1,
+      "name_en": "Editorial Fashion Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Editorial fashion poster featuring a full-body, stylish male model leaning casually against a light stone column in an upscale urban setting, wearing a slim-fit black button-down shirt tucked into tailored camel chinos w"
+    },
+    {
+      "case": 245,
+      "variant": 1,
+      "name_en": "Roland Garros Tennis Trailer",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra cinematic 15-second tennis commercial for Roland Garros 2026. Hand-drawn ink-and-marker illustration aesthetic mixed with dynamic modern sports animation. Deep navy shadows, saturated clay orange courts, rough sket"
+    },
+    {
+      "case": 247,
+      "variant": 1,
+      "name_en": "Eagle vs Lion Stadium Clash",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A colossal, highly detailed, realistic anthropomorphic Sun Eagle representing Argentina and a massive muscular anthropomorphic Golden Lion representing England. The Eagle wears the classic Argentina national football tea"
+    },
+    {
+      "case": 248,
+      "variant": 1,
+      "name_en": "Original Anime Dev Board",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a single vertical anime animation development board for an original emotional short film titled “The Girl and the Paper Boat”.\nThe output must be ONE combined image containing:\n1. an anime character design sheet\n2"
+    },
+    {
+      "case": 251,
+      "variant": 1,
+      "name_en": "Surreal Inner Self Editorial Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A hyper-realistic young man sitting inside the open cavity of a massive realistic human chest sculpture shaped like himself. The chest is hollow like a room, with soft fabric textures and dim ambient light inside. He wea"
+    },
+    {
+      "case": 256,
+      "variant": 1,
+      "name_en": "電子レンジ大明神キャラ設定ポスター",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "{\"type\":\"Japanese mascot character sheet / contest entry poster\",\"format\":\"wide horizontal infographic character design sheet, 16:9, clean cream background with orange decorative borders, shrine motifs, sparkles and rays"
+    },
+    {
+      "case": 259,
+      "variant": 1,
+      "name_en": "Mixed-Media Train Platform Portrait",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Mixed media portrait of a trendy young man standing on a KRL Jabodetabek Commuter Line platform at night. He poses confidently, one hand gripping the strap of an olive-green backpack, dressed in streetwear: oversized bla"
+    },
+    {
+      "case": 261,
+      "variant": 1,
+      "name_en": "Berries and Blossoms Infographic Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A delightful vertical infographic poster in 9:16 format about berries and forest fruits, designed in a warm 3D cozy kawaii illustration style with soft rounded shapes, glossy textures, and a comforting pastel atmosphere,"
+    },
+    {
+      "case": 264,
+      "variant": 1,
+      "name_en": "Cosmic Campfire Concept Art",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a surreal, cinematic, photorealistic 8k conceptual artwork set in an abstract cosmic void. Use a high-angle full shot with symmetrical balance, placing a magical campfire at the exact center between two seated cha"
+    },
+    {
+      "case": 267,
+      "variant": 1,
+      "name_en": "Glass Skeleton Study Desk",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Stylized 3D render of a clear glass skeleton with black-rimmed glasses, seated at a wooden desk, looking down at an open textbook while highlighting text with a yellow highlighter. A warm gold desk lamp on the right cast"
+    },
+    {
+      "case": 276,
+      "variant": 1,
+      "name_en": "Love Bites Cyberpunk Manga Cover",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Generate a vintage vinyl album cover with a cyberpunk and manga aesthetic, grainy and worn. The background is dark and textured, with scratches and dust. At the top, the title \"LOVE BITES\" appears in large white and gray"
+    },
+    {
+      "case": 279,
+      "variant": 1,
+      "name_en": "Sleep-Deprived Chibi Creator",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Use my uploaded photo as the sole facial reference. Preserve my exact identity, facial proportions, eye shape, skin tone, lip shape, nose structure, and all distinctive features with exceptional accuracy and no facial dr"
+    },
+    {
+      "case": 280,
+      "variant": 1,
+      "name_en": "Spring Garden Watercolor Couple",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Fashion editorial watercolor portrait illustration of a romantic young Korean couple in a blooming spring garden, standing close together in a soft intimate moment — the boy gently holding the girl's hand while she leans"
+    },
+    {
+      "case": 281,
+      "variant": 1,
+      "name_en": "Cosmic Anime Villain Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-detailed anime villain portrait poster, dark cosmic background, legendary antagonist standing front-facing, one hand covering the lower face in a sinister pose, glowing eyes staring directly at the viewer, powerful"
+    },
+    {
+      "case": 285,
+      "variant": 1,
+      "name_en": "Cinematography Analysis Frame",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a cinematic fashion editorial photograph in a bright minimal bedroom, presented as a cinematography composition analysis frame.\n\nMain Image: A young adult female model kneeling on a soft white bed beside a large w"
+    },
+    {
+      "case": 290,
+      "variant": 1,
+      "name_en": "3D Travel Ticket",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Photorealistic 3D travel ticket concept, a close-up human hand holding a large vintage “NYC All Access Pass” ticket in front of a clean cream-colored background. The ticket acts as a portal window into New York City, rev"
+    },
+    {
+      "case": 291,
+      "variant": 1,
+      "name_en": "Luxury Birthday Poster 3:4",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Professional luxury birthday poster, 3:4 ratio. Entire frame filled with a premium off white luxury paper textured wall. Large number “2” precisely carved in the wall with visible depth and realistic inner shadows. Insid"
+    },
+    {
+      "case": 292,
+      "variant": 1,
+      "name_en": "Window Girl Fashion Editorial",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "://t.co/yMuwrbQO3u\n\nUltra-photoreal fashion editorial. A young woman sits casually inside the open window of a soft warm yellow house, one leg extended outward and raised, the other relaxed, one arm hanging freely. She w"
+    },
+    {
+      "case": 294,
+      "variant": 1,
+      "name_en": "Three-Frame Nightlife Collage",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create image Create a photorealistic three-frame vertical nightlife collage inspired by the supplied reference image. Preserve the subject's facial identity, facial structure, skin tone, hairstyle, and overall appearance"
+    },
+    {
+      "case": 298,
+      "variant": 1,
+      "name_en": "Nighttime Japanese Theater Cinematic",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a cinematic 16:9 wide image from the audience POV at a nighttime outdoor Japanese theater performance. The camera feels like a handheld smartphone recording from the crowd, with silhouetted audience heads and rais"
+    },
+    {
+      "case": 304,
+      "variant": 1,
+      "name_en": "Japanese Ad Banner 2x2 Grid",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "://t.co/9AyRJEG6VB\n\n{\n  \"type\": \"2x2 grid of Japanese-style digital advertisement banners\",\n  \"layout\": {\n    \"structure\": \"4 equal quadrants\",\n    \"quadrants\": [\n      {\n        \"position\": \"top-left\",\n        \"theme\": "
+    },
+    {
+      "case": 305,
+      "variant": 1,
+      "name_en": "Argentina Football Uniform Promo",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "ARGENTINA NATIONAL TEAM\n\n\"NEW UNIFORM\"\n\nFORMAT\n\nUltra-Premium Football Fashion SMM Promotional Poster\nVertical 4:5\nInstagram Hero Creative\nGlobal Sportswear Advertising\nCommercial Football Graphic Design\nAgency-Level Art"
+    },
+    {
+      "case": 310,
+      "variant": 1,
+      "name_en": "Celestial Fantasy Oracle Storyboard",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a premium cinematic 12-panel storyboard sheet for a celestial fantasy oracle reveal sequence featuring Astrielle, an ethereal cosmic sorceress who manipulates stars, destiny, and astral energy.\n\nThe storyboard sho"
+    },
+    {
+      "case": 313,
+      "variant": 1,
+      "name_en": "Satellite Terrain Letter Typography Map",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-realistic overhead satellite view from orbit, a crisp modern editorial layout featuring 9 vertical panels arranged side by side on a white background, together spelling \"MADPENCIL\", each panel containing a single l"
+    },
+    {
+      "case": 314,
+      "variant": 1,
+      "name_en": "Polish PRL Era Magazine Spread",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a full two-page spread from a fictional Polish color weekly magazine from the PRL era, late 1950s to early 1960s. The image should look like an authentic vintage printed magazine: yellowed paper, offset printing, "
+    },
+    {
+      "case": 315,
+      "variant": 1,
+      "name_en": "FIFA World Cup 2026 Throne Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "FIFA World Cup 2026 hero throne sports artwork. 🧵"
+    },
+    {
+      "case": 318,
+      "variant": 1,
+      "name_en": "World Cup National Team Fashion Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Who's gonna win tonight? Are you team Mexico or team South Africa?\n\nGPT Image 2\n\nPrompt\n\nSOUTH AFRICA NATIONAL TEAM\n\n\"NEW UNIFORM\"\n\nFORMAT\n\nUltra-Premium Football Fashion SMM Promotional Poster\nVertical 4:5\nInstagram Her"
+    },
+    {
+      "case": 319,
+      "variant": 1,
+      "name_en": "FIFA World Cup Country Emblem Badge",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a FIFA World Cup 2026 country variant emblem in a bold, flat, typographic illustration style. Preserve the official FIFA World Cup 2026 stacked identity exactly: the digit “2” occupies the upper half and the digit"
+    },
+    {
+      "case": 321,
+      "variant": 1,
+      "name_en": "Pixar 3D Kebab Maker Storyboard Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a crisp, clean infographic storyboard poster for THE KEBAB MAKER. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright vivid colors — deep carameli"
+    },
+    {
+      "case": 322,
+      "variant": 1,
+      "name_en": "BMX Rider Streetwear Mixed-Media Collage",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-creative streetwear collage poster featuring a tattooed BMX rider and urban lifestyle athlete. Multiple cutout photographs arranged in a layered mixed-media composition. One large back-facing portrait wearing an ov"
+    },
+    {
+      "case": 324,
+      "variant": 1,
+      "name_en": "Sony A7 Exploded Diagram",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Detailed exploded-view diagram of a Sony A7 mirrorless camera, with all internal components separated and clearly visible, each part labeled with its name. Technical product illustration style, clean white background, pr"
+    },
+    {
+      "case": 330,
+      "variant": 1,
+      "name_en": "Blockbuster Action Movie Shot",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Cinematic photorealistic action scene on a rain-soaked downtown street canyon. A dark-haired man in his 30s sprints toward the camera, soaked dark jacket and dark pants, mid-stride with a tense survival expression. Behin"
+    },
+    {
+      "case": 334,
+      "variant": 1,
+      "name_en": "Jellyfish City Above the Dunes",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "The Jellyfish City Above the Dunes\n\nOn a desert world too hot to live on, entire cities float just above the dunes—built from colossal jellyfish that weave their own architecture in the sky.\n\nSoft solarpunk alien vibes, "
+    },
+    {
+      "case": 336,
+      "variant": 1,
+      "name_en": "AI Music Bootcamp Event Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Generate a dramatic Japanese anime-style event promotional poster in vertical 4:5 format, ultra-detailed, cinematic, neon-lit, high contrast, styled like a polished social media announcement. Center-right subject: a beau"
+    },
+    {
+      "case": 340,
+      "variant": 1,
+      "name_en": "Lion-Camel Ridge Demon Court",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Dark, eerie Chinese mythological atmosphere blending traditional aesthetics with cinematic realism, meticulous detail, multi-pass rendering, flawless modeling. Journey to the West — the treacherous Lion-Camel Ridge, teem"
+    },
+    {
+      "case": 341,
+      "variant": 1,
+      "name_en": "Moscow Swiss Editorial Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Design a contemporary Swiss Style editorial poster for Moscow, Russia. Use a large bold sans-serif capital letter “M” as the main typographic structure. The “M” must be very clear, clean, geometric, solid, and dominant, "
+    },
+    {
+      "case": 342,
+      "variant": 1,
+      "name_en": "Whispers in the Crowd Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A sorrowful Korean psychological drama movie poster depicting a beautiful young woman photographed from a dramatic overhead angle, camera pointing straight down at her face as she gazes upward. Her long dark hair is loos"
+    },
+    {
+      "case": 343,
+      "variant": 1,
+      "name_en": "Red Dress Editorial Portrait",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Editorial fashion portrait, woman wearing flowing red bell-sleeve wrap dress, dramatic hard rim lighting from camera-left casting golden edge glow on fabric, direct intense eye contact with camera, parted lips, confident"
+    },
+    {
+      "case": 344,
+      "variant": 1,
+      "name_en": "Golden Halo Fashion Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a luxury cinematic fashion poster featuring a stylish young male standing in a powerful confident pose, captured from a low-angle perspective. The subject wears a high-end black designer outfit with sharp tailorin"
+    },
+    {
+      "case": 345,
+      "variant": 1,
+      "name_en": "Ronaldo Tri-Zone Sports Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Cristiano Ronaldo sports poster. Background divided intothree horizontal zones. Top zone warm cream Pantone 9183Coccupying top 40% of poster. Middle zone signal redPantone 485C as a pure flat color band occupying exactly"
+    },
+    {
+      "case": 347,
+      "variant": 1,
+      "name_en": "Whimsical Mirror Travel Journal",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Transform the uploaded photo into a whimsical hand-painted storybook illustration. Keep the exact pose, perspective, convex traffic mirror reflection, road, utility pole, and surrounding tropical greenery. Reimagine the "
+    },
+    {
+      "case": 349,
+      "variant": 1,
+      "name_en": "Argentina Number 10 Sports Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A mixed-media sports poster with a realistic chest-up portrait of a young Argentine soccer player, confident pose with a subtle smile, dark brown slightly messy hair. Wearing the Argentina national team jersey with iconi"
+    },
+    {
+      "case": 352,
+      "variant": 1,
+      "name_en": "Guangzhou Silk Ribbon Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Spring Festival 2026 Guangzhou city promo poster, vertical 9:16, festive yet elegant. Double exposure with S-curve flowing composition on a pure white textured background. Bottom-right corner: a miniature figure in tradi"
+    },
+    {
+      "case": 353,
+      "variant": 1,
+      "name_en": "Ronaldo Topographic Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create an extraordinary collector-edition Cristiano Ronaldo poster inspired by contemporary data visualization, cartographic design, and editorial publishing. The composition should capture Manchester United-era Ronaldo "
+    },
+    {
+      "case": 356,
+      "variant": 1,
+      "name_en": "Moody GQ Beach Cover",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Cinematic GQ Style magazine cover — male model with a dark beard and messy curly dark hair, leaning against a vintage 1960s silver convertible on a misty, overcast beach. He stares directly into the camera with a cool, i"
+    },
+    {
+      "case": 357,
+      "variant": 1,
+      "name_en": "Chrome Visor Side Profile",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Photorealistic sci-fi portrait, young woman in left-facing side profile, dressed in a mirror-finish chrome-blue jacket and a futuristic helmet with a wide glossy visor obscuring her eyes. Helmet features smooth curves, w"
+    },
+    {
+      "case": 359,
+      "variant": 1,
+      "name_en": "CMYK Ronaldo Collector Poster",
+      "path": "README.md",
+      "category": "海报与插画",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a world-class collector's edition Cristiano Ronaldo poster inspired by premium offset printing, editorial publishing, and award-winning graphic design. The composition is dominated by a monumental close-up portrai"
+    },
+    {
+      "case": 360,
+      "variant": 1,
+      "name_en": "Cozy Lifestyle Sticker Grid",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A 3x3 grid collage of 9 illustrated sticker-style panels, all featuring the same young woman with curly brown hair styled in a messy bun, soft anime-inspired illustration style with warm pastel color palette (blush pink,"
+    },
+    {
+      "case": 364,
+      "variant": 1,
+      "name_en": "Mecha Girl Sea-City Key Visual",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A mecha girl mid-teens, pale skin smudged with soot and salt spray, sharp amber eyes with glowing HUD reticles, waist-length ash-white hair tied in a high ponytail whipping in the sea wind, matte gunmetal exoskeleton arm"
+    },
+    {
+      "case": 365,
+      "variant": 1,
+      "name_en": "GTA 6 in Bangalore Flower Market",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "{argument name=\"game\" default=\"gta 6\"} in {argument name=\"location\" default=\"Bangalore's market flower\"} in India"
+    },
+    {
+      "case": 366,
+      "variant": 1,
+      "name_en": "Stylized 3D Skater Character",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Design a stylized 3D cartoon skater character with a premium animated-film look, mixing Pixar-like polish, Spider-Verse energy, and indie street-art attitude.\n\nCharacter details:\n- exaggerated proportions with long, skin"
+    },
+    {
+      "case": 370,
+      "variant": 1,
+      "name_en": "雨中灵姬东方幻想 3D CG 角色",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "9:16 竖版，高精度 3D CG 东方幻想女性角色写真，3D CG oriental fantasy beauty portrait，anime-style 3D CG character art，semi-realistic 3D character render，镜头为大腿及上半身构图，画面主体是一位明确成年的年轻东方幻想系女性，视觉年龄约 20–26 岁，整体气质清冷、空灵、精致、安静，带有雨中水系精灵般的神秘感与高级感。整体不"
+    },
+    {
+      "case": 373,
+      "variant": 1,
+      "name_en": "Luminant Archivist Character Poster",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Vertical 9:16 full-body cinematic portrait of a single alien character, the Luminant Archivist, standing on a rocky ridge on the twilight band of an alien planet; the creature has a tall elongated body with three root-li"
+    },
+    {
+      "case": 376,
+      "variant": 1,
+      "name_en": "Pixar Banana Hero Character",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Pixar-style 3D animated banana character, single fruit brought to life. A charismatic male figure with bold confident eyes, thick expressive brows, and a wide grin full of gleaming white teeth with sparkle accents. Smoot"
+    },
+    {
+      "case": 378,
+      "variant": 1,
+      "name_en": "LEGO Football Collectible Figure",
+      "path": "README.md",
+      "category": "角色设计",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A highly detailed collectible toy figure inspired by a LEGO-style minifigure, standing in a professional studio. The figure has a realistic young woman’s face with porcelain skin, straight jet-black hair, blunt bangs, an"
+    },
+    {
+      "case": 383,
+      "variant": 2,
+      "name_en": "12-Panel Storyboard Poster",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "配套视频生成提示词，不属于本来源的图片风格。",
+      "source_excerpt": "to Seedance 2.0 and use this prompt: Prompt: Generate a scene using the shots in the uploaded film storyboard. No text on screen. That's it."
+    },
+    {
+      "case": 393,
+      "variant": 1,
+      "name_en": "Sitcom Intro Storyboard Sheet",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a professional film production storyboard for a 15-second sitcom intro montage in a premium pitch deck presentation. Use multi-panel storyboard sheet layout, cinematic 16:9 framing per panel, clean panel borders, "
+    },
+    {
+      "case": 396,
+      "variant": 1,
+      "name_en": "Pet World Cup Storyboard Sheet",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A professional pre-production storyboard sheet for a 12-second photorealistic short film, single landscape page, layout top to bottom:\n\n== TITLE BAR ==\nBlack bar across full width. Left: massive bold white text \"PET WORL"
+    },
+    {
+      "case": 399,
+      "variant": 1,
+      "name_en": "Bazaar Heist Storyboard Card",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a 16:9 image.\n\n[PROJECT CARD]\nCreate a compact designed masthead, not a table.\nTITLE: JIEL MARKET HANDS\nMETA LINE: sly fantasy theft / fast-paced bazaar caper / sharp kinetic energy\nPRIORITY: readable hand tricks,"
+    },
+    {
+      "case": 400,
+      "variant": 1,
+      "name_en": "Luxury Starter Pack Vision Board",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-detailed luxury feminine “Starter Pack” vision board poster featuring an adorable chibi-style girl as the central character, inspired by premium collectible dolls and Pinterest luxury aesthetics. She has huge spark"
+    },
+    {
+      "case": 405,
+      "variant": 1,
+      "name_en": "Energy Drink Storyboard Grid",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "- Create a high-energy 16:9 energy drink advertising storyboard in 3x2 grid (6 frames), editorial layout, Monster/Red Bull style, matte black + electric green palette. Structured flow: pre-game locker room, can crack ope"
+    },
+    {
+      "case": 406,
+      "variant": 1,
+      "name_en": "Anime Short Film Dev Board",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "\"Create a single vertical anime development board for an original emotional short film titled \"One More Player\". Output ONE combined image with 2 sections: top section = character design sheet, bottom section = cinematic"
+    },
+    {
+      "case": 407,
+      "variant": 1,
+      "name_en": "Editorial Anatomy Infographic Poster",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "prompt:\n\nUltra-clean editorial infographic poster (1080x1080 square), blending premium magazine design with lifestyle illustration and photography.\n\n**HEADLINE:**\nBold, large sans-serif type centered at top: \"HUMAN LIVER"
+    },
+    {
+      "case": 408,
+      "variant": 1,
+      "name_en": "Graphite Coffee-Shop Storyboard",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a rough black-and-white graphite pencil storyboard in a 3x3 grid, nine 16:9 panels, with hand-drawn borders, panel numbers, motion arrows, music notes, and handwritten director notes.\n\nStoryboard for a premium ani"
+    },
+    {
+      "case": 409,
+      "variant": 1,
+      "name_en": "Venice Travel Vlogger Collage",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Young female travel vlogger exploring Venice, Italy across 13 wildly candid, chaotic, funny, and uniquely Venetian moments, stunning with long windswept hair, effortless luxury European summer fashion, playful adventurou"
+    },
+    {
+      "case": 419,
+      "variant": 1,
+      "name_en": "The King Still Breathes Masthead",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a 16:9 image.\n\n[PROJECT CARD]\nCreate a compact designed masthead, not a table.\nTITLE: THE KING STILL BREATHES\nMETA LINE: empty night stadium / a buried crown remembers / three triumphs and one hope\nPRIORITY: the f"
+    },
+    {
+      "case": 419,
+      "variant": 2,
+      "name_en": "The King Still Breathes Masthead",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "配套视频生成提示词，不属于本来源的图片风格。",
+      "source_excerpt": "Based on the storyboard , create this short film — do not include any movement arrows, camera notes, panel numbers, captions, labels, borders, or storyboard markings.\n\nTHE KING STILL BREATHES — beneath an empty Argentina"
+    },
+    {
+      "case": 420,
+      "variant": 1,
+      "name_en": "Douyin Livestream Screenshot",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Vertical 9:16 aspect ratio. Create a realistic Douyin (TikTok China) live broadcast screenshot. The scene shows Liu Yifei hosting a live stream, holding up a sign that reads: \"Streaming live tonight, join the chat with Y"
+    },
+    {
+      "case": 421,
+      "variant": 1,
+      "name_en": "AR Grocery Overlay POV",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "POV shot from inside a grocery store aisle, your hands holding a vibrant mixed-fruit jam jar -- strawberry, blueberry, and orange blend. Holographic AR overlays float around it: a \"Flavor Mix\" panel with fruit icons, a \""
+    },
+    {
+      "case": 426,
+      "variant": 1,
+      "name_en": "Livestream Commerce UI Mockup",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "{\n  \"type\": \"live stream UI mockup\",\n  \"subject\": {\n    \"description\": \"portrait of {argument name=\\\"host name\\\" default=\\\"Elon Musk\\\"}, smiling, dressed in a black t-shirt featuring a white technical schematic print\",\n "
+    },
+    {
+      "case": 429,
+      "variant": 1,
+      "name_en": "VOLT Rush Citrus Burst",
+      "path": "README.md",
+      "category": "界面与社交媒体样机",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Ultra-cinematic product photography of a neon-green energy drink can labeled \"VOLT RUSH\", tilted at a sharp diagonal, bursting through glowing citrus slices and electric sparks. Frozen lime juice splashes and ice shards "
+    },
+    {
+      "case": 432,
+      "variant": 1,
+      "name_en": "Sam Altman Bear Selfie",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "generate image: Selfie of Sam Altman riding a bear"
+    },
+    {
+      "case": 432,
+      "variant": 2,
+      "name_en": "Sam Altman Bear Selfie",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "去背景编辑操作，没有独立视觉风格。",
+      "source_excerpt": "Remove the background make it transparent"
+    },
+    {
+      "case": 435,
+      "variant": 1,
+      "name_en": "Donut Heist Storyboard Sheet",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Title: “THE DONUT HEIST”\nSubtitle: “15s Comedic Storyboard – 9 Shots”\n\nStyle: full-color 3D animated storyboard sheet, cinematic cartoon characters, polished lighting, expressive faces, vibrant colors, red panel borders,"
+    },
+    {
+      "case": 436,
+      "variant": 1,
+      "name_en": "Sourdough Baker Storyboard",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a crisp, clean infographic storyboard poster for THE SOURDOUGH BAKER. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright warm colors — creamy dou"
+    },
+    {
+      "case": 438,
+      "variant": 1,
+      "name_en": "Pancake Dad Storyboard",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a crisp, clean infographic storyboard poster for THE PANCAKE DAD. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright warm colors — golden pancake "
+    },
+    {
+      "case": 439,
+      "variant": 1,
+      "name_en": "Solar Desert Worldbuilding Kit",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Build a full visual worldbuilding kit for a futuristic solar-powered desert civilization. Include multiple images covering architecture, characters, clothing, vehicles, and maps, all sharing one cohesive design language,"
+    },
+    {
+      "case": 440,
+      "variant": 1,
+      "name_en": "Racer Character Model Sheet",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "[layout_setup]: A comprehensive, full-page character model design sheet layout strictly on a pristine solid white background with no gradients, no environmental art, and no photorealistic elements whatsoever. [identity_m"
+    },
+    {
+      "case": 442,
+      "variant": 1,
+      "name_en": "Chaotic Kitchen Freeze-Frame",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Surreal comedic freeze-frame inside a modern kitchen: a young man arches backward in an extreme acrobatic dodge, body exaggerated, while a kettle hangs suspended mid-air above him, hot tea exploding outward in a dramatic"
+    },
+    {
+      "case": 447,
+      "variant": 1,
+      "name_en": "Continuous-Run Glitch Storyboard",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Use @[storyboard ref]  as the authoritative director-approved storyboard blueprint for the sequence. Treat every storyboard panel as a consecutive shot within a single cinematic sequence. Follow panel order exactly and d"
+    },
+    {
+      "case": 449,
+      "variant": 1,
+      "name_en": "Dust Bunny Nature Documentary",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a 16:9 image.\n\n[PROJECT CARD]\nCreate a compact designed masthead, not a table.\nTITLE: THE DUST BUNNY NATURE DOCUMENTARY\nMETA LINE: macro wildlife realism / under-couch survival ecosystem / dry documentary comedy /"
+    },
+    {
+      "case": 449,
+      "variant": 2,
+      "name_en": "Dust Bunny Nature Documentary",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "配套视频生成提示词，不属于本来源的图片风格。",
+      "source_excerpt": "Use as the authoritative director-approved storyboard blueprint for the sequence. Treat every storyboard panel as a consecutive shot within a single cinematic survival-documentary sequence. Follow panel order exactly and"
+    },
+    {
+      "case": 450,
+      "variant": 1,
+      "name_en": "Action Storyboard Sheet",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a 16:9 image.\n[PROJECT CARD]\nCreate a compact designed masthead, not a table.\nTITLE: KUROSHI VS ARACHNEX: BLITZ\nMETA LINE: relentless explosive / futuristic samurai vs spider-mech / max-dynamism one-take action\nPR"
+    },
+    {
+      "case": 451,
+      "variant": 1,
+      "name_en": "Churro Maker Storyboard Poster",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a crisp, clean infographic storyboard poster for THE CHURRO MAKER. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright vivid colors — golden fried"
+    },
+    {
+      "case": 452,
+      "variant": 1,
+      "name_en": "Food Anime Storyboard Generator",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Create a professional anime production storyboard sheet for a **15-second cooking animation featuring authentic Edo-style Sushi (江戸前寿司 / 握り寿司)**.\n\nThe cooking process should accurately reflect professional Tokyo high-end"
+    },
+    {
+      "case": 453,
+      "variant": 1,
+      "name_en": "Weightless Morning Storyboard",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A cinematic 6-panel storyboard sheet on a clean dark charcoal background, arranged in a 3-column by 2-row grid of widescreen 16:9 panels with thin neutral gray borders and a small white number label in the top-left corne"
+    },
+    {
+      "case": 454,
+      "variant": 1,
+      "name_en": "Pretzel Maker Storyboard",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "“Create a crisp, clean infographic storyboard poster for THE PRETZEL MAKER. Wide 16:9 layout, white background, black borders, bold black typography, premium Pixar 3D stylized rendering, bright vivid colors — deep golden"
+    },
+    {
+      "case": 455,
+      "variant": 1,
+      "name_en": "Bird Nest Chair Concept Board",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Design concept board: bird nest weaving methods as the inspiration for a sculptural lounge chair. Four-stage sequence from nest-building reference photos to construction diagrams, then organic form abstraction, then the "
+    },
+    {
+      "case": 456,
+      "variant": 1,
+      "name_en": "Old Footage Restoration with GPT-Image 2",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "旧片修复或算数编辑测试，属于操作测试而非视觉风格。",
+      "source_excerpt": "Transform the attached image into a high resolution digital photo that looks like it was taken yesterday. Make it look like it was taken with a Canon EOS R6. Cinematic color grading and lighting. Keep details the same, o"
+    },
+    {
+      "case": 458,
+      "variant": 1,
+      "name_en": "Coin Math Editing Test",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "旧片修复或算数编辑测试，属于操作测试而非视觉风格。",
+      "source_excerpt": "Modify this photo so the total adds up to 244.5 baht. Adjust the number of coins in each stack until the combined value hits the target."
+    },
+    {
+      "case": 460,
+      "variant": 1,
+      "name_en": "Pergola Blueprint Build Split",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Architectural split-scene: left side shows a hand-sketched pencil blueprint of a wooden garden pergola on white paper, front and slight side elevation with construction lines, dimension labels, and handwritten notes, pos"
+    },
+    {
+      "case": 460,
+      "variant": 2,
+      "name_en": "Pergola Blueprint Build Split",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Hand-drawn architectural pencil sketch of a wooden garden pergola on white paper. Front and slight side elevation view with clear proportions.\n\nConstruction lines, dimensions and handwritten notes visible. Wooden posts a"
+    },
+    {
+      "case": 460,
+      "variant": 3,
+      "name_en": "Pergola Blueprint Build Split",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "Fully built wooden pergola in a real garden, matching the exact structure and proportions from the sketch. Viewed from a low front corner perspective at eye level, showing depth and the full beam structure instead of a f"
+    },
+    {
+      "case": 461,
+      "variant": 1,
+      "name_en": "Dog Bone Spacecraft Morph",
+      "path": "README.md",
+      "category": "对比与社区示例",
+      "reason": "包含固定人物、地点、产品或逐镜情节；主体内容与场景强绑定，不能只换主题保留原文。",
+      "source_excerpt": "A photorealistic split-frame composition divided precisely down the center. Left half: a detailed dog bone resting against the dividing edge, set against a bright blue sky with soft clouds. Right half: the bone organical"
+    }
+  ],
+  "listed_by_function": {
+    "motion": 416,
+    "video": 181,
+    "image": 352
+  },
+  "unlisted_by_function": {
+    "video": 332,
+    "motion": 271,
+    "image": 237
+  }
+}

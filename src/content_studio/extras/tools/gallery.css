@@ -1,0 +1,100 @@
+/* 风格画廊 / 打磨台（10/10）。颜色只用 /static/styles.css 的 :root 变量；字号 12/13/14/16/20/26/34，圆角 6/10/14/999，间距 4–32。
+   首屏大标题是这一页唯一的展示字号，和 /tools 的首屏同一套。 */
+.gl-body { --gut: 32px; --max: 1280px; overflow-x: hidden }
+.gl-top { position: sticky; top: 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px max(var(--gut), calc((100% - var(--max)) / 2 + var(--gut)));
+  background: color-mix(in srgb, var(--ground) 84%, transparent); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4) }
+.gl-back { color: var(--ink-2); text-decoration: none; font-size: 14px; font-weight: 600 }
+.gl-back:hover { color: var(--accent) }
+.gl-top-r { display: flex; align-items: center; gap: 12px }
+.gl-live { font-size: 12px; font-weight: 600; color: var(--out); background: var(--out-soft); padding: 4px 12px; border-radius: 999px }
+.gl-theme { width: 32px; height: 32px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; font-size: 14px }
+
+.gl { max-width: var(--max); margin: 0 auto; padding: 32px var(--gut) 96px; display: flex; flex-direction: column; gap: 24px }
+.gl-head { display: flex; flex-direction: column; gap: 16px; padding-bottom: 8px }
+.gl-eyebrow { margin: 0; font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: .06em; font-variant-numeric: tabular-nums }
+.gl-head h1 { margin: 0; font-size: clamp(40px, 6vw, 72px); line-height: 1.02; font-weight: 900; letter-spacing: -.04em; text-wrap: balance }
+.gl-lede { margin: 0; max-width: 40em; font-size: 16px; line-height: 1.75; color: var(--ink-2) }
+.gl-lede b { color: var(--ink) }
+
+/* 筛选：粘在顶栏下面 */
+.gl-bar { position: sticky; top: 56px; z-index: 20; display: flex; flex-direction: column; gap: 12px; padding: 12px 0;
+  background: color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px) }
+.gl-fns { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--sunk); border: 1px solid var(--line-soft); width: max-content; max-width: 100%; overflow-x: auto; scrollbar-width: none }
+.gl-fns::-webkit-scrollbar { display: none }
+.gl-fn { flex: none; display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 16px; border: 0; border-radius: 999px; background: transparent; color: var(--ink-3); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; transition: color var(--mid) var(--ease), background var(--mid) var(--ease) }
+.gl-fn em { font-style: normal; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums }
+.gl-fn:hover { color: var(--ink) }
+.gl-fn.on { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgba(18,21,25,.08), 0 2px 8px rgba(18,21,25,.06) }
+.gl-fn.on em { color: var(--accent) }
+.gl-row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap }
+.gl-q { flex: 1; min-width: 200px; font: inherit; font-size: 14px; padding: 8px 16px; height: 40px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink) }
+.gl-q:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft) }
+.gl-toggle { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; color: var(--ink-2); cursor: pointer }
+.gl-cats, .gl-rev { display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px }
+.gl-cats::-webkit-scrollbar, .gl-rev::-webkit-scrollbar { display: none }
+.gl-chip { flex: none; font: inherit; font-size: 13px; height: 28px; padding: 0 12px; border-radius: 999px; border: 1px solid transparent; background: var(--sunk); color: var(--ink-2); cursor: pointer; white-space: nowrap }
+.gl-chip em { font-style: normal; color: var(--ink-3); margin-left: 4px; font-variant-numeric: tabular-nums }
+.gl-chip.on { border-color: var(--accent); background: var(--accent-soft); color: var(--accent) }
+.gl-chip.on em { color: var(--accent) }
+.gl-rev .gl-lab { flex: none; font-size: 12px; color: var(--ink-3); align-self: center }
+
+/* 瀑布流：每张图按自己的比例 */
+.gl-grid { columns: 260px; column-gap: 16px }
+.gl-card { break-inside: avoid; margin: 0 0 16px; display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); cursor: zoom-in; transition: transform var(--mid) var(--ease), box-shadow var(--mid) var(--ease), border-color var(--mid) var(--ease) }
+.gl-card:hover { transform: translateY(-4px); box-shadow: 0 1px 2px rgba(18,21,25,.06), 0 24px 48px -24px rgba(18,21,25,.35); border-color: var(--ink-3) }
+.gl-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px }
+.gl-card img { display: block; width: 100%; height: auto; background: var(--sunk) }
+.gl-card .ph { aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; background: var(--sunk); color: var(--ink-3); font-size: 13px }
+.gl-card .bd { padding: 12px 16px 16px; display: flex; flex-direction: column; gap: 4px }
+.gl-card b { font-size: 16px; line-height: 1.4 }
+.gl-card p { margin: 0; font-size: 13px; line-height: 1.6; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden }
+.gl-card small { font-size: 12px; color: var(--ink-3) }
+.gl-card.approve { border-color: var(--out); box-shadow: 0 0 0 1px var(--out) }
+.gl-card.redo { border-color: var(--hot); box-shadow: 0 0 0 1px var(--hot) }
+.gl-acts { display: flex; gap: 8px; padding: 0 16px 16px }
+.gl-acts button { flex: 1; font: inherit; font-size: 13px; font-weight: 600; height: 32px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer }
+.gl-acts .go { flex: 1; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; height: 32px; border-radius: 6px; border: 1px solid var(--line); color: var(--accent); text-decoration: none }
+.gl-acts .go:hover { background: var(--accent-soft); border-color: var(--accent) }
+.gl-use { align-self: flex-start; text-decoration: none }
+.gl-acts .ok:hover, .gl-acts .ok.on { background: var(--out-soft); border-color: var(--out); color: var(--out) }
+.gl-acts .no:hover, .gl-acts .no.on { background: var(--hot-soft); border-color: var(--hot); color: var(--hot) }
+.gl-empty { color: var(--ink-3); font-size: 14px; padding: 48px 0; text-align: center }
+.gl-more { text-align: center; margin: 0 }
+
+/* 详情 */
+.gl-box { width: min(1100px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); overflow: hidden }
+.gl-box::backdrop { background: var(--scrim) }
+.gl-box-in { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); max-height: calc(100vh - 48px) }
+.gl-box-img { background: var(--sunk); display: flex; align-items: center; justify-content: center; min-height: 0 }
+.gl-box-img img { max-width: 100%; max-height: calc(100vh - 48px); display: block; object-fit: contain }
+.gl-box-img .ph { color: var(--ink-3); font-size: 14px; padding: 48px }
+.gl-box-info { padding: 24px; display: flex; flex-direction: column; gap: 16px; overflow-y: auto; min-width: 0 }
+.gl-box-info h2 { margin: 0; font-size: 26px; line-height: 1.25; letter-spacing: -.01em }
+.gl-box-info .en { font-size: 13px; color: var(--ink-3); margin-top: -12px }
+.gl-box-info p { margin: 0; font-size: 14px; line-height: 1.75; color: var(--ink-2) }
+.gl-meta { display: flex; flex-wrap: wrap; gap: 8px }
+.gl-meta span { font-size: 12px; padding: 0 8px; line-height: 24px; border-radius: 999px; background: var(--sunk); color: var(--ink-2) }
+.gl-box-info details { border-top: 1px solid var(--line-soft); padding-top: 12px }
+.gl-box-info summary { font-size: 13px; font-weight: 600; color: var(--ink-2); cursor: pointer }
+.gl-box-info pre { margin: 8px 0 0; padding: 12px; border-radius: 6px; background: var(--sunk); font-family: var(--code); font-size: 12px; line-height: 1.6; white-space: pre-wrap; word-break: break-word; color: var(--ink-2); max-height: 260px; overflow: auto }
+.gl-note { font: inherit; font-size: 14px; min-height: 72px; padding: 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--sunk); color: var(--ink); resize: vertical }
+.gl-note:focus { outline: none; border-color: var(--accent); background: var(--surface) }
+.gl-box-acts { display: flex; gap: 8px; flex-wrap: wrap; align-items: center }
+.gl-box-acts .grow { flex: 1 }
+.gl-x { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); cursor: pointer; font-size: 16px }
+.gl-toast { position: fixed; left: 50%; bottom: 32px; z-index: 70; transform: translate(-50%, 16px); opacity: 0; padding: 12px 16px; border-radius: 999px; background: var(--ink); color: var(--ground); font-size: 13px; pointer-events: none; transition: opacity .25s var(--ease), transform .25s var(--ease) }
+.gl-toast.in { opacity: 1; transform: translate(-50%, 0) }
+
+@media (max-width: 760px) {
+  .gl-body { --gut: 16px }
+  .gl-grid { columns: 2; column-gap: 12px }
+  .gl-card { margin-bottom: 12px }
+  .gl-card .bd { padding: 8px 12px 12px }
+  .gl-card b { font-size: 14px }
+  .gl-acts { padding: 0 12px 12px }
+  .gl-box-in { grid-template-columns: 1fr; overflow-y: auto }
+  .gl-box-img img { max-height: 60vh }
+}
+@media (prefers-reduced-motion: reduce) { .gl-card, .gl-fn, .gl-toast { transition: none } .gl-card:hover { transform: none } }
+.gl-box-info .gl-lab { font-size: 13px; font-weight: 600; color: var(--ink-2); margin-bottom: -8px }

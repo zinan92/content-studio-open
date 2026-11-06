@@ -1,0 +1,53 @@
+/* 朋友圈（10/18）。颜色只用 :root 变量，强调色只有一个；字号 12/13/14/16/20/26/34，圆角 6/10/14/999，间距 4/8/12/16/24/32。 */
+.mo-body{--gut:32px;--max:1080px;background:var(--ground);color:var(--ink);overflow-x:hidden}
+.mo-top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px max(var(--gut),calc((100% - var(--max)) / 2 + var(--gut)));background:color-mix(in srgb,var(--ground) 86%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.mo-brand{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:14px}
+.mo-brand svg{width:24px;height:24px}
+.mo-brand .mo-dot{fill:var(--accent)}
+.mo-theme{width:32px;height:32px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer;font-size:14px}
+.mo-main{max-width:var(--max);margin:0 auto;padding:24px var(--gut) 96px}
+
+.mo-intake{padding:32px 0 24px}
+.mo-intake h1{margin:0;font-size:34px;line-height:1.2;font-weight:800;letter-spacing:-.02em}
+.mo-lede{margin:12px 0 24px;font-size:16px;line-height:1.7;color:var(--ink-2)}
+.mo-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.mo-row .btn{height:48px;padding:0 24px;font-size:16px;border-radius:10px}
+.mo-form{display:flex;gap:8px;flex:1;min-width:260px}
+.mo-form input{flex:1;min-width:0;height:48px;padding:0 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-size:16px}
+.mo-form input:focus{outline:2px solid var(--accent);outline-offset:-1px}
+.mo-msg{min-height:20px;margin:12px 0 0;font-size:13px;color:var(--ink-3)}
+.mo-msg.err{color:var(--warn)}
+
+.mo-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px}
+.mo-post{padding:24px;border:1px solid var(--line-soft);border-radius:14px;background:var(--surface)}
+.mo-post.new{border-color:var(--accent)}
+.mo-meta{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-3)}
+.mo-meta a{color:inherit}
+.mo-tag{padding:0 8px;line-height:24px;border-radius:999px;font-size:12px;background:var(--out-soft);color:var(--out)}
+.mo-post.new .mo-tag{background:var(--accent);color:var(--surface)}
+.mo-text{margin:12px 0 0;font-size:16px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.mo-text.open{display:block}
+.mo-more{margin-top:4px;padding:0;border:0;background:none;color:var(--ink-3);font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.mo-thumbs{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.mo-thumbs img{width:96px;height:96px;object-fit:cover;border-radius:10px;border:1px solid var(--line-soft);background:var(--ground)}
+.mo-actions{display:flex;gap:12px;align-items:center;margin-top:16px}
+.mo-actions .btn{height:40px;padding:0 16px;font-size:14px;border-radius:10px}
+
+.mo-packs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px;padding-top:24px;border-top:1px solid var(--line-soft)}
+.mo-pack{display:flex;flex-direction:column;gap:8px;min-width:0}
+.mo-pack h3{margin:0;font-size:14px;font-weight:700}
+.mo-field{display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:10px;background:var(--ground)}
+.mo-field-h{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:var(--ink-3)}
+.mo-field-h button{height:24px;padding:0 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink-2);font-size:12px;cursor:pointer}
+.mo-field p{margin:0;font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;max-height:160px;overflow:auto}
+.mo-pack .mo-thumbs img{width:64px;height:64px}
+.mo-note{margin:0;font-size:12px;line-height:1.6;color:var(--warn)}
+.mo-pack .btn{height:40px;font-size:14px;border-radius:10px}
+.mo-done{margin:0;font-size:12px;line-height:1.6;color:var(--out)}
+
+@media (max-width:760px){
+  .mo-body{--gut:16px}
+  .mo-intake h1{font-size:26px}
+  .mo-packs{grid-template-columns:1fr}
+  .mo-post{padding:16px}
+}

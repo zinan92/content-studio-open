@@ -1,0 +1,852 @@
+{
+  "source": {
+    "repo": "alchaincyf/huashu-art-motion",
+    "license": "MIT",
+    "url": "https://github.com/alchaincyf/huashu-art-motion",
+    "attribution": "花叔（alchaincyf）"
+  },
+  "function": "motion",
+  "grammars": [
+    {
+      "id": "hs-grammar-t1-3b1b",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "数学概念形变",
+      "name_en": "3Blue1Brown Mathematical Visualization",
+      "summary": "黑底上一个对象平滑变成另一个，颜色对应概念。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the 3Blue1Brown Mathematical Visualization animation grammar. Show one mathematical or conceptual object on pure black #000000; define exactly what becomes what before staging the sequence. Use Computer Modern-style serif mathematics and compatible Chinese serif text, thin clean lines and at most four stable semantic colors from blue #58C4DD, red #FC6255, yellow #FFFF00, teal #5CD0B3 and green #83C167, with gray support lines; the source boosts saturation by 1.5. Symbols and corresponding objects must share colors throughout. Begin with the object, not a title; keep no more than two textual points visible. Morph resampled, start-aligned shapes point by point using smooth quintic easing 6t^5-15t^4+10t^3, normally allowing 1–3 seconds per meaningful change and a readable stationary pause. Use linear stroke writing, slight stagger, purposeful signal flashes, matching-symbol replacements or an identified-object zoom-through rather than arbitrary cuts. Highlight the target before entering it, preserve continuity across transformations and hold the final conclusion. The camera moves only to inspect a new object and then stops. Do not add bloom, navy gradient backgrounds, decorative floating/breathing, endless slow zoom, bullet-list slides, inconsistent color meanings or mathematically incorrect connections; choose a small enough chain for ten seconds.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/t1_3b1b.md",
+      "preview": "assets/动画语法/t1_3b1b_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-t2-keynote-ui",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "发布会产品演示",
+      "name_en": "Keynote UI Motion",
+      "summary": "产品画面占主位，文字和数字跟着讲解逐个落定。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Keynote UI Motion animation grammar. Make the product itself the focal subject, with one noun, feature or number per screen. Use supplied product screenshots or product visuals at least 80% of landscape width or 90% of portrait width, zooming to the relevant detail; embed any supplied assets in the HTML. Follow the product's own brand colors instead of default purple-blue gradients. The source's optional presentation palette is near-black #050508/#08090a with primary white #f5f5f7 and secondary #a7a7b4; use Inter-like sans serif, 600-weight tight-tracked headings, fine rounded icons and restrained rounded geometry. Select at most two optional treatments among gradient light blobs, frosted glass, gradient lettering, centered blur reveals and floating decoration; settled cards themselves must stay still. Use critically damped or barely bouncing springs, 0.28-second purposeful pushes of 18–32%, 0.30-second same-scale pans and short number impacts. Time counters to finish when the narration says the value, count each number once and use tabular digits. Prefer shared-element expansion, match cuts or blur transitions with covered edges; new content inside an expanding card must be opaque immediately. Avoid tiny cards on empty backgrounds, repeating title/three-cards/number layouts, decorative idle drift, excessive spring bounce or using celebratory launch styling for serious bad news.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/t2_keynote_ui.md",
+      "preview": "assets/动画语法/t2_keynote_ui_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-t3-finance-chart",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "财经图表动画",
+      "name_en": "Finance Chart Animation",
+      "summary": "坐标系先出现，数据逐项长出，再标记一个重点。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Finance Chart Animation animation grammar. Stage each chart as axes first, data second and one conclusion annotation last. Use only supplied values, units and sources; if illustrative data is explicitly used, label it as such on every view. Keep ratios reproducible, distinguish growth-to from growth-by, start bars at zero and label any truncated non-bar axis. Use white #FFFFFF, salmon #FFF1E5 or a dark #0E1116 background matching the film; a red #E3120B rule, blue #006BA2 or cyan #3EBCD2 main series, gray #C6D2D8 secondary data and restrained horizontal gridlines. Use clear sans-serif labels and tabular numbers, with metric/unit subtitle and visible source. Grow bars from their baseline with staggered quintic-out easing, reveal lines by x/time rather than path length, synchronize labels and reveal event annotations only as the trace reaches them. Candles grow from open to close before wicks appear. State the market's up/down color convention or use blue/orange with direction symbols. Settle values on their spoken cue and hold at least 0.5 seconds; camera pushes are brief purposeful events followed by stillness. Never invent factual figures, distort magnitude through animation, morph between different measures, continuously drift over settled charts or repeat the same layout more than three times.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/t3_finance_chart.md",
+      "preview": "assets/动画语法/t3_finance_chart_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-y1-kurzgesagt",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "扁平科普",
+      "name_en": "Kurzgesagt Flat Explainer",
+      "summary": "抽象概念化成具体物体，镜头在不同尺度间穿行。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Kurzgesagt Flat Explainer animation grammar. Turn each abstract idea into a concrete visual metaphor and move between meaningful scales. Use flat unoutlined organic geometry with same-hue shadow planes, small highlight edges and restrained radial glow on actual light sources. Follow the source's corrected advice: use a flat deep-ink or navy base rather than copying its documented blue-purple gradient demo; combine that base with only two or three contrasting saturated accents such as cyan #32BAEE/#7DD3DC, orange-yellow #F48301/#E07919/#FACC12, magenta #BE3A95/#C83C7F and light #E7DFE1/#F9FCFB. Do not mix an older pale low-saturation palette with a modern dark palette within one scene. Layer scenery in depth, with foreground silhouettes and softly moving environmental stars, particles or clouds. Trigger at least one meaningful state change per narration sentence, with soft strong easing, staggered related elements and restrained pop overshoot. Keep settled subjects and labels still. Before logarithmic scale travel, highlight the target and hold it at least 0.3 seconds; pass through it or pull back to reveal a larger world, preserving spatial continuity. Avoid a generic glowing orange planet for every topic, idle subject floating, constant slow zoom, labels substituting for concrete objects or cartoon substitutes for documentary evidence.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/y1_kurzgesagt.md",
+      "preview": "assets/动画语法/y1_kurzgesagt_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-y2-vox",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "证据拼贴解说",
+      "name_en": "Vox Collage Explainer",
+      "summary": "照片和剪报铺在桌面上，镜头沿证据和标线移动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Vox Collage Explainer animation grammar. Build an editorial evidence collage from supplied real documents, screenshots, maps or photographs, embedding them in the single file; do not fabricate archives or quotes. Use static fibrous paper and restrained shadows, with near-black #171716, paper whites #E0DCDA/#EEEDED, map paper #E4DCCF, parchment #CFB195, line red #B65255/#b8433f, dark red #93403C and muted highlighter yellow #DACF08. Present large grayscale halftone photos with pale cut edges and translucent tape, torn yellowed clippings, serif source text and bold pale-on-dark labels. Camera travel is smooth and eased; individual marks, labels and map fills advance at 12 fps. Reveal evidence with varied cuts, zooms, pans, highlight sweeps, red connections and stamps; do not repeat slide-in/type/red-circle more than three times. Move the camera toward what must be read, using eased tracking or a brief purposeful push, then stop while annotations unfold in narration time. Draw readable text last above all objects, keep neighboring text from forming false combined statements and enact each factual event only once. No animated grain during holds, continuous camera drift, tiny photos stranded on a decorative desktop, springy document entrances everywhere or template paper-tear transitions masquerading as Vox grammar.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/y2_vox.md",
+      "preview": "assets/动画语法/y2_vox_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-y3-whiteboard",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "白板手绘解说",
+      "name_en": "RSA Animate Whiteboard",
+      "summary": "手随着讲解写字画图，最后拉远看见整张关系图。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the RSA Animate Whiteboard animation grammar. Use the RSA Animate mode consistently: one large planned whiteboard, black marker #0A0503 on #FBFBFB, with a single orange emphasis #EB701F/#F3742D or #EF7226. Use slightly irregular roughly 6–7-pixel lines at 1080p, thinner hatched shading, clear handwritten print and picture-led visual metaphors; keep quoted narration text under half the simultaneous spoken words and avoid more than one full handwritten sentence per region. Plan the final relationship map first. A right hand and marker enter from the lower right, with the nib leading the visible stroke reveal; move the hand offscreen during long gaps. Write body text around 16 characters per second and draw small icons over 0.5–1 second, adapting density to the ten-second excerpt. Reveal strokes with eased starts/ends and short pen lifts, moving between board regions with sine-eased pans that retain spatial overlap; finish by pulling back to the whole argument and holding. Keep solid lines for occurred events, dashed lines for plans and dotted lines for cross-section links. Ink stays until erased, never fades decoratively. Do not mix hard-cut paper-page grammar, move into speech bubbles as a default transition, let the nib drift away from revealed marks, repeat identical block layouts or fill the board with transcription instead of visual reasoning. RSA narration has no music bed.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/y3_whiteboard.md",
+      "preview": "assets/动画语法/y3_whiteboard_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-y4-storytime",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "简笔角色讲故事",
+      "name_en": "Storytime Character Animation",
+      "summary": "简笔角色快切姿势后定住，用反应特写配合口播。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Storytime Character Animation animation grammar. Treat narration as the lead performance and draw simple expressive pose-to-pose reaction images. Use rounded heads and bean-shaped bodies, blunt tubular arms, minimal hands, thick dark character contours #1B1B1F at least twice the background line weight, skin #FFE2CC, white clothing, low-saturation background blocks #DCE9EC/#E2C29B/#E8DCC8 and a darker reaction backdrop #3D405B. Keep backgrounds to three to five large shapes and preserve the supplied protagonist's identifying features rather than importing the source demo's identity. Cut poses in roughly 0.10 seconds and hold for 0.4–0.7 seconds; use only slight settling squash if needed. Align closed/half/open mouths to speech at a maximum of 12 changes per second and close the mouth during silence. Favor medium shots, hard cuts, jump-ins, a brief whip toward the object being discussed and smash cuts to large reaction faces; a sudden wide shot can convey helplessness. Put reaction shots in 0.8–1.5-second silent gaps, let punchlines hold at least 0.9 seconds and finish sound tails naturally. Characters are already in position on the first frame; props and symbols may pop in. Avoid smoothing every pose, constant idle camera push, overactive subtitles, narration through the reaction pause or cuts that interrupt a spoken phrase.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/y4_storytime.md",
+      "preview": "assets/动画语法/y4_storytime_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-y5-kinetic-type",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "动态文字排版",
+      "name_en": "Kinetic Typography",
+      "summary": "关键词踩着重音进入画面，字落定后保持不动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Kinetic Typography animation grammar. Make the words the actors: one dominant stressed keyword at a time, no more than four Chinese characters or comparably brief text, with a supporting line no longer than fourteen Chinese characters. Use a main/support/label size hierarchy near 3.4:1:0.4, heavy sans serif, generous margins and chapter-colored flat backgrounds: yellow #FFD23F, coral #FF5A36, navy #14213D or cream #F4EFE6, with ink #111111 and white; use only one active accent, with blue #3A86FF or green #2BB673 when semantically needed. Use circles, clipped highlighter bands, simple cards and a low-opacity dot grid. Slam main words from about 1.7x scale with a small overshoot that settles around 0.35 seconds, raise supporting text through a baseline mask, pop symbols and slide evidence cards. Tie every event to a spoken stress or a beat grid such as the source's 120 BPM; align the new scene's actual reveal, not the transition's start, to the strong beat. Words stay fixed after landing; movement comes from short beat punches, background dots and transitions. Exit faster than entering, vary layouts within three pages, preserve readable holds and end with a clear final beat and pause. No outlined/shadowed lettering, equal-size text walls, simultaneously entering everything or continuously drifting words.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/y5_kinetic_type.md",
+      "preview": "assets/动画语法/y5_kinetic_type_总览.jpg",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-grammar-y6-presenter-explainer",
+      "function": "grammar",
+      "category": "动画语法",
+      "name": "卡通讲解员科普",
+      "name_en": "Presenter Explainer",
+      "summary": "卡通讲解员在纸面、图表和关键词之间切换姿势。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript using the Presenter Explainer animation grammar. Use the source's presenter-led explainer grammar with a cartoon presenter moving between paper, charts and keywords. Required source material is user-supplied character frames and voiceover; this card supplies neither and must not be treated as a ready-made film. Embed the supplied full-body and bust frames and audio in the single HTML file; use actual supplied sitting or leaning poses where those actions are required rather than stretching an unrelated frame. The source does not prescribe a fixed palette or surface treatment beyond the paper/chart context, so follow the supplied character and material colors consistently. Vary side-on presentation, full-screen numbers, side-by-side comparison, the presenter entering the diagram and reaction close-ups instead of keeping a person-left/chart-right layout throughout. Normalize pose heights, anchor full-body figures at their feet and change poses with hard cuts and a slight pop, never contour dissolves that produce double images. Synchronize speaking/closed-mouth frames with voiceover, stop mouth motion in pauses and use a complete walk cycle for walking. Numbers settle when spoken; do not display 'more than' or '+' before the counter reaches the claimed value, and reveal emphasis rings afterward. Reserve pauses after highlights, share one clock across years, captions and headings, reset each scene's character position/scale explicitly, preserve outer fade opacity in nested drawing and use scene-camera movement rather than enlarging full-frame bitmaps. Keep people from covering text or being cropped during pushes.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/动画语法/y6_presenter_explainer.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [
+        "character-frames",
+        "voiceover"
+      ],
+      "listed": false
+    }
+  ],
+  "styles": [
+    {
+      "id": "hs-cave",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "洞穴岩画",
+      "name_en": "Cave Painting",
+      "summary": "岩壁上的赭石剪影和炭笔毛边随火光明暗变化。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Cave Painting style. Use porous, softly relieved rock in #ce925a, #6e4426 and #b6643a; charcoal #21150d, red ochre #9c3520/#74261a, yellow ochre #c9772f, golden ochre #cf8f2c/#6e3c0e, hide brown #b06a2c/#4e2610 and chalk #f0dfbf. Make silhouettes with solid charcoal centers, dusty sprayed edges, pigment holes, dry/wet patches and rock texture absorbed into the paint. Add incised cracks with a small light offset and negative hand stencils where appropriate. Animate warm firelight using overlay, breathing edge darkness, rising #ffe082 embers and two-pose animal or character motion; let charcoal grains shift at 9 fps while geometry stays stable. Use local gestures, head movement and silhouette motion to carry the script. Keep medium-frequency rock relief subtle: strong relief looks like camouflage. Do not multiply the pigment layer, which erases chalk, or use additive firelight that washes ochres pink-white; do not replace local action with full-screen flashing.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/01_cave.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-egypt",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "埃及墓室壁画",
+      "name_en": "Egyptian Tomb Painting",
+      "summary": "侧脸正面眼的平面人物配象形字和矿物色。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Egyptian Tomb Painting style. Use a flat, perspective-free Egyptian mural on aged plaster #eadcb8/#d8c597, outlined with clean dark brown #2a1810 lines. Use mineral red #b8322a, blue #2a58a8, yellow #e2b13a, green #2e8a55, cream #f2ead6 and gold #e0ab38/#a8741c/#f3d27a; reserve #1c2236 for dark bands and #c8372b for the sun disk. Render profile heads with frontal almond eyes and frontal shoulders; linen is translucent white with fine pleats, hair is braided strips with diagonal segments. Frame the narrative with varied hieroglyph columns and colored borders. Animate hieroglyph strokes being written with brief gold afterglow, 12-fps stepped water signs, opening ray-tip hands, pulsing rays around a red disk, a rolling solar ball and two-pose scarab legs, plus clear local character gestures. Keep outlines stable, without boiling brushwork or volumetric perspective. Avoid adjacent repeated glyphs and excessive scarabs, bead-like hair, isolated pillar-like limbs, cropped ray hands or characters colliding with frames; preserve the disk's red core by placing glow outside it.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/02_egypt.md",
+      "preview": "assets/showcase/egypt.gif",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-greek",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "阿提卡黑绘陶器",
+      "name_en": "Attic Black-figure Pottery",
+      "summary": "陶土底上画黑色剪影，细刻线和回纹带缓慢移动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Attic Black-figure Pottery style. Render Attic black-figure pottery with warm terracotta #dc6a2f/#e8803f, black glaze silhouettes #1b120d, fine incised orange lines #e8904c, added purple-red bands #8a2a37 and white dots #f6ead6; secondary ochres are #f2bd48, #f2913f and cream #f3cfa4. Use horizontal throwing marks, sparse pits, incised cracks and warm vignetting. Every figure follows the same black-glaze, incision and added-color method; divide white areas with white paint #efe1c8 and dark overlaps with incised lines. Scroll the upper meander and lower alternating lotus bands in opposite directions using their full repeat periods and continuous phase drift; animate small swimming silhouettes, rocking boats, a gently swinging lyre, rotating rosettes and thin curling steam when relevant. Use irregular-height hand-drawn inscriptions and shallow period vessels. Avoid bright modern cartoon figures, overlapping black faces/hands/props without separating incisions, large props hiding the profile, and scrolling exactly whole periods with indistinguishable sampled frames.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/03_greek.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-roman",
+      "function": "motion",
+      "category": "材料层",
+      "name": "庞贝马赛克",
+      "name_en": "Pompeian Mosaic",
+      "summary": "小石块顺轮廓拼成图像，波浪边框循环流动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Pompeian Mosaic style. Build a Pompeian stone mosaic with tesserae aligned along contours, irregular cut edges, close-packed mortar gaps about 1.5–2.5 px at 1080p, and upper-left bevel lighting. Use wall #e4ddcd, white contour halos #f5f1e8, outline #46322a, red #a8322a/#7c221d, gold #d0a23c, blue-violet #7c84b8/#4e5796/#2f3672, sky #9ec0d8/#d3e3e4, green #6f9341/#92b254, ochre #cba344 and lava #d64a22/#f2952c. Keep the main stone layout fixed while moving narrative colors through it; for legible moving borders use seamless clockwise tessera conveyor strips with static corner blocks, following the source's final revision. Animate drifting smoke, sparks, rippling wave borders and clear figure gestures. Use finer stones for faces and independent tiny-tessera inlays for small moving props, with thick monoline lettering about two stones wide. Avoid sparse mortar-dominated layouts, detail patches with different wall tile sizes, half-updated stones at animation bounds, and fine serif strokes that disappear. Composite pixel rendering through an offscreen canvas so camera transforms and clipping still apply.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/04_roman.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-gothic",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "哥特泥金手抄本",
+      "name_en": "Gothic Illuminated Manuscript",
+      "summary": "羊皮纸上的金箔、细线人物和藤蔓随光闪动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Gothic Illuminated Manuscript style. Make a Gothic illuminated manuscript on parchment, with gold leaf ranging #9c6a1a through #d9a63a to #f8de86, red robes, blue cloaks, cream faces and jewel-like stained glass. Give gold fine horizontal burnishing, engraved diamond embossing, bright offset cuts and faint square leaf seams. Use pointed arches, slender pinnacles, dense ivy ornament and blackletter with red initials; keep faces and poses medieval rather than modern naturalistic. Sweep a diagonal highlight at constant speed only across gold, with small four-point stars appearing as it passes. Animate dense vine and leaf sways, stained-glass glints, a crawling snail, scampering or pendulum-like marginal creatures and localized character gestures with fine ink steam. Preserve clear material separation: mask gold by its color so parchment and pink areas do not glitter. Avoid an eased sweep that leaves the gold before the important gesture, sparse miniature foliage, modern handled mugs where a period chalice is appropriate, and overlapping costume/halo layers in the wrong order.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/05_gothic.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-renaissance",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "文艺复兴晕涂",
+      "name_en": "Renaissance Sfumato",
+      "summary": "柔和晕涂的人物配旧画布纹理和细微浮尘。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Renaissance Sfumato style. Use High Renaissance oil painting with sfumato, warm dark walls #43321f/#22180e, perspective tiles #a88c64/#5c2418 and atmospheric distant blue-gray mountains #9fb4b8/#7d9294. Model figures without contour lines using soft volume gradients, velvet light bands, gentle skin shadows, subdued red folds and warm glazing. Add subtle canvas weave, random low-opacity oil strokes and fine craquelure with a faint raised light edge. Keep faces readable with a lightly softened layer plus a predominantly clear layer, following the final revision. Animate river glints, birds or a ribbed bat-wing ornithopter as script-appropriate motifs, softly blurred window-light wedges, drifting dust, cloud-shadow changes and restrained hair, head and hand gestures. Avoid swirling high-contrast impasto that reads as Van Gogh, sharp polygonal light beams, bright graphic floor tiles, heavy inner shadows that make pale forms glassy, or a blurred protagonist against a sharper background.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/06_renaissance.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-impressionism",
+      "function": "motion",
+      "category": "材料层",
+      "name": "印象派",
+      "name_en": "Impressionism",
+      "summary": "粉彩短笔触拼出光色，光斑和草叶轻轻移动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Impressionism style. Use bright Impressionist broken color with pale ground #f2e6ee, pink-lilac walls #d8bede/#f0c8cc/#f2c4d4, warm cream sunlight, rose-orange-purple floors, blue-violet whites and garden greens punctuated by poppy red. Repaint broad areas with short unoutlined strokes, using finer strokes for distant scenes and small pictures; walls incline toward the light, floors run horizontally, cloth vertically, foliage radiates and water uses horizontal marks. Preserve white structural frames and saturated flower accents. Figures carry fine internal strokes and only delicate violet facial marks, never heavy outlines. Following the source's final revision, keep brush positions and per-cell random seeds fixed, including during masks and palette changes. Movement comes from drifting and irregularly flickering light patches, wind-bent flowers, moving clouds, billowing curtains, foliage, ribbons and local head/tail gestures. Do not regenerate the entire brush field at 8 fps, let coarse strokes erase small objects, recolor white frames into walls, or leave dark default contour strokes on faces.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/08_impressionism.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-postimp",
+      "function": "motion",
+      "category": "材料层",
+      "name": "梵高笔触",
+      "name_en": "Van Gogh Post-Impressionism",
+      "summary": "粗短笔触顺流场旋转，星空和光晕持续涌动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Van Gogh Post-Impressionism style. Use Van Gogh-like directional impasto with dark-blue drawn structure and region-specific palettes: walls #7f9be6/#5f7fd8/#a7bbf2/#6c6fd2/#8ad0e6/#c3cbf6/#4f6cc8/#9a8fe0, sky #22339a/#2f4fb8/#5c86dc/#8fb6ee/#1b2a78/#3c6bd0 and floor #c0573c/#a8453a/#d7774a/#8e3b30/#5f8f6a/#c96a52/#e08a5c. Use separate stroke passes: long near-vertical wall strokes, perspective-directed floor strokes and shorter strokes elsewhere; stars follow rotating vortex tangents and lamp halos run circumferentially. Render props and figures on separate layers with finer internal strokes, then restore lines and facial details. Animate 8-fps line/stroke boiling, rotating sky vortices, expanding dashed lamp halos, star flicker, curling steam and spiral markings rotating slowly on suitable subjects. Never use one brush scale over the whole frame, break small props with coarse strokes, or substitute brightness jitter within one blue for the source's varied regional hues.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/09_postimp.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-nouveau",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "慕夏新艺术",
+      "name_en": "Mucha Art Nouveau",
+      "summary": "粗细变化的曲线围住人物，花朵与发丝轻摆。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Mucha Art Nouveau style. Create a Mucha-style Art Nouveau lithographic poster with gray-green to peach ground #b9cba0/#cfd3a6/#ecc9a2, dark-brown lines #4e3320, gold #c9a24a/#9c7a2e, cream #f6eedb, pink #e6aaa5/#d48e8c, poppy coral #d9706a/#b4504b and wrought-iron green #3d7763. Use mottled printed paper, decorated gold frames, circular haloes, stained-glass borders, and whiplash ribbons whose widths taper at both ends. Figures have thick outer silhouettes and fine internal lines, drawn in occlusion order. Animate a rising sun and rotating rays, swaying flowers, counter-rotating halo rings, S-shaped hair waves ending in spirals and broad curling steam that leans away from faces. Hair starts as one mass with narrow individual curls, not thick sausage-like strips. Do not redraw hidden body outlines over foreground limbs, send steam through faces or lose the lithographic flatness to photoreal shading.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/10_nouveau.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-cubism",
+      "function": "motion",
+      "category": "材料层",
+      "name": "分析立体主义",
+      "name_en": "Analytical Cubism",
+      "summary": "半透明几何切面错位叠合，同一张脸有多个视角。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Analytical Cubism style. Use analytical Cubism with paper #d6c8ac, cream #ece3cf, ochre #b8975f, brown #6e5538/#3a2c1e, gray #a8a395/#5a5852 and blue-gray #8e9eab. Build overlapping translucent angular planes with a light and dark gradient on each, Braque-like short sandy dashes, hatching, newspaper fragments, combed faux wood grain and caning. Fragment subjects into large uneven facets extending past the silhouette, combine profile heads with frontal eyes and let thin straight structure lines overrun edges. Animate independently offset window facets, 12-fps stencil-letter permutations, subtle 8-fps newspaper/facet jitter, folds and sliding transparent foreground planes that embed subjects in space. Keep dark sleeves distinct from nearby clothing. Avoid tiny uniform triangles that read as low-poly 3D, smooth untouched silhouettes, hair-colored facets spilling into faces or compositing that leaves figures pasted onto the background. Use deterministic per-frame drawing state and stable pixel sampling so the same timestamp renders identically.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/11_cubism.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-bauhaus",
+      "function": "motion",
+      "category": "材料层",
+      "name": "包豪斯海报",
+      "name_en": "Bauhaus Poster",
+      "summary": "红黄蓝几何块和关节圆盘组成会动的构图。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Bauhaus Poster style. Use a Bauhaus print on aged cream paper #ebe3cf with black #161514, red #d3262b, blue #2a58b4, yellow #efc12f, pale blue #b9cee0/#a6c0da, gray #c6c3bb, cream #f2ecdf and orange #ee8a2a/#c25a14. Combine circles, squares, triangles, thick rods, asymmetrical oversized geometric type, Schlemmer-like jointed figures and chrome tubular furniture #c9c9c6. Add uneven print ink and restrained paper grain. Animate a long pivoted black pointer, staggered 13-fps primary-color grid changes, expanding concentric arcs, geometric paws or hands nudging a rolling ball whose rotation equals distance/radius, and fine sinusoidal steam. Use circle joints and block-shaped features; no naturalistic curved contour drawing. Do not cycle grid cells to black, which produces abrupt dead squares; calculate cells from inner frame size, keep short mouth marks inside heads and keep geometric subjects aligned across transitions.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/12_bauhaus.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-pop",
+      "function": "motion",
+      "category": "材料层",
+      "name": "漫画波普",
+      "name_en": "Pop Art",
+      "summary": "粗黑轮廓和本戴网点配跳动的拟声字框。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Pop Art style. Render 1960s Lichtenstein/Warhol Pop Art with coarse black outlines #141414, paper #f3eedb, blue #2f5cc8, yellow #f7d52c, red #d8232a/#a8161c and warm white #fbf8ee. Use regular 45-degree Ben-Day dots, red #e2483c skin dots over #fae0cc, flat fills, black diagonal shadow hatching, thick short white highlights and sculptural yellow curls #f8d62c/#d9a514 with black C-shaped lines. Frame story beats as comic panels and four-panel screenprints with lime #9ccf3a, pink #e0359a, teal #2fc0b0 and orange #f08a2a. Animate 11-fps color cycling, sequential thought-bubble dots, jittering burst captions, pulsing action lines and exaggerated local anticipation gestures. Keep halftone patterns aligned rather than swimming across moving characters. Draw burst and bubble silhouettes as unions, not visibly overlapping circles; avoid flat blanket-like hair, detached heads above compressed bodies and modern smooth gradient shading.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/13_pop.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-8bit",
+      "function": "motion",
+      "category": "材料层",
+      "name": "八位像素游戏",
+      "name_en": "8-bit Pixel Art",
+      "summary": "低分辨率硬边像素用有限色板逐帧跳动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the 8-bit Pixel Art style. Render the whole scene on a 240x135 low-resolution canvas and upscale with nearest-neighbor sampling, with crisp integer pixels, a limited 14-color character palette and one-pixel black outlines around each separate body part. Use three sky blues #0856ef/#47c4f8/#aae9fb with checkerboard dithering, cream brick highlights #fbe2a6 and deep blue #0838a8 for shadowed clothing; draw faces, mugs and HUD icons as explicit pixel sprites. Background materials are cross-dot wallpaper, staggered bricks and black-seamed wood planks. Animate stepped poses rather than smooth tweening: four-pose tails at 15 fps, integer-pixel leaf shakes, clouds moving one pixel every two frames, blinking hearts, coins popping in short arcs and looping pixel steam. Preserve internal part outlines so hair, face and arms remain legible. Do not use antialiasing, filtered scaling or blurred tiny props; never divide non-premultiplied RGBA by alpha again, and check sprite heads against window sills.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/14_8bit.md",
+      "preview": "assets/showcase/pixel.gif",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-raytrace",
+      "function": "motion",
+      "category": "材料层",
+      "name": "早期光追电脑动画",
+      "name_en": "Early Ray-traced CGI",
+      "summary": "塑料色物体、铬球和棋盘倒影带早期电脑画面感。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Early Ray-traced CGI style. Imitate early-1990s raytraced CGI using glossy plastic volumes, narrow Phong highlight bands, hard white elliptical specular spots, teal reflected rims and chrome/transparent-glass props. Use teal walls #7dbcb9/#64a6a6/#3f8285, a pink-purple sunset #a24cc4/#df62ae/#f5a08a/#f8c070, wireframe mountains and a perspective checkerboard floor fading into mist. Construct toy-like ball joints and cylindrical limbs with crosswise shading; smooth organic silhouettes before adding soft printed stripes. Animate a rotating violet torus, environment-mapped chrome sphere, sliding glass-table reflection, pulsing sun core, rotating star rays, lens ghosts and small local character gestures. Mirror objects around their own contact lines; composite each reflection as a single translucent layer so overlapping pieces do not become opaque. Keep the first frame fully drawn rather than blank or faded in, and avoid angular unsoftened bodies that undermine glossy plastic volume.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/15_raytrace.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-2026",
+      "function": "motion",
+      "category": "材料层",
+      "name": "当代扁平插画",
+      "name_en": "Contemporary Flat Illustration",
+      "summary": "无描边色块带颗粒纹理，角色动作有回弹。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Contemporary Flat Illustration style. Use contemporary flat vector illustration with solid unoutlined shapes, same-hue darker planes, coral highlight #f08b7d, golden-orange #f3ad4c, pink circles, lavender shapes and position-dependent stippled grain. Keep grain static and clipped to shapes; use a cached dotted light cone attached to the swinging lamp. Translate the script into clear poses with enlarged heads, simple changing facial expressions, anticipation, squash-and-stretch anchored to the feet, curved leaps and impact reactions. Use hard facing-direction snaps at the most compressed pose, overshooting recoveries, delayed hair or accessory follow-through, damped lamp/plant motion, gently passing clouds and rotating sun rays. Where the script calls for an impact, add expanding lines, parabolic fragments that stop at the floor and spreading liquid marks; do not import the source's fixed cat-and-cup story. Solve contact targets after body transforms so hands or paws hit the actual prop, keep contact points planted and prevent fine decorative motion from replacing the story action.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/16_2026.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-ink",
+      "function": "motion",
+      "category": "材料层",
+      "name": "中国水墨写意",
+      "name_en": "Chinese Ink Wash",
+      "summary": "毛笔飞白和墨晕在留白纸面上写出形状。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Chinese Ink Wash style. Use Chinese freehand ink on fibrous xuan paper #efe6d0, ink RGB(16,14,12) in five densities, ochre #c47a3c, indigo #6f8aa0/#7d97ab and gamboge, with sparing rouge RGB(190,40,40), vermilion sun #d8553f and seal #c4281e. Construct pressure-sensitive brush ribbons with taper, continuous bristles and dry gaps exposing paper; washes spread outward and multiply into the paper. Carve white regions out to reveal paper rather than painting opaque white. Begin with several marks already present, then reveal strokes in sequence and allow ink halos to diffuse. Animate swaying segmented bamboo and leaves, horizontal paper-colored mist, quick ink birds, softly swimming segmented shrimp where appropriate, thin steam and a seal pressing down. Avoid segmented round-capped bristles that look like rope, a blank opening frame, or underlying architecture bleeding through foreground figures: reserve those silhouettes with paper before adding transparent wash. Cache completed strokes and keep moving silhouettes unobscured by foliage.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/17_ink.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-klimt",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "克里姆特金色时期",
+      "name_en": "Klimt Golden Period",
+      "summary": "写实脸搭配平面金袍，金箔和螺旋纹样闪动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Klimt Golden Period style. Use Klimt's golden-period contrast between flat ornament and softly modeled faces/hands. Build leaf gold from RGB(120,78,18), RGB(196,148,52) and RGB(246,216,128), with burnished horizontal texture, square seams, brown-gold mottling and tiny metallic grains. Add black-white rectangles, colored concentric circles, dark gold spirals, eye motifs, red hearts, a flower carpet and birch-like dotted foliage. Skin ranges #fbe8da/#f0cfb8/#d8a88c/#b88068 with restrained contours. Animate rotating spirals, occasional patterned-eye blinks, falling leaves, swaying flowers, a low-opacity diagonal gold sweep at constant speed, small rising gold dust and turning falling foil fragments. Clip all robe patterns together to its silhouette. Do not apply source-in to each motif separately, use large Christmas-like sparkles, turn the sweep into a strong lens flare, or cover faces in dense spirals; keep decorations on clothing/body and retain enough localized motion during soft-light pauses.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/18_klimt.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-munch",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "蒙克表现主义",
+      "name_en": "Munch Expressionism",
+      "summary": "长弯笔触和血色天空一起扭动，轮廓像在波动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Munch Expressionism style. Use Munch-like Expressionism with thin, long, translucent, unoutlined flowing strokes over matching base color; wall tones run #a8401e to #5a1a14, and blood-sky bands alternate #e2541c/#f08a24/#f4c03a/#c8301e/#e8743a/#f6a63a/#b82a1e. Let sky ribbons undulate, fjord strokes curl around a center, walls bend vertically and floors converge toward a vanishing point. Warp the whole painted world gently in rows and columns so figures, furniture and architecture share the unease; animate waving hair, trembling contours and expressive open-mouth or cheek-clutching gestures when warranted by the script. Use muted dark period clothing, yellow-green facial shadow and an old-style serif such as IM Fell English. Avoid short, dark-outlined caterpillar strokes that look like Van Gogh, comic handwriting, black gaps between strokes, dark exposed edges after warping or background outlines cutting through foreground arms; overscan beyond the maximum displacement.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/19_munch.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-dunhuang",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "敦煌壁画",
+      "name_en": "Dunhuang Mural",
+      "summary": "土红底和褪色矿物颜料上，飞天飘带缓缓移动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Dunhuang Mural style. Render a Tang-era Dunhuang mural on aged earth-red plaster #a5452f/#7a3020, with mineral green #3f8f6e/#6ab08e, azurite #2f5f8f/#5a86b0, chalk #ecdfc4 and gold #d8b05a. Use even iron-wire contours #5a2414, redder facial lines #8a3a24, scrolling floral borders, lotus tiles and restrained Tang hair and makeup. Animate airborne figures and large flowing silk ribbons with upward curling tips, drifting cloud tails, falling rotating petals, flickering oil-lamp flames, small pigment flakes and dangling bells. Materials show muted saturation, broad irregular plaster losses, fine cracks and smoke-darkened upper walls; protect faces and foreground subjects from flaking. Avoid tiny sesame-like distress specks, heavy cheek marks resembling scars, opaque circular haloes resembling swim rings, and narrow vertical sashes reading as chair bars. Ribbons must travel outward in a broad wave, and character movement must extend beyond a lone swaying tail.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/20_dunhuang.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-kusama",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "草间弥生波点",
+      "name_en": "Kusama Polka Dots",
+      "summary": "密集手绘圆点一圈圈胀缩，形成重复的波点空间。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Kusama Polka Dots style. Use an infinite-dot environment of saturated red and white, yellow pumpkins with black dots, and orange/white subjects. Lay large and small irregular elliptical dots on staggered hexagonal grids, with perspective-flattened dots on the floor; animate dot radius as an outward traveling wave from the script's focal subject, making the room breathe. Let dots crawl down clothing masks and use slight base-anchored squash on lobed pumpkins. Show an infinity-mirror inset as a regular three-dimensional lattice of colored lights with small solid cores and restrained halos moving toward the viewer. For a self-obliteration ending, transition to a red field of breathing white dots and hold, capping radii below half the spacing. Do not grow dots until they become a blank white screen, scatter lights into indistinct bokeh or let red-white clothes vanish into a matching wall; preserve figure outlines and white/orange boundaries.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/21_kusama.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-constructivism",
+      "function": "motion",
+      "category": "材料层",
+      "name": "俄国构成主义",
+      "name_en": "Russian Constructivism",
+      "summary": "红楔黑圆配灰度网点照片，方块字逐字盖上。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Russian Constructivism style. Create a Russian Constructivist poster in aged paper #e9dfc4/#d9c9a4, red #c8231c/#8f1711, black #151311, cream #f4ecd6 and limited ochre #e3b03e/#a87a1c or orange #e2741c. Combine diagonal bars, wedges, circles, geometric lettering, grayscale halftone photo-like cutouts with cream cut edges, and flat colored clothing. Use crisp line structures over dotted imagery, such as industrial towers. Animate a red wedge thrusting into a black circle, traveling dashed rings, expanding radio arcs, sequential stamped letters that settle and bounce in a wave, tied fabric tails and angular rising steam. Keep type above figures when it carries the message, draw overlapping letter components separately and contain diacritics within their glyph boxes. Avoid cropped slogans, overly dark halftone cheek shadows that read as facial hair, illegible geometric glyphs or replacing the raw print/collage surface with glossy 3D.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/22_constructivism.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-dali",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "达利超现实主义",
+      "name_en": "Dali Surrealism",
+      "summary": "软钟向下流淌，拉长的影子和长腿形体缓慢移动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Dali Surrealism style. Use Dali-like surreal academic modeling without contour lines, with sky #22407c/#5f88bd/#e9dcae, sea #8aa6b8/#4f6f86, rock #e8c27a/#9a6a34, ground #d2ad70/#7a5129, wall #f4ead2/#cdbf9f and soft-clock gold #f0d27c/#9a7426 around ivory #f6efd6. Build smooth volume gradients and internal occlusion, a barren distant horizon and sharply legible elongated shadows. Animate soft watch forms sagging like draped cloth, with dial, rim, numerals and hands following the same deformation; let the lower edge spread outward, not taper to a cone. Add differently rotating hands, thin-legged distant walkers, circling ants and slowly lengthening cast shadows as script-appropriate motifs. Project shadows backward across the ground beneath wall and furniture layers, combining silhouettes before applying opacity. Avoid ice-cream-cone clocks, shadows cut off toward the viewer, outlined cartoon figures and labels without sufficient contrast.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/23_dali.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-hopper",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "霍珀硬光块面",
+      "name_en": "Hopper American Realism",
+      "summary": "硬边阳光块在墙面和人物上缓慢扫过。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Hopper American Realism style. Use Hopper's hard-edged light planes, quiet architectural space and restrained oil texture. Paint paired shadow/lit versions: walls #5d8679 versus #efcf8f, paneling #4b6d63 versus #d8ad68, floors #5b3d2b versus #c98b52; accents include dress reds #7a2c2a/#cc4a3c, hair ochres #a8893f/#f3d67e and brick #b4553a. Reveal the lit version through slowly moving polygonal window-light masks with crisp edges, letting the same band cross figures and furnishings. Project each figure's silhouette into the wall's shadow palette in synchrony with its pose. Keep brush marks barely visible, elongated mostly vertically, with slight diagonal grain. Animate the light patch as the main event, plus a rotating striped sign, a lightly swinging blind cord, dust confined to the beam and rising steam where appropriate. Avoid strong horizontal noise that reads as marble or water, flat overly bright walls, or neutral-gray pale subject areas that lose their warm identity.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/24_hopper.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-ghibli",
+      "function": "motion",
+      "category": "材料层",
+      "name": "吉卜力水彩背景",
+      "name_en": "Ghibli Watercolor Background",
+      "summary": "水彩洗染背景配赛璐璐阴影，纱帘与草叶随风摆。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Ghibli Watercolor Background style. Use luminous hand-painted watercolor backgrounds with warm cream #fbf3e0 near windows fading to #dcc49a in corners, layered pale yellow, pink, blue-gray and green blooms, visible paper fibers and pigment-deposit water edges. Combine this with two-tone cel figures and softened warm-brown outlines #6a4a38, clipping subtle watercolor blooms and grain into the figures so they belong to the background. Use warm orange/cream animals and teal, white and red fabric accents as appropriate. Animate billowing sheer curtains with fixed watercolor seeds, a traveling wind wave through grass, slowly drifting clouds, swaying trees, moving dappled light, nodding flowers, hair, ribbons and cloth edges. Paint white material opaquely rather than multiplying it away. Avoid moldy parchment darkness from excessive layered blooms, hard seams between rectangular washes, static curtains and clean vector characters pasted on textured scenery.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/25_ghibli.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-vaporwave",
+      "function": "motion",
+      "category": "材料层",
+      "name": "蒸汽波霓虹",
+      "name_en": "Vaporwave / Cyber Neon",
+      "summary": "双色霓虹、滚动透视网格和录像带色偏叠在一起。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Vaporwave / Cyber Neon style. Use vaporwave neon in magenta #ff4fd8, hot pink #ff2f8f, cyan #3ff6ff, deep purple #12052a/#2a0b4a, sun yellow #ffd84a and orange #ff8a3a. Make neon tubes with blurred colored halos and near-white narrow cores, a horizontally slashed gradient sun, glowing wireframe mountains and perspective grids rolling toward the viewer. Add marbled sculpture and period gray/navy desktop-dialog motifs where the script calls for them. Animate the sun drifting, palm silhouettes swaying, intermittent tube-letter flicker and progress indicators; composite VHS RGB separation, a downward tracking-noise band, restrained scanlines and stepped timecode/PLAY blink. Keep clothing distinct from pink-tinted skin, using the source's corrected lavender #8f7cf6 with a white collar and cyan seam rather than skin-like pink. Draw unsupported signs or glyphs explicitly; do not trust silent font fallback, and use a silhouette outline pass if internal seams should not glow.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/26_vaporwave.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-kirby",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "柯比银河漫画",
+      "name_en": "Jack Kirby Cosmic Comics",
+      "summary": "四色网点、粗黑阴影和能量圆点组成漫画分格。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Jack Kirby Cosmic Comics style. Create a 1960s Jack Kirby cosmic comic on #f4ecd6 paper using a separately offset flat color/Ben-Day-dot plate and thick black ink plate. Use cyan dots over light blue, purple over dark blue, red skin dots, orange-edged yellow energy streams and magenta/yellow reaction panels. Give forms spotted black crescent shadows and directional feathered hatching; use broad forceful silhouettes and heavy comic lettering. Animate clustered black Kirby-krackle circles at 12 fps along S-shaped energy paths, pulsing radii, action-speed lines tied to the actual gesture and large two-color extruded onomatopoeia snapping into burst shapes. Use split panels and dramatic reaction close-ups when the script calls for them. Draw white-filled ink components in occlusion order before multiplying onto the shifted color plate. Avoid captions covering faces, oversized black facial patches that change a subject's identity, and planet rings crossing the front of the entire planet; split rings into back and front arcs.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/27_kirby.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-monet",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "莫奈睡莲",
+      "name_en": "Monet Water Lilies",
+      "summary": "短笔触倒影随水波颤动，睡莲和柳影轻轻晃动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Monet Water Lilies style. Use Monet's water-lily and Japanese-bridge language: broad reflective water #b9c7e6/#8fa6d6/#6c84bf/#5a72a8, water strokes #5b6fb5/#7d8fd0/#9db5e0/#6aa0a8/#b7a6d8/#d9c8e8/#8fb8a8/#a6c4e8/#c8b0d8, leaf greens #5f8f4a/#7fae5a/#3f6f4a/#9cc070/#6f9a7a/#b4cc78 and flowers #f0a0b8/#f7d0dc/#fff2f4/#e88aa0. Paint unoutlined horizontal water strokes, finer distant diagonal and horizontal marks, stable floor strokes and a separately rendered pale-green bridge over dark foliage. Figures receive small internal strokes with warm-yellow light and violet shadow. Animate drifting lily clusters, gently warped willow reflections, localized bright horizontal shimmer, expanding flat elliptical ripples, swaying wisteria made from dot clusters and moving ribbons. Never boil the entire frame into noisy 6-fps repainting, swallow the bridge in the foliage palette or render wisteria as smooth thick pills; preserve a quiet readable surface.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/28_monet.md",
+      "preview": "assets/showcase/monet.gif",
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-seurat",
+      "function": "motion",
+      "category": "材料层",
+      "name": "修拉点彩",
+      "name_en": "Seurat Pointillism",
+      "summary": "纯色小圆点并置混色，明暗像呼吸一样变化。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Seurat Pointillism style. Create Seurat pointillism with equal-size dots on a fixed, slightly jittered hexagonal grid over a softly blurred light underpainting. Use pure colors #1a2058/#2a3a9a/#3f6fd0/#6aaee6/#1f6a52/#2f9a5a/#a8c83a/#f2cf3a/#f08a2a/#e0432a/#c0306a/#7a4aa8/#f8f4e8/#e8b48a plus pale tints #f6e49a/#f6c48a/#cfe08a/#b0cff0/#f2b8c8/#c99a4a/#9a7ac8. Approximate each target color through spatially interleaved paired pigments, adding sparse complementary dots and light-edge contrast; include a dotted dark-blue border. Keep composition still and dignified while water dots shimmer, boats drift, smoke rises and a small butterfly flaps where appropriate. At 6 fps, change only a restrained fraction of dots to their paired color. Avoid black-white mixing for all grays, missing pale tints that create snow-like noise, or vertical color bands: use continuous mixing weights and fixed per-dot target-color jitter at palette boundaries.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/29_seurat.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-matisse",
+      "function": "motion",
+      "category": "材料层",
+      "name": "马蒂斯剪纸",
+      "name_en": "Matisse Cut-outs",
+      "summary": "饱和色纸片带不规则剪边与投影，轻轻摆动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Matisse Cut-outs style. Use Matisse gouache cut-paper collage with cobalt and light-blue fields #1d4fb8/#4f95dc, green #1f9a5a, black silhouettes, bright yellow stars, red hearts and white organic shapes. Give contours small fixed scissor-cut irregularities, broad faint gouache brush marks and a slight offset paper shadow. Build seaweed from tapered stems with alternating rounded finger lobes, combining them into one silhouette before shadowing. Animate paper forms pivoting at their bases, subtle edge-curl through horizontal scale changes, rotating blinking stars, a floating silhouette, a pulsing red heart, flapping paper birds and a falling turning scrap; steam becomes small cut-paper strips. Simplify faces to a few colored paper fragments and clothing to flat embroidered cutouts. Avoid spine-width modulation that makes seaweed look like caterpillars or lightning, multiple overlapping shadows inside one shape, paper drifting over a face, and black text disappearing on cobalt; use a light paper backing when needed.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/30_matisse.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-haring",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "凯斯哈林线描",
+      "name_en": "Keith Haring",
+      "summary": "粗黑等宽线画出小人，配放射线按节拍跳舞。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Keith Haring style. Use Keith Haring's vivid flat yellow #ffd51c and green #16a54a fields, red/blue/pink figures, and consistent thick rounded black contours. Build connected capsule limbs and circular heads with one united outer contour; keep faces minimal. Animate four dance poses as hard 8-fps cuts without interpolation, redraw short radiating action lines at 8 fps and let the scene bounce to a 128-BPM pulse. Offset subject phases, anchor squash-and-stretch at the feet, bend furniture legs, bounce props and pulse a red heart or radiant crawling figure when fitting the script. Keep figure contours thick and uniform, with background bars behind the figures. Do not add fine hair strands, smooth pose tweening or limb-cap gaps; remove lines that cross faces during head turns. Let the beat and hard pose changes carry energy rather than gradients, texture or detailed facial modeling.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/31_haring.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-rembrandt",
+      "function": "motion",
+      "category": "材料层",
+      "name": "伦勃朗明暗",
+      "name_en": "Rembrandt Chiaroscuro",
+      "summary": "大块暗部中透出窗光与烛光，浮尘在光柱里移动。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Rembrandt Chiaroscuro style. Use Rembrandt chiaroscuro with deep brown ambient darkness RGB(30,21,13), warm gold-brown glazing, softly brushed backgrounds and selectively impasto-lit faces, hair, collars and pale props. Model figures with volume gradients and lost edges, then illuminate through a multiply light map containing blurred window wedges, separate face/torso/prop pools, candle light and a dim separation glow on the wall behind the dark side. Use fine crackle, restrained grain and dark vignetting. Animate candle lean and height through noise, subtly wandering light pools, clouds dimming the window, dust restricted to the light cone, slow gestures and steam. Paint impasto as many irregular parallel bristles with broken bright flecks only on lit surfaces. Avoid tidy three-stripe highlights resembling adhesive bandages, rectangular unpainted patches copied back from a base image, dirty speckles covering faces or a foreground hand erasing its prop; layer hand, vessel and thumb correctly.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/32_rembrandt.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-rubberhose",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "橡皮管卡通",
+      "name_en": "Rubber Hose Animation",
+      "summary": "面条手臂、白手套和派切眼按低帧率节拍弹跳。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Rubber Hose Animation style. Use 1930s rubber-hose cartoon drawing with rounded elastic limbs, circular faces, pie-cut pupils, four-finger white gloves, simple polka-dot clothing and smooth body silhouettes. Render everything in warm monochrome, with mid-gray #a39a84, dark #5e574b, pale #fbf7ec and a final faded-paper multiply wash #f2e8d2. Step all character and motif motion at 12 fps and film effects at 24 fps. Bounce figures and props to 128 BPM, compress on landing and stretch in the air around planted contact points, offsetting phases and delaying bows/accessories. Animate dancing flowers, smiling sun rays, swaying curtains, traveling rubber tails and one smoke ring per beat. Add restrained gate weave, frame flicker, persistent vertical scratches, dust, grain and a rounded film aperture. Smooth angular skeleton shapes before drawing and desaturate the completed scene uniformly so gloves and vessels do not retain stray color. Keep story action readable through film noise.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/33_rubberhose.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-shadowpuppet",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "中国皮影",
+      "name_en": "Chinese Shadow Puppetry",
+      "summary": "半透明镂空皮影用铆钉关节转动，背后透出灯光。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Chinese Shadow Puppetry style. Create Chinese shadow-puppet theater with translucent carved leather in red #c0352a, green #2f7d4c, amber #d99a2e, yellow #e2bd4a, blue #2c5a8a and orange #d9782a, edged in dark brown #3a160a. Backlight a woven cloth screen from #fff6d6 through #f2d7a0/#cf9a58 to #7a4a20. Cut dot, flower, cloud, lattice and line patterns through each leather piece while preserving a solid rim; leave white body regions and the delicate profile face open to the screen. Stamp a soft offset shadow and then multiply each piece so overlaps darken naturally; show rivets and thin control rods. Animate 10-fps stepped gestures, loose wrists, pivoted heads, delayed multi-jointed tails, swinging ornaments, 12-fps turning butterfly wings and 15-fps flickering lamp illumination. Route rods down and outward, never across other subjects; avoid dark leather overlaps at focal faces, blocked white cutouts and carved holes cutting through the outer contour.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/34_shadowpuppet.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-shinkai",
+      "function": "motion",
+      "category": "材料层",
+      "name": "新海诚光影",
+      "name_en": "Shinkai Light and Atmosphere",
+      "summary": "积雨云、硬边阴影和斜向光柱配缓慢飘动的光粒。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Shinkai Light and Atmosphere style. Use detailed contemporary anime light with realistic perspective interiors, expressive cel figures and warm/cool separation. Use brown outlines #6a4632, skin #ffe8dc/#f2b6a8, hair #f8d681/#d8a050, white #fbfbfe/#b9c3dc and navy #2c3a66/#1b2446; clouds start blue-gray #b7c6e6/#8297c6 under sunlit white lobes. Shade and rim-light each component in occlusion order. Animate billowing cumulus, slow cloud drift, contrails, birds, a glass droplet leaving a trail, sheer curtains and their moving wall shadows, wind-driven leaves/hair, rotating restrained star rays and shimmering dust in soft Tyndall beams. Add low-opacity hexagonal lens ghosts and gentle bloom. Place the sun inside the glass opening, keeping its halo near it. Avoid soap-bubble clouds made from outlined radial circles, a full-width bright horizontal streak, opaque floating bubble droplets or bloom that disguises the actual window light source; droplets need transparent bodies, a lower-edge arc and one glint.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/35_shinkai.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    },
+    {
+      "id": "hs-picasso-blue",
+      "function": "motion",
+      "category": "时代标本",
+      "name": "毕加索蓝色时期",
+      "name_en": "Picasso Blue Period",
+      "summary": "单色蓝调和粗轮廓画出拉长的人体，动作缓慢。",
+      "prompt": "Create an approximately 10-second web animation from this script: {script}. Deliver one self-contained HTML file with embedded CSS and JavaScript, expressing the script in the Picasso Blue Period style. Use Picasso's Blue Period in strict monochrome: #132240/#1d3866/#2d5a94/#6b8fb6/#b6c8d8 and blue-gray #3b6878, with Prussian-blue outlines #0c1830. Translate every local color into value: middle blue #4f719a with #273f66 stripes, pale areas #b6c8d8, light hair #cbd8e0 and skin #90a9be. Paint broad, long, low-contrast dry strokes, predominantly vertical on walls and horizontal on floors, softened into a subdued ground with faint dry fibers and canvas texture. Elongate figures around their planted feet, use long fingers, enclosing shawls and steady heavy contours. Animate slow breathing, deliberate gestures, half-speed steam, gently traveling sea waves, flickering moon reflections and a pale cloud crossing the moon. Do not retain any ochre/orange accents, boil the outlines, use dense short strokes resembling rain or carpet, leave rounded-brush bead rows, or cut rectangular unpainted holes around props; paint props on their own later layers.",
+      "inputs": [
+        "script"
+      ],
+      "aspect": null,
+      "path": "references/风格配方/36_picasso_blue.md",
+      "preview": null,
+      "attribution": "花叔（alchaincyf）",
+      "status": "draft",
+      "needs": [],
+      "listed": true
+    }
+  ]
+}

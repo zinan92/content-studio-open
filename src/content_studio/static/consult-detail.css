@@ -1,0 +1,49 @@
+/* 客户页（10/11 晚 作者：「明明一两行能搞定，现在一个客户要占半页」）：
+ * 一位客户一行——名字 / 来源·画像·后续方案 / 每场咨询的文件 / 上传录音；改资料收在下面的折叠里。 */
+#v-consults{max-width:none}
+#clientsBody{min-width:0;width:100%}
+.cd-overview{display:flex;gap:24px;flex-wrap:wrap;margin:0 0 16px;color:var(--ink-2);font-size:14px}
+.cd-overview b{font-size:20px;color:var(--ink);margin-right:4px}
+.cd-error{color:var(--warn);font-size:13px}
+
+.cl-list{overflow:hidden}
+.cl-item+.cl-item{border-top:1px solid var(--line-soft)}
+.cl-line{display:grid;grid-template-columns:minmax(120px,160px) minmax(0,1.2fr) minmax(0,1.4fr) auto;gap:24px;align-items:start;padding:16px 24px 8px}
+.cl-name{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cl-name b{font-size:16px;font-weight:600;color:var(--ink)}
+.cl-name small{font-size:12px;color:var(--ink-3)}
+.cl-brief{display:flex;flex-direction:column;gap:4px;min-width:0;font-size:13px}
+.cl-who{color:var(--ink-3);font-size:12px}
+.cl-what{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cl-plan{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-size:12px}
+.cl-pill{padding:0 8px;border-radius:999px;background:var(--sunk);color:var(--ink-2);font-weight:600}
+.cl-pill.go{background:var(--accent-soft);color:var(--accent)}
+.cl-none{color:var(--ink-3);font-size:12px}
+.cl-files{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cl-files .cl-day-block{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.cl-files .cl-day{font-size:12px;color:var(--ink-3);min-width:40px;font-variant-numeric:tabular-nums}
+.cl-files .cl-doc a{font-size:12px;font-weight:500;padding:2px 8px}
+.cl-files .cl-doc .cl-alt{padding:2px 8px}
+.cl-files .cl-find{border:0;background:transparent;color:var(--ink-3);padding:2px 8px;cursor:pointer;border-left:1px solid var(--line-soft)}
+.cl-files .cl-find:hover{color:var(--ink)}
+.cl-files .cl-job{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}
+.cl-files .cl-job .cs-err{flex-basis:100%;font-size:12px;color:var(--warn);overflow-wrap:anywhere}
+.cl-files .cd-progress{font-size:12px;color:var(--ink-3)}
+.cl-acts{display:flex;gap:8px}
+
+.cl-edit{padding:0 24px 12px}
+.cl-edit>summary{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--ink-3);cursor:pointer;list-style:none}
+.cl-edit>summary:hover{color:var(--ink)}
+.cl-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 16px;margin-top:12px;padding:16px;border-radius:10px;background:var(--sunk)}
+.cl-form .cd-field{display:flex;flex-direction:column;gap:4px;min-width:0}
+.cl-form .cd-field-long{grid-column:span 2}
+.cl-form .cd-field>span{font-size:12px;color:var(--ink-3)}
+.cl-form :is(textarea,select){width:100%;box-sizing:border-box;font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 8px;resize:vertical;field-sizing:content;min-height:0}
+.cl-form :is(textarea,select):focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft);outline:none}
+.cl-form-acts{display:flex;align-items:center;gap:12px;margin-top:12px}
+.cl-form-acts .cd-save-status{font-size:12px;color:var(--ink-3)}
+.cl-form-acts .cd-save-status.cd-error{color:var(--warn)}
+.cl-form-acts .cl-del{margin-left:auto;color:var(--ink-3)}
+
+@media (max-width:1100px){.cl-line{grid-template-columns:minmax(0,1fr) auto}.cl-brief,.cl-files{grid-column:1/-1}.cl-acts{grid-row:1;grid-column:2}.cl-form{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.cl-line,.cl-edit{padding-left:16px;padding-right:16px}.cl-form{grid-template-columns:1fr}.cl-form .cd-field-long{grid-column:auto}}

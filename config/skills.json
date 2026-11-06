@@ -1,0 +1,17 @@
+{
+  "stages": [{"key": "collect", "label": "收集"}, {"key": "plan", "label": "选题与提纲"}, {"key": "write", "label": "写文"}, {"key": "video", "label": "编辑视频"}, {"key": "design", "label": "作图"}, {"key": "ship", "label": "排版与发布"}, {"key": "review", "label": "复盘"}],
+  "skills": [
+    {"name": "park-video-v2", "dir": "park-video-v2", "title": "口播视频全流程", "stage": "video", "own": true, "author": "作者", "repo": "https://github.com/zinan92/park-video-v2", "use": "剪映粗剪 + 字幕 → 标 Hook、切 Hook、加动效、样片和成片；12 个环节，三次确认（10/21 起旧的 14 步 ask-park-video 归档）", "invoke": "在 Claude/Codex 里说：用 park-video-v2 剪这条口播"},
+    {"name": "khazix-writer", "dir": "khazix-writer", "title": "卡兹克写作", "stage": "write", "own": false, "author": "数字生命卡兹克", "repo": "https://github.com/KKKKhazix/khazix-skills", "use": "把素材写成有观点、有人味的公众号长文；想让「写文章」照它的写法，在设置里选它（默认不用 skill，只整理原话）", "invoke": "设置 →「写文章用哪个 skill」选它，或在 Claude 里说：用 khazix-writer 把这些素材写成文章"},
+    {"name": "dbs-content", "dir": "dbs-content", "title": "内容诊断", "stage": "plan", "own": false, "author": "dontbesilent", "repo": "https://github.com/dontbesilent2025/dbskill", "use": "选题定了之后，诊断怎么把它做成好内容、检查文案", "invoke": "/dbs-content 这个选题怎么做"},
+    {"name": "dbs-deconstruct", "dir": "dbs-deconstruct", "title": "概念拆解", "stage": "plan", "own": false, "author": "dontbesilent", "repo": "https://github.com/dontbesilent2025/dbskill", "use": "把一个模糊的词或概念拆清楚，适合观点类选题找角度", "invoke": "/dbs-deconstruct 拆一下这个概念"},
+    {"name": "x-mentor-skill", "dir": "x-mentor-skill", "title": "X 运营导师", "stage": "plan", "own": false, "author": "alchaincyf", "repo": "https://github.com/alchaincyf/x-mentor-skill", "use": "X 选题、推文和 thread 怎么写、怎么涨粉", "invoke": "在 Claude 里说：这条推文怎么写"},
+    {"name": "video-shotcraft", "dir": "video-shotcraft", "title": "镜头配方视频", "stage": "video", "own": false, "author": "Vincentwei1021", "repo": "https://github.com/Vincentwei1021/video-shotcraft", "use": "用镜头配方卡 + 页面截图做产品展示视频（Remotion）", "invoke": "在 Claude/Codex 里说：用 video-shotcraft 做一条产品视频"},
+    {"name": "dbs-wechat-html", "dir": "dbs-wechat-html", "title": "公众号 HTML", "stage": "ship", "own": false, "author": "dontbesilent", "repo": "https://github.com/dontbesilent2025/dbskill", "use": "Markdown 转成可以直接粘贴到公众号后台的 HTML，15 种风格", "invoke": "/dbs-wechat-html 把这篇转成公众号格式"},
+    {"name": "gzh-design", "dir": "gzh-design", "title": "公众号排版", "stage": "ship", "own": false, "author": "isjiamu", "repo": "https://github.com/isjiamu/gzh-design-skill", "use": "公众号文章排版引擎，Markdown → 公众号 HTML", "invoke": "在 Claude 里说：用 gzh-design 排版这篇文章"},
+    {"name": "baoyu-post-to-wechat", "dir": "baoyu-post-to-wechat", "title": "发公众号", "stage": "ship", "own": false, "author": "宝玉", "repo": "https://github.com/JimLiu/baoyu-skills", "use": "把文章推到公众号草稿箱（API 或浏览器）", "invoke": "在 Codex 里说：用 baoyu-post-to-wechat 发到公众号草稿"},
+    {"name": "publish-wechat-channels", "dir": "publish-wechat-channels", "title": "发视频号", "stage": "ship", "own": false, "author": "lovstudio", "repo": null, "use": "把视频发布到微信视频号", "invoke": "在 Codex 里说：用 publish-wechat-channels 发这条视频"},
+    {"name": "dbs-diagnosis", "dir": "dbs-diagnosis", "title": "商业诊断", "stage": "review", "own": false, "author": "dontbesilent", "repo": "https://github.com/dontbesilent2025/dbskill", "use": "拆解业务、检查商业模式，适合复盘内容怎么变现", "invoke": "/dbs-diagnosis 帮我看看这个商业模式"},
+    {"name": "daily-news-caster", "dir": "daily-news-caster", "title": "新闻播客", "stage": "collect", "own": false, "author": null, "repo": null, "use": "抓最新新闻，写成播客稿并生成音频", "invoke": "在 Claude 里说：把今天的新闻做成播客"}
+  ]
+}

@@ -1,0 +1,142 @@
+/* Shared workbench controls. Values stay on the repository's existing scales. */
+:root{--ink-3:#626b77;--control-height:32px;--z-sticky:10;--z-dialog:30;--z-toast:40}
+:root[data-theme="dark"]{--ink-3:#a1a9b5}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink-3:#a1a9b5}}
+.app{grid-template-columns:236px minmax(0,1fr)}
+.view,.panel,.panel-h>*,.page-h>*,.acct,.rep-shell>*,#repBody{min-width:0}
+.page-h{gap:16px;flex-wrap:wrap}
+.page-h h1{font-family:var(--sans);font-size:26px;line-height:1.4;letter-spacing:normal}
+.page-h p{max-width:70ch}
+.panel{box-shadow:none}
+.panel-h{gap:12px;flex-wrap:wrap;padding:16px}
+.panel-h small{max-width:70ch;font-size:12px}
+/* 按钮只有三种长相 × 三种尺寸（10/8 量出来 40 种，这里收成一套）：默认（白底描边）· primary（强调色实心）· ghost（无边框）；
+   small 28 · 默认 32 · big 40。具体位置的规则不再改字号、内边距、圆角。 */
+.btn{min-height:var(--control-height);border-radius:6px;padding:4px 12px;font-size:13px;font-weight:500;line-height:1.4;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none}
+.btn:hover{background:var(--sunk);border-color:var(--ink-3);text-decoration:none}
+.btn:active{background:var(--press)}
+.btn.small{font-size:12px;padding:2px 10px;min-height:28px}
+.btn.big{font-size:14px;padding:8px 20px;min-height:40px}
+.btn:disabled,.btn[disabled]{cursor:not-allowed;opacity:.5}
+/* 不能点的主按钮变成灰的，不是淡粉色（10/9 自查：淡橙看着像坏了） */
+.btn.primary:disabled,.btn.go:disabled,.btn.primary[disabled]{opacity:1;background:var(--sunk);border-color:var(--line-soft);color:var(--ink-3);filter:none}
+.btn.primary,.btn.go{box-shadow:none;background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.primary:hover:not(:disabled),.btn.go:hover:not(:disabled){filter:brightness(.92);background:var(--accent)}
+.btn.ghost,.btn.quiet{color:var(--ink-2);background:transparent;border-color:transparent}
+.btn.ghost:hover,.btn.quiet:hover{background:var(--hover);color:var(--ink)}
+.subnav{gap:4px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin}
+.subnav>button{flex:none;white-space:nowrap;min-height:40px;padding:8px 12px;font-size:14px}
+input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=color]),select,textarea{border-radius:6px;max-width:100%;min-width:0}
+input::placeholder,textarea::placeholder{color:var(--ink-3);opacity:1}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.accounts{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.acct h3{flex-wrap:wrap;overflow-wrap:anywhere}
+.acct .meta{flex-wrap:wrap}
+.rep-shell{grid-template-columns:240px minmax(0,1fr);gap:24px}
+.rep-picker-shell{background:var(--surface);border:1px solid var(--line);border-radius:10px;position:sticky;top:16px;overflow:hidden}
+.rep-picker-shell>summary{padding:12px 16px;cursor:pointer;font-weight:600;min-height:44px}
+.rep-shell .rep-picker{position:static;max-height:calc(100vh - 180px);overflow:auto;border:0;border-radius:0}
+.rep-shell:has(.rep-picker-shell:not([open])){grid-template-columns:minmax(0,1fr)}
+.rep-picker-shell:not([open]){width:fit-content;position:static}
+#repBody{container-type:inline-size;display:flex;flex-direction:column;gap:24px}
+.rep-head{grid-template-columns:minmax(0,1fr);padding:24px;gap:16px}
+.rep-head h2{font-family:var(--sans);font-size:20px;line-height:1.5;overflow-wrap:anywhere}
+.rep-actions{justify-content:flex-start}
+.facts{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.facts>div{padding:16px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft)}
+.facts>div>div{padding:0;border:0}
+.facts .l{font-size:12px;line-height:1.5;margin-bottom:8px}
+.facts .v{font-size:20px}
+.rep-grid{grid-template-columns:minmax(0,1fr) minmax(280px,340px);gap:24px}
+.rep-grid .line{grid-template-columns:60px minmax(0,1fr);gap:8px 12px;padding:16px 24px}
+.rep-grid .line .seg-body{grid-column:1/-1;max-width:70ch;font-size:14px;line-height:1.8}
+.rep-grid .line .lab{font-size:12px}
+.rep-grid .line .ts{font-size:12px}
+.rep-grid .thesis{font-family:var(--sans);font-size:16px;line-height:1.8;border:0;padding:0}
+.rep-grid .spine{padding:24px;gap:16px}
+.rep-grid .why{font-size:14px;line-height:1.8}
+.rep-grid .side{gap:16px}
+@container(max-width:900px){.rep-grid{grid-template-columns:minmax(0,1fr)}.rep-grid>.side{grid-row:1}}
+.queue-fold{border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.queue-fold>summary{padding:12px 16px;min-height:44px;cursor:pointer;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.queue-fold[open]{padding-bottom:16px}
+.queue-fold>.panel{margin:0 16px;border-radius:6px}
+.queue-fold .q{grid-template-columns:minmax(0,1fr) 200px auto;gap:16px;padding:16px}
+.queue-fold .q .clamp{font-weight:600}
+.q-actions{display:flex;justify-content:flex-end;gap:8px;align-items:center}
+.q-error-details{font-size:12px;color:var(--ink-2);margin-top:8px}
+.q-error-details summary{cursor:pointer}
+.q-error-details p{overflow-wrap:anywhere;max-width:70ch}
+.q-error-hint{font-size:13px;color:var(--warn);margin-top:8px}
+.rep-toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.ui-save-status{font-size:13px;min-height:24px;color:var(--ink-2)}
+.ui-save-status[data-state=error]{color:var(--warn)}
+.ui-save-status[data-state=saved]{color:var(--save)}
+@media(max-width:1100px){.rep-shell{grid-template-columns:minmax(0,1fr)}.rep-picker-shell{position:static}.rep-shell .rep-picker{max-height:300px}.queue-fold .q{grid-template-columns:minmax(0,1fr) auto}.queue-fold .steps{grid-column:1/-1;grid-row:2}}
+@media(max-width:760px){.app{grid-template-columns:minmax(0,1fr)}main{padding:16px 16px 32px}.page-h h1{font-size:26px}.btn{min-height:44px}.btn.small{min-height:40px}.rep-head,.rep-grid .spine{padding:16px}.rep-grid .line{padding:16px}.facts{grid-template-columns:repeat(2,minmax(0,1fr))}.queue-fold>.panel{margin:0 8px}.queue-fold>summary{padding:12px}.subnav>button{min-height:44px}.rep-shell{gap:16px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+#anna{border-radius:10px;box-shadow:none;z-index:var(--z-dialog)}
+#anna [data-an-edge]{display:none}
+#anna .an-h,#anna.an-dragging .an-h{cursor:default}
+@media(min-width:900px){#anna{left:auto;right:16px;top:16px;bottom:16px;width:var(--anna-width,368px);height:auto}#anna [data-an-edge="w"]{display:block;left:-8px;top:12px;bottom:12px;width:12px;cursor:ew-resize;touch-action:none}#anna [data-an-edge="w"]:hover,#anna [data-an-edge="w"]:focus-visible{background:var(--accent-soft);border-radius:6px}}
+@media(min-width:1100px){.anna-open .app{padding-right:calc(var(--anna-width,368px) + 32px)}}
+@media(max-width:1099px){#anna{right:16px;top:16px;bottom:16px;width:min(600px,calc(100vw - 32px));box-shadow:0 0 0 100vmax var(--scrim)}}
+@media(max-width:760px){#anna{inset:8px;width:calc(100vw - 16px);height:calc(100dvh - 16px)}}
+
+/* Tabs are a single horizontal strip; their active underline must not create a vertical scrollbar. */
+.subnav{overflow-y:hidden}
+.subnav button{margin-bottom:0}
+#todayBody{display:flex;flex-direction:column;gap:24px}
+#todayBody>*{margin-top:0;margin-bottom:0}
+#todayBody>.fc{margin:0;border-left:1px solid var(--line);padding:24px;border-radius:10px;background:var(--surface)}
+#todayBody>.fc .fc-t{font-size:20px;line-height:1.5}
+#todayBody>.fc .fc-next{font-size:16px}
+#todayBody>.fc.done .fc-ok{font-size:20px}
+#todayBody .fc .btn{min-height:40px;padding:8px 16px;font-size:14px}
+#todayBody .rs{gap:16px}
+#todayBody .rs-h>b{font-size:26px}
+#todayBody .rs-card{box-shadow:none}
+
+/* Full text belongs in the detail pane; supporting documents keep a stable reading width. */
+.settings{gap:16px;padding:24px}
+.settings>label{display:flex;flex-direction:column;gap:8px;max-width:720px}
+.settings>label small{max-width:70ch;font-size:13px;line-height:1.6}
+#tagsRows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
+#tagsRows label{min-width:0;display:flex;flex-direction:column;gap:8px}
+#tagsRows input{width:100%}
+.settings .ui-save-status{margin:0}
+.pt-grid{grid-template-columns:minmax(0,1fr) minmax(280px,360px);gap:24px}
+.pt-shots,.pd-gallery{min-width:0}
+.pt-shot img,.pd-gallery img{max-width:100%;object-fit:contain}
+.sw-card{min-width:0}
+.sw-card h3,.sw-card .sw-title{overflow-wrap:anywhere}
+.playbook-md{max-width:75ch;margin-inline:auto;line-height:1.8}
+@media(max-width:1200px){.pt-grid{grid-template-columns:minmax(0,1fr)}.pt-judge{max-width:75ch}}
+
+.focus-card{border-left:1px solid var(--line);border-radius:10px;box-shadow:none;padding:24px}
+
+/* 设置 · 流程（10/9）：按阶段一组，一行一个组件开关 */
+#flowRows{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
+.flow-stage{display:flex;flex-direction:column;gap:8px;min-width:0}
+.flow-stage h3{margin:0 0 4px;font-size:14px;color:var(--ink-2)}
+.settings .flow-sw{display:flex;flex-direction:row;align-items:flex-start;gap:12px;padding:12px;border:1px solid var(--line-soft);border-radius:10px;background:var(--surface);cursor:pointer;max-width:none}
+.settings .flow-sw:hover{background:var(--hover)}
+.flow-sw input{margin:4px 0 0;accent-color:var(--accent)}
+.flow-sw span{display:flex;flex-direction:column;gap:4px;font-weight:400}
+.flow-sw b{font-size:14px;color:var(--ink)}
+.settings .flow-sw small{font-size:13px;line-height:1.6;color:var(--ink-3)}
+
+/* 设置 · 通用（10/9 重做）：一行一项，左边是名字和说明、右边是输入框——像 monday / Linear 的设置页；
+   每项之间一条细线，保存按钮靠右下。只在宽屏这样排，窄了回到上下排。 */
+@container settings-form (min-width:720px){
+  #settingsForm>label,#meLinksForm>label{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);grid-template-rows:auto 1fr;column-gap:32px;row-gap:4px;max-width:none;padding:16px 0 0;border-top:1px solid var(--line-soft)}
+  #settingsForm>label:first-of-type,#meLinksForm>label:first-of-type{border-top:0;padding-top:0}
+  #settingsForm>label>span,#meLinksForm>label>span{grid-column:1;grid-row:1}
+  #settingsForm>label>small,#meLinksForm>label>small{grid-column:1;grid-row:2;align-self:start}
+  #settingsForm>label>:is(input,select),#meLinksForm>label>:is(input,select){grid-column:2;grid-row:1/3;align-self:start;max-width:none;width:100%}
+}
+#settingsForm,#meLinksForm{container:settings-form / inline-size;gap:16px}
+/* 保存：按钮和「已保存」在同一行，靠右，跟最后一项隔一条线 */
+:is(#settingsForm,#meLinksForm,#tagsForm)>div:has(>button[type=submit]){display:flex;justify-content:flex-end;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line-soft)}
+:is(#settingsForm,#meLinksForm,#tagsForm) .ui-save-status{margin:0}

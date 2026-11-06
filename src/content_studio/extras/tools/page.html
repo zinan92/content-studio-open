@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单点功能</title>
+<script>try { const t = localStorage.getItem('cs-theme'); if (t) document.documentElement.dataset.theme = t; } catch (_) { /* ignore */ }</script>
+<link rel="icon" href="/static/brand/app-icon.svg">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/tools/page.css">
+</head>
+<body class="sf-body">
+<header class="sf-top">
+  <a class="sf-brand" href="/" title="回工作台"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 66 Q30 28 48 86" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="9" stroke-linecap="round"/><path d="M48 86 Q76 88 106 22" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round"/><circle cx="48" cy="86" r="9" class="sf-dot"/></svg><span>单点功能</span></a>
+  <div class="sf-top-r">
+    <button type="button" class="btn ghost" id="acct" hidden></button>
+    <button type="button" class="btn ghost" id="openHistory">我的记录</button>
+    <button type="button" class="sf-theme" id="theme" title="切换深浅色" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+
+<section class="sf-hero">
+  <div class="sf-hero-t">
+    <p class="sf-eyebrow">10 个一进一出的 AI 功能</p>
+    <h1>贴进去，<br><em>拿结果。</em></h1>
+    <p class="sf-lede">先看它真做出来的样子，再用你自己的内容试。下面每一份都是真跑出来的结果，没有修过。</p>
+    <div class="sf-hero-cta"><a class="btn primary sf-big" href="#dir">找你要的功能</a><span class="muted" id="heroMeta"></span></div>
+  </div>
+  <div class="sf-stack" id="stack" data-cursor="拖一拖" aria-hidden="true"></div>
+</section>
+
+<section class="sf-dir" id="dir" aria-labelledby="dirAsk" hidden>
+  <h2 class="sf-dir-ask" id="dirAsk">你是谁，在做什么？</h2>
+  <input id="dirQ" type="search" placeholder="直接搜：雅思作文、封面、研报、PS……" aria-label="搜索功能">
+  <div class="sf-tabs" id="dirTabs" role="group" aria-label="场景"></div>
+  <div class="sf-rows" id="dirRows" hidden></div>
+  <div class="sf-dir-grid" id="dirGrid" aria-live="polite"></div>
+</section>
+
+<nav class="sf-index" id="index" aria-label="10 个功能"><div class="sf-index-in" id="indexIn"><i class="sf-index-bar" id="indexBar"></i></div></nav>
+
+<main class="sf-cases" id="cases"></main>
+
+<section class="sf-vids" id="vids" aria-labelledby="vidsH" hidden>
+  <header class="sf-vids-h" data-reveal>
+    <p class="sf-eyebrow">视频样片</p>
+    <h2 id="vidsH">也能做成视频</h2>
+    <p>下面每一条都是照着三个开源仓库做出来的成片。后两组画面里的字，是 作者 已发内容的原话。</p>
+  </header>
+  <div id="vidsBody"></div>
+</section>
+
+<footer class="sf-foot">
+  <p>全部跑在这台 Mac 上的 Codex · <span id="model">gpt-6.1-sol · medium</span> · 一次跑一个</p>
+</footer>
+
+<div class="sf-scrim" id="scrim" hidden></div>
+<aside class="sf-drawer" id="drawer" aria-hidden="true" aria-label="用我的内容试"></aside>
+<div class="sf-lightbox" id="lightbox" hidden><img alt=""><button type="button" class="sf-lb-x" aria-label="关闭">×</button></div>
+<div class="sf-lightbox sf-vbox" id="vbox" hidden><figure><video controls playsinline preload="none"></video><figcaption></figcaption></figure><button type="button" class="sf-lb-x" aria-label="关闭">×</button></div>
+<div class="sf-cursor" id="cursor" aria-hidden="true"></div>
+<div class="sf-toast" id="toast" role="status"></div>
+
+<script src="/static/vendor/marked.min.js"></script>
+<script src="/static/vendor/purify.min.js"></script>
+<script src="/tools/page.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+#!/bin/zsh
+# 安全重启内容工作台：有活在跑就不重启（重启会打断它们），加 --force 才硬重启。
+# - 正在发布的任务（YouTube、B 站上传）
+# - 工作台起的 claude -p / codex exec（写文章、排版、Anna、视频长任务）
+# - 咨询录音的转写 / 分析（state.json 记着服务的 pid）
+# 装机脚本把它装到 ~/.local/bin/content-studio-restart。服务名从 CONTENT_STUDIO_SERVICE_LABEL 读，
+# 默认 com.content-studio.app（装机脚本注册的名字）。
+LABEL="${CONTENT_STUDIO_SERVICE_LABEL:-com.content-studio.app}"
+HOME_DIR="${CONTENT_STUDIO_HOME:-$HOME/.config/content-studio}"
+running=$(sqlite3 "$HOME_DIR/data/studio.sqlite3" "select group_concat(platform || '#' || id, ', ') from publish_jobs where state = 'running'" 2>/dev/null)
+pid=$(launchctl list | awk -v l="$LABEL" '$3 == l {print $1}')
+busy=""
+if [[ -n "$pid" && "$pid" != "-" ]]; then
+  kids=$(pgrep -P "$pid" -f "claude -p|codex exec" | wc -l | tr -d ' ')
+  (( kids > 0 )) && busy="$kids 个写作/排版在跑"
+  consults=$(grep -lE "\"pid\": $pid,?$" "$HOME_DIR"/consults/*/state.json 2>/dev/null | wc -l | tr -d ' ')
+  (( consults > 0 )) && busy="${busy:+$busy，}$consults 场咨询录音在转写/分析"
+fi
+if [[ ( -n "$running" || -n "$busy" ) && "$1" != "--force" ]]; then
+  echo "先不重启：${running:+发布中 $running }${busy}。等它们结束再来，或者 --force。"
+  exit 1
+fi
+launchctl kickstart -k "gui/$(id -u)/$LABEL" && echo "已重启"

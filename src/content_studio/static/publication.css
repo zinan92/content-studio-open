@@ -1,0 +1,53 @@
+/* Publication facts share the existing light/dark palette. */
+.publication-sections { display: grid; gap: 24px; min-width: 0; }
+/* 提醒不是报警：一条细的黄边提示，字是正文色（10/8 作者：那块大红框太吵） */
+.publication-warning { padding: 8px 12px; margin-bottom: 16px; border-radius: 6px; border-left: 3px solid var(--hot); background: var(--hot-soft); color: var(--ink-2); font-size: 13px; overflow-wrap: anywhere; }
+.publication-warning b, .publication-warning strong { color: var(--ink); font-weight: 600; }
+.publication-warning ul { padding-left: 16px; margin: 4px 0; }
+.publication-warning small { font-size: 12px; color: var(--ink-3); }
+/* 状态 = 一块有底色的小牌子（monday 的状态列）：绿 发了 · 黄 在路上/等你 · 红 出错 · 灰 还没齐；时间和回执跟在后面，灰字。 */
+.publication-fact { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; font-size: 12px; color: var(--ink-3); overflow-wrap: anywhere; }
+.publication-status { display: inline-flex; align-items: center; padding: 0 8px; min-height: 24px; border-radius: 6px; font-size: 12px; font-weight: 500; background: var(--sunk); color: var(--ink-2); white-space: nowrap; }
+.publication-status.state-published { background: var(--out-soft); color: var(--out); }
+.publication-status.state-ready { background: var(--in-soft); color: var(--in); }
+.publication-status:is(.state-draft, .state-running, .state-awaiting_confirm, .state-wait) { background: var(--hot-soft); color: var(--hot); }
+.publication-status:is(.state-failed, .state-unknown) { background: var(--warn-soft); color: var(--warn); }
+.publication-fact a { color: var(--ink-2); }
+.publication-fact a:hover { color: var(--accent); }
+.publication-row { padding: 12px 16px; border-top: 1px solid var(--line-soft); }
+.publication-row > .publication-fact { margin-bottom: 8px; }
+.publication-row .pp-frow { padding: 0; border: 0; }
+.publication-forms { display: block; padding: 16px; }
+.publication-forms > summary { font-size: 14px; color: var(--ink-2); cursor: pointer; }
+.publication-forms[open] > summary { margin-bottom: 16px; }
+.publication-lane { cursor: default; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-width: 0; }
+.mx td.publication-cell { vertical-align: top; min-width: 112px; white-space: normal; }
+.publication-cell > small, .publication-cell > a { display: block; font-size: 12px; margin-top: 4px; }
+.publication-cell details { font-size: 13px; text-align: left; }
+.publication-cell summary { padding: 4px 0; font-size: 12px; color: var(--ink-3); justify-content: flex-end; }
+.publication-cell summary:hover { color: var(--ink); }
+.publication-cell ul { padding: 0; margin: 0; list-style: none; }
+.publication-cell li { display: grid; gap: 4px; padding: 8px 0; }
+.publication-cell .publication-fact { flex-direction: column; font-size: 12px; }
+#platformBody .pp-frow { grid-template-columns: 64px minmax(0, 1fr); }
+#platformBody .pp-frow .act { grid-column: 2; flex-wrap: wrap; justify-content: flex-start; }
+#platformBody .pp-frow .fv { min-width: 0; overflow-wrap: anywhere; }
+#platformBody .pp-h, #platformBody .pp-forms, #platformBody .pp-item-h { flex-wrap: wrap; }
+/* 复盘页：上面的卡、那张表、改目标之间一样宽的缝（10/19 战况和汇总并成一页） */
+#fupanTable, #todayTargets { display: flex; flex-direction: column; gap: 24px; margin-top: 24px; }
+#fupanTable > *, #todayTargets > * { margin-top: 0; margin-bottom: 0; }
+#fupanTable:empty, #todayTargets:empty { display: none; }
+
+/* 其他三个：事实与动作各占自己的行，表格内部承接窄窗口滚动。 */
+#platformBody .pp-sum { width: 100%; min-width: 600px; table-layout: fixed; }
+#platformBody .pp-sum th, #platformBody .pp-sum td { padding: 12px 16px; vertical-align: top; white-space: normal; }
+#platformBody .pp-sum th:first-child { width: 28%; padding-left: 24px; }
+#platformBody .pp-sum thead th { padding-top: 16px; padding-bottom: 16px; vertical-align: middle; }
+/* 要你动手的那几行：左边一条黄边，扫一眼就知道 */
+#platformBody .pp-sum tbody tr:has(.pp-draft-actions, .s-bad) > th:first-child { box-shadow: inset 3px 0 0 var(--hot); }
+#platformBody .publication-others-cell { display: grid; gap: 8px; min-width: 0; }
+#platformBody .publication-others-cell + .publication-others-cell { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line-soft); }
+#platformBody .publication-others-cell .publication-fact { align-items: center; }
+#platformBody .pp-c { min-width: 0; overflow-wrap: anywhere; }
+#platformBody .pp-c small { line-height: 1.7; }
+#platformBody .pp-draft-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }

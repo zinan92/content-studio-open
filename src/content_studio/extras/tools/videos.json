@@ -1,0 +1,42 @@
+{
+ "groups": [
+  {
+   "key": "brand",
+   "name": "品牌宣传片",
+   "repo": "nutllwhy/code-brand-film",
+   "url": "https://github.com/nutllwhy/code-brand-film",
+   "note": "给一个产品页，做 15 秒宣传片。画面是代码写的动画，配乐也是代码合成的。",
+   "items": [
+    {"id": "brand-newsletter", "title": "每日 AI 情报", "secs": 15, "sound": true, "give": "产品页 example.com/newsletter"},
+    {"id": "brand-tools", "title": "单点功能", "secs": 15, "sound": true, "give": "产品页 example.com/tools"},
+    {"id": "brand-teardown", "title": "抖音爆款拆解", "secs": 15, "sound": true, "give": "产品页 example.com/teardown"}
+   ]
+  },
+  {
+   "key": "huashu",
+   "name": "讲解动画",
+   "repo": "alchaincyf/huashu-art-motion",
+   "url": "https://github.com/alchaincyf/huashu-art-motion",
+   "note": "给几句话，选一种动画语法，出一段 7–8 秒的讲解动画。",
+   "items": [
+    {"id": "hs-kinetic", "title": "动态文字", "secs": 7.5, "sound": false, "give": "我这个号只有 6000 粉丝……赚到了大部分人一个月的工资"},
+    {"id": "hs-whiteboard", "title": "白板手绘", "secs": 8, "sound": false, "give": "试着为一段工作写下两个东西"},
+    {"id": "hs-kurz", "title": "扁平科普", "secs": 8, "sound": false, "give": "一个真正的交易计划，会在下单前写清楚"},
+    {"id": "hs-keynote", "title": "发布会界面", "secs": 8, "sound": false, "give": "按小时收咨询费……所以是 2000"}
+   ]
+  },
+  {
+   "key": "opus",
+   "name": "照着提示词做",
+   "repo": "yihui-dev/awesome-opus5-5-videos",
+   "url": "https://github.com/yihui-dev/awesome-opus5-5-videos",
+   "note": "别人分享过的 Opus 5.5 视频提示词，换成自己的内容再做一遍。",
+   "items": [
+    {"id": "op-breakout", "title": "海报破框", "secs": 10, "sound": false, "give": "90% 的人挤在前端，我在后端跟人竞争", "credit": "@pankajkumar_dev", "credit_url": "https://x.com/pankajkumar_dev/status/2103502614134718609"},
+    {"id": "op-doodle", "title": "折纸涂鸦叙事", "secs": 12, "sound": false, "give": "《闭环》里从盯盘到 hard stop 的那段", "credit": "@songkeys", "credit_url": "https://x.com/songkeys/status/2102743212922384673"},
+    {"id": "op-styles4", "title": "一个意思换四种画风", "secs": 12, "sound": false, "give": "把连贯决策变成离散决策", "credit": "@emollick", "credit_url": "https://x.com/emollick/status/2103688362960019567"},
+    {"id": "op-beat", "title": "合成音乐卡点", "secs": 12, "sound": true, "give": "23:00 要回答的四个问题", "credit": "@prasenx", "credit_url": "https://x.com/prasenx/status/2103538744695693512"}
+   ]
+  }
+ ]
+}

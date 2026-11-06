@@ -1,0 +1,1492 @@
+{
+ "version": 4,
+ "source": "",
+ "scenes": [
+  {
+   "id": "self",
+   "name": "自媒体",
+   "why": "每天都要更新，慢一天就掉流量；成果当场看得见",
+   "groups": [
+    {
+     "id": "self-mv1uffjt",
+     "name": "抖音/视频号",
+     "kind": "platform"
+    },
+    {
+     "id": "self-mv1uf9an",
+     "name": "小红书",
+     "kind": "platform"
+    },
+    {
+     "id": "self-mv1uf192",
+     "name": "公众号",
+     "kind": "platform"
+    },
+    {
+     "id": "self-x",
+     "name": "X",
+     "kind": "platform"
+    },
+    {
+     "id": "self-topic",
+     "name": "选题"
+    },
+    {
+     "id": "self-write",
+     "name": "写稿"
+    },
+    {
+     "id": "self-image",
+     "name": "图片"
+    },
+    {
+     "id": "self-video",
+     "name": "视频"
+    },
+    {
+     "id": "self-voice",
+     "name": "声音"
+    }
+   ]
+  },
+  {
+   "id": "school",
+   "name": "学业留学",
+   "why": "考试和申请有截止日期，分数和录取直接决定结果；家长愿意付",
+   "groups": [
+    {
+     "id": "school-apply",
+     "name": "申请文书"
+    },
+    {
+     "id": "school-exam",
+     "name": "考试写作和口语"
+    },
+    {
+     "id": "school-paper",
+     "name": "论文和读书"
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "name": "职场办公",
+   "why": "要交差、要省时间；公司或个人都愿意为省下的几小时付钱",
+   "groups": [
+    {
+     "id": "work-job",
+     "name": "求职"
+    },
+    {
+     "id": "work-docs",
+     "name": "文档和汇报"
+    },
+    {
+     "id": "work-data",
+     "name": "数据和翻译"
+    }
+   ]
+  },
+  {
+   "id": "money",
+   "name": "投资理财",
+   "why": "每天开盘前都要判断，信息就是钱；交易者为数据和纪律付钱",
+   "groups": [
+    {
+     "id": "money-daily",
+     "name": "每天看盘"
+    },
+    {
+     "id": "money-research",
+     "name": "研究"
+    },
+    {
+     "id": "money-custom",
+     "name": "搭给你自己的"
+    }
+   ]
+  },
+  {
+   "id": "biz",
+   "name": "生意经营",
+   "why": "直接关系成交：多一个客户、多一单就回本",
+   "groups": [
+    {
+     "id": "biz-shop",
+     "name": "电商"
+    },
+    {
+     "id": "biz-client",
+     "name": "客户和私域"
+    },
+    {
+     "id": "biz-site",
+     "name": "门面"
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "name": "生活",
+   "why": "高频、私人；好奇和焦虑都愿意付钱",
+   "groups": [
+    {
+     "id": "life-fate",
+     "name": "玄学"
+    },
+    {
+     "id": "life-health",
+     "name": "健康"
+    }
+   ]
+  },
+  {
+   "id": "info",
+   "name": "信息抓取",
+   "why": "所有人都要：把外面的东西读懂、变成自己能用的",
+   "groups": [
+    {
+     "id": "info-digest",
+     "name": "每天的信息"
+    },
+    {
+     "id": "info-transcribe",
+     "name": "转录和总结"
+    }
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "id": "u1",
+   "name": "当天热点",
+   "note": "X、抖音、日报里今天在涨的",
+   "group": "self-topic",
+   "media": [
+    "数据",
+    "抓取"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an",
+    "self-x"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u2",
+   "name": "选题打分",
+   "note": "痛点具象、认知反差、交付可行三点打分",
+   "group": "self-topic",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an",
+    "self-mv1uf192"
+   ],
+   "alsoScenes": [],
+   "tool": "topic"
+  },
+  {
+   "id": "u3",
+   "name": "爆款拆解",
+   "note": "主线、开头、哪里撑住、哪里散、能借什么",
+   "group": "self-topic",
+   "media": [
+    "文字",
+    "视频"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an"
+   ],
+   "alsoScenes": [],
+   "tool": "teardown"
+  },
+  {
+   "id": "u4",
+   "name": "对标账号监控",
+   "note": "每天盯对标账号、出爆款提醒；要账号登录，按月",
+   "group": "self-topic",
+   "media": [
+    "数据",
+    "抓取"
+   ],
+   "buy": [
+    "联系我"
+   ],
+   "status": "要做",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u5",
+   "name": "口述 → 口播稿",
+   "note": "只删口水词，一个字不改写",
+   "group": "self-write",
+   "media": [
+    "文字",
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": [],
+   "tool": "clean"
+  },
+  {
+   "id": "u6",
+   "name": "文章点评",
+   "note": "开头有没有说出主线、密度撑不撑得住",
+   "group": "self-write",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uf192",
+    "self-x"
+   ],
+   "alsoScenes": [],
+   "tool": "review"
+  },
+  {
+   "id": "u7",
+   "name": "标题",
+   "note": "6–10 个候选，带写法和依据",
+   "group": "self-write",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次",
+    "skill"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an",
+    "self-mv1uf192"
+   ],
+   "alsoScenes": [],
+   "tool": "titles"
+  },
+  {
+   "id": "u8",
+   "name": "去掉 AI 味",
+   "note": "意思不变、读起来像人写的",
+   "group": "self-write",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uf192",
+    "self-mv1uf9an",
+    "self-x"
+   ],
+   "alsoScenes": [
+    "school",
+    "work"
+   ],
+   "tool": "humanize"
+  },
+  {
+   "id": "u9",
+   "name": "一稿改成各平台版本",
+   "note": "抖音、视频号、小红书、X 各自的标题简介话题",
+   "group": "self-write",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an",
+    "self-mv1uf192",
+    "self-x"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u10",
+   "name": "X 长文",
+   "note": "一篇笔记 → 排好的 X 长文",
+   "group": "self-x",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u11",
+   "name": "封面",
+   "note": "3:4 竖版文字封面",
+   "group": "self-image",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf9an",
+    "self-mv1uf192"
+   ],
+   "alsoScenes": [],
+   "tool": "cover"
+  },
+  {
+   "id": "u12",
+   "name": "正文配图",
+   "note": "手绘解释图，插回对应段落",
+   "group": "self-image",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uf192",
+    "self-x"
+   ],
+   "alsoScenes": [],
+   "tool": "illustrate"
+  },
+  {
+   "id": "u14",
+   "name": "生图风格",
+   "note": "同一主题挑风格出图；风格库要扩到 20 种左右",
+   "group": "self-image",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次",
+    "skill"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uf9an"
+   ],
+   "alsoScenes": [],
+   "tool": "style"
+  },
+  {
+   "id": "u15",
+   "name": "个人 IP 形象",
+   "note": "两张照片 → 卡通形象、头像、水印、Banner",
+   "group": "self-image",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u16",
+   "name": "口播去废话剪辑",
+   "note": "剪掉口误和停顿、加字幕；按分钟收费",
+   "group": "self-video",
+   "media": [
+    "视频"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u17",
+   "name": "字幕",
+   "note": "视频 → SRT 字幕；按分钟",
+   "group": "self-video",
+   "media": [
+    "视频",
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": [
+    "school",
+    "work"
+   ]
+  },
+  {
+   "id": "u18",
+   "name": "长视频切片",
+   "note": "一期长视频 → 几条短切片",
+   "group": "self-video",
+   "media": [
+    "视频"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u19",
+   "name": "动效包装",
+   "note": "Remotion 动效；渲染重，先人工接单",
+   "group": "self-video",
+   "media": [
+    "视频"
+   ],
+   "buy": [
+    "联系我"
+   ],
+   "status": "要做",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u20",
+   "name": "数字人口播",
+   "note": "一段文字 → 数字人口播视频",
+   "group": "self-video",
+   "media": [
+    "视频"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "u21",
+   "name": "产品宣传片",
+   "note": "产品素材 → 电影感宣传片",
+   "group": "self-video",
+   "media": [
+    "视频"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": [
+    "biz"
+   ]
+  },
+  {
+   "id": "u22",
+   "name": "配音",
+   "note": "一段文字 → 配音或有声书",
+   "group": "self-voice",
+   "media": [
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u23",
+   "name": "声音克隆",
+   "note": "一段录音 → 你的声音说任何话",
+   "group": "self-voice",
+   "media": [
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u24",
+   "name": "文章转播客",
+   "note": "一篇长文 → 双人对谈播客",
+   "group": "self-voice",
+   "media": [
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u25",
+   "name": "Personal Statement 点评和修改",
+   "note": "按招生官的读法点评，帮他改他自己的稿，不代写",
+   "group": "school-apply",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u26",
+   "name": "留学简历",
+   "note": "活动经历 → 申请用简历",
+   "group": "school-apply",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u27",
+   "name": "推荐信草稿",
+   "note": "给推荐人一份能改的初稿",
+   "group": "school-apply",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u28",
+   "name": "面试模拟",
+   "note": "按学校常见问题模拟、给反馈",
+   "group": "school-apply",
+   "media": [
+    "文字",
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": [
+    "work"
+   ]
+  },
+  {
+   "id": "u29",
+   "name": "雅思作文评分",
+   "note": "按官方四项评分标准给分、逐段改",
+   "group": "school-exam",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u30",
+   "name": "托福写作评分",
+   "note": "按 ETS 评分标准给分",
+   "group": "school-exam",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u31",
+   "name": "GRE 写作评分",
+   "note": "Issue 题按 0–6 分给分",
+   "group": "school-exam",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u32",
+   "name": "SAT 作文",
+   "note": "SAT 从 2021 年起不考作文了，需求可能在 AP 和校内作文",
+   "group": "school-exam",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u33",
+   "name": "雅思口语模拟打分",
+   "note": "录一段回答 → 按四项给分",
+   "group": "school-exam",
+   "media": [
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u34",
+   "name": "论文结构和逻辑反馈",
+   "note": "看论证、结构、引用；做反馈和润色，不代写",
+   "group": "school-paper",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u35",
+   "name": "文献速读",
+   "note": "一篇论文 → 中文要点和翻译",
+   "group": "school-paper",
+   "media": [
+    "文字",
+    "抓取"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": [
+    "work"
+   ]
+  },
+  {
+   "id": "u36",
+   "name": "引用格式检查",
+   "note": "APA / MLA / GB 格式逐条核对",
+   "group": "school-paper",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u37",
+   "name": "简历修改",
+   "note": "对着岗位描述改简历",
+   "group": "work-job",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u38",
+   "name": "求职信",
+   "note": "一份岗位描述 → 求职信",
+   "group": "work-job",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u39",
+   "name": "PPT 生成",
+   "note": "大纲 → 整套幻灯片；可挑 PPT 风格",
+   "group": "work-docs",
+   "media": [
+    "图片",
+    "文字"
+   ],
+   "buy": [
+    "按次",
+    "skill"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u40",
+   "name": "会议录音 → 纪要",
+   "note": "录音 → 纪要和待办；咨询录音还能出客户版 PDF",
+   "group": "work-docs",
+   "media": [
+    "文字",
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u41",
+   "name": "周报和汇报",
+   "note": "零散记录 → 一页周报",
+   "group": "work-docs",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u42",
+   "name": "一句话画流程图",
+   "note": "一句描述 → 能继续改的流程图、架构图",
+   "group": "work-docs",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u43",
+   "name": "表格 → 分析和图表",
+   "note": "上传表格 → 结论和图",
+   "group": "work-data",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u44",
+   "name": "中英互译润色",
+   "note": "地道的商务英文或中文",
+   "group": "work-data",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": [
+    "school"
+   ]
+  },
+  {
+   "id": "u45",
+   "name": "今日市场报告",
+   "note": "收盘后一页：大盘、板块、情绪",
+   "group": "money-daily",
+   "media": [
+    "数据",
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u46",
+   "name": "资金流入流出",
+   "note": "今天钱往哪去了",
+   "group": "money-daily",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u47",
+   "name": "单只股票今日技术分析",
+   "note": "一只股票 → 今天的技术面和关键位",
+   "group": "money-daily",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u48",
+   "name": "板块热力图",
+   "note": "各板块涨跌一眼看完",
+   "group": "money-daily",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u49",
+   "name": "个股深度研报",
+   "note": "一只 A 股 → 带证据的长期研报",
+   "group": "money-research",
+   "media": [
+    "数据",
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u50",
+   "name": "财报解读",
+   "note": "一份财报 → 看懂了什么、要警惕什么",
+   "group": "money-research",
+   "media": [
+    "数据",
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u51",
+   "name": "策略回测",
+   "note": "一个策略 → 胜率、盈亏比、最大回撤",
+   "group": "money-research",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u52",
+   "name": "个人提醒（价格、异动）",
+   "note": "按你的条件推送到微信或邮箱；要帮你搭",
+   "group": "money-custom",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "联系我"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u53",
+   "name": "交易工作台",
+   "note": "整套看盘、复盘、纪律工具，按你的方法搭",
+   "group": "money-custom",
+   "media": [
+    "数据"
+   ],
+   "buy": [
+    "联系我"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u54",
+   "name": "商品图 → 短视频",
+   "note": "几张商品图 → 一条商品短视频",
+   "group": "biz-shop",
+   "media": [
+    "视频",
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u55",
+   "name": "主图和详情页文案",
+   "note": "卖点 → 主图和详情页",
+   "group": "biz-shop",
+   "media": [
+    "图片",
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u56",
+   "name": "微信聊天 → 客户名单",
+   "note": "聊天记录 → 客户、关系状态、下一步",
+   "group": "biz-client",
+   "media": [
+    "数据",
+    "抓取"
+   ],
+   "buy": [
+    "联系我"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u57",
+   "name": "销售话术",
+   "note": "产品和客户画像 → 话术和异议应答",
+   "group": "biz-client",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u58",
+   "name": "咨询录音 → 客户版 PDF",
+   "note": "一次咨询 → 给客户的总结 PDF",
+   "group": "biz-client",
+   "media": [
+    "文字",
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u59",
+   "name": "一句话做落地页",
+   "note": "一句需求 → 能上线的落地页",
+   "group": "biz-site",
+   "media": [
+    "图片",
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u60",
+   "name": "八字、紫微、六爻",
+   "note": "天机已经在跑：排盘和解读",
+   "group": "life-fate",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": [],
+   "link": "/products/tianji/"
+  },
+  {
+   "id": "u61",
+   "name": "人生 K 线",
+   "note": "出生时间 → 一生运势画成 K 线",
+   "group": "life-fate",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u62",
+   "name": "30 天训练和饮食计划",
+   "note": "身体数据和目标 → 私教计划（轻练）",
+   "group": "life-health",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": [],
+   "link": "/products/get-fit/"
+  },
+  {
+   "id": "u63",
+   "name": "AI 日报",
+   "note": "免费引流：每天的 AI 新闻和点评",
+   "group": "info-digest",
+   "media": [
+    "文字",
+    "抓取"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [],
+   "alsoScenes": [],
+   "link": "/newsletter"
+  },
+  {
+   "id": "u64",
+   "name": "定制日报",
+   "note": "你关心的信源 → 每天一份",
+   "group": "info-digest",
+   "media": [
+    "文字",
+    "抓取"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u65",
+   "name": "音视频转文字",
+   "note": "录音或视频 → 文字稿；按分钟",
+   "group": "info-transcribe",
+   "media": [
+    "声音",
+    "抓取"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": [
+    "self",
+    "school",
+    "work"
+   ]
+  },
+  {
+   "id": "u66",
+   "name": "网页和长视频总结",
+   "note": "一个链接 → 要点",
+   "group": "info-transcribe",
+   "media": [
+    "文字",
+    "抓取"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "u67",
+   "name": "播客 → 文章",
+   "note": "一期播客 → 一篇能读的文章",
+   "group": "info-transcribe",
+   "media": [
+    "文字",
+    "声音"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "umv1ufmj3",
+   "name": "图文（文章排成卡片）",
+   "note": "一篇文章一字不改，排成 3:4 封面 + 正文卡片；抖音图文也能发",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "有",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-image"
+   ],
+   "alsoScenes": [],
+   "tool": "xhs"
+  },
+  {
+   "id": "p1",
+   "name": "公众号排版",
+   "note": "Markdown → 排好版的公众号文章，直接粘进编辑器；工作台里已经在用",
+   "group": "self-mv1uf192",
+   "media": [
+    "文字",
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "要做",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "p2",
+   "name": "公众号图文（贴图）",
+   "note": "几张图 + 一段短文案，发成公众号的图片消息",
+   "group": "self-mv1uf192",
+   "media": [
+    "图片",
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uf9an"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p3",
+   "name": "公众号封面",
+   "note": "2.35:1 头图 + 1:1 分享图，和标题逐字一致",
+   "group": "self-mv1uf192",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "p4",
+   "name": "电影截图 + 字幕",
+   "note": "一张电影感画面，下面几行字幕，像影视剧截图",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p5",
+   "name": "金句文字卡",
+   "note": "一句话 → 大字报式的纯文字卡片",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p6",
+   "name": "干货清单卡",
+   "note": "一篇干货 → 编号清单的多页卡片",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p7",
+   "name": "前后对比图",
+   "note": "做之前、做之后左右对比",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p8",
+   "name": "聊天截图风",
+   "note": "把一段对话排成聊天截图的样子",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p9",
+   "name": "手写笔记风",
+   "note": "像手账、手写笔记拍下来的样子",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p10",
+   "name": "四格漫画",
+   "note": "一个观点 → 四格漫画",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt",
+    "self-mv1uf192"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p11",
+   "name": "杂志封面风",
+   "note": "像杂志封面的单图：大标题 + 人物或物件",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [
+    "self-mv1uffjt"
+   ],
+   "alsoScenes": []
+  },
+  {
+   "id": "p12",
+   "name": "九宫格拼图",
+   "note": "一组图排成九宫格，第一张点开就想往后翻",
+   "group": "self-mv1uf9an",
+   "media": [
+    "图片"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  },
+  {
+   "id": "p13",
+   "name": "长帖 / 推文串",
+   "note": "一段想法 → 一串推文",
+   "group": "self-x",
+   "media": [
+    "文字"
+   ],
+   "buy": [
+    "按次"
+   ],
+   "status": "想法",
+   "alsoGroups": [],
+   "alsoScenes": []
+  }
+ ]
+}

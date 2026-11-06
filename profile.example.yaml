@@ -1,0 +1,105 @@
+# 内容工作台 · 个人配置模板
+#
+# 复制一份成 profile.yaml（同目录，或 ~/.config/content-studio/profile.yaml），填好就能跑。
+# profile.yaml 已在 .gitignore 里，不会被提交。
+#
+# 标记说明：
+#   [必填]  没有它工作台起不来，或者起来了什么都做不了
+#   [可选]  留空也能用，填了多一项能力
+#
+# 检查填得对不对：  python3 -m content_studio check
+# 密钥不放这里——放 secrets_file 指向的文件（见最后一节）。
+
+# ─── 我是谁 ────────────────────────────────────────────────────────────────
+me:
+  name: ""                          # [必填] 你的名字。提示词里「作者是 ___」用它
+  douyin: ""                        # [必填] 你自己的抖音主页链接，形如 https://www.douyin.com/user/MS4wLjAB…
+                                    #        数据（播放、点赞、涨粉）从这个号自动同步
+  github: ""                        # [可选] GitHub 用户名或主页链接。定位页顶上「在哪找到我」显示；X 页「我做的」读你的公开仓库
+  site: ""                          # [可选] 个人网站，形如 https://example.com。同上；X 页「原则」「预测」从这里读
+  # 其他平台的账号名，填了就在「发布」页出现一张卡；留空的平台不显示
+  platforms:                        # [可选]
+    channels: ""                    #   视频号
+    xiaohongshu: ""                 #   小红书
+    wechat_mp: ""                   #   公众号
+    miniprogram: ""                 #   小程序
+    x: ""                           #   X
+    bilibili: ""                    #   B 站
+    youtube: ""                     #   YouTube
+    xiaoyuzhou: ""                  #   小宇宙
+
+# ─── 后台用什么模型 ────────────────────────────────────────────────────────
+ai:
+  backend: codex                    # [必填] codex（默认）或 claude；本机先安装并登录对应 CLI
+                                    #        （直接填 API key 的方式还没接入，写了会被拒）
+  command: claude                   # [可选] 兼容调用格式，运行层按 backend 转给对应 CLI；一般不用改
+  heavy_model: opus                 # [可选] 写提纲、写文章、每周复盘用的模型
+  light_model: sonnet               # [可选] 三点评分、开头检查、Anna 对话用的模型
+
+# ─── 对标账号 ──────────────────────────────────────────────────────────────
+# 你想跟着看的账号，主页链接一行一个。同步后在进项看新作品，再由你选择是否下载和拆解。
+benchmarks: []                      # [可选]
+# benchmarks:
+#   - https://www.douyin.com/user/MS4wLjAB…
+#   - https://www.douyin.com/user/MS4wLjAB…
+
+# ─── Obsidian 库 ───────────────────────────────────────────────────────────
+vault:
+  path: ""                          # [必填] 库的根目录，形如 ~/my-vault
+  folders:
+    my_writing: ""                  # [必填] 你自己写的东西放在库里哪个文件夹（相对库根目录）
+                                    #        这一栏不看时间：写过、还没拍的排期选题池里「从我的笔记里选」就能找到
+    clippings: ""                   # [可选] 网页剪藏
+    saved: ""                       # [可选] 收藏的别人的内容
+    benchmark_transcripts: 002_对标内容   # [可选] 对标视频的文字稿会写到这里（工作台会写）
+    my_videos: 005_我发出的内容           # [可选] 你自己视频的文字稿会写到这里（工作台会写）
+    processing: 004_内容加工中            # [可选] 文章交接给公众号管线时写到这里
+  # 每天早上要读的日报。key 只能是字母数字下划线；folder 相对库根目录
+  dailies: []                       # [可选]
+  # dailies:
+  #   - { key: ai_daily, label: AI 日报, folder: 006_ai daily newsletter }
+
+# ─── Anna（常驻主编）──────────────────────────────────────────────────────
+# 不填也能用：仓库自带一个通用版角色和提纲框架（src/content_studio/examples/anna/）。
+# 想要「你的」Anna，把那两个文件复制到你的笔记库里改，然后指过来。
+anna:
+  # writing_skill: ""  # [可选] 写作 skill 文件夹（里面有 SKILL.md 和 references/）；不填自动找 ~/.claude/skills/park-writing
+  role: ""                          # [可选] 角色 Markdown，形如 ~/my-vault/roles/Anna.md；同名文件夹下的 knowledge/ 会一起读
+  workflows: ""                     # [可选] 提纲框架所在文件夹，里面要有 一勾式骨架.md
+
+# ─── 其他 ─────────────────────────────────────────────────────────────────
+video_projects_root: ""             # [可选] 口播视频项目目录（剪辑进度从这里读）
+secrets_file: ~/.config/content-studio/secrets.yaml   # [可选] 公众号 appid/secret、X 密钥放这里，权限 600
+
+# ─── 品牌 ─────────────────────────────────────────────────────────────────
+# 工作台左上角、发给客户的会议纪要和报告都用它。不填 = 内容工作台。
+# brand:
+#   name: 你的名字或公司名
+#   en: YOUR CO.                    # [可选] 英文名，页脚用
+#   slogan: 一句话说你是谁
+#   promise: 一句话说你交付什么       # [可选] 页脚
+#   logo: ~/my-vault/brand/logo.svg # [可选] SVG；不填用对勾
+
+# ─── 你的标准和定位 ────────────────────────────────────────────────────────
+# 一个文件夹里放 SKILL.md（评分标准）、positioning.md（定位三问）、principles.md（内容原则），
+# 这里指到那个 SKILL.md。不填 = ~/.claude/skills/content-qa/SKILL.md
+# standards: ~/my-vault/标准/SKILL.md
+
+# ─── 咨询客户 ─────────────────────────────────────────────────────────────
+# consult:
+#   folder: 010_咨询                 # 库里放客户文件夹的地方
+#   workdir: ~/.config/content-studio/consults   # 录音、转写原件（不进笔记库）
+
+# ─── 发布和下载用的外部仓库、skill ─────────────────────────────────────────
+# 装机脚本会装到下面这些默认位置；装在别处才需要填。
+# paths:
+#   content_ops: ~/work/content-ops
+#   content_downloader: ~/work/content-downloader
+#   xingqiu: ~/work/xingqiu-shell        # 研习室（小程序）发布
+#   publish_toolkit: ~/content-toolkit/capabilities/publish
+#   secrets: ~/.config/content-studio/secrets.yaml
+#   youtube_token: ~/.config/park/youtube-token.json
+# skills:
+#   koubo: ~/.claude/skills/park-video-v2
+#   gzh_design: ~/.claude/skills/gzh-design
+#   shots: ~/.agents/skills/video-shotcraft/references/shots

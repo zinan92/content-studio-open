@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>朋友圈</title>
+<script>try { const t = localStorage.getItem('cs-theme'); if (t) document.documentElement.dataset.theme = t; } catch (_) { /* ignore */ }</script>
+<link rel="icon" href="/static/brand/app-icon.svg">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/moments/page.css">
+</head>
+<body class="mo-body">
+<header class="mo-top">
+  <a class="mo-brand" href="/" title="回工作台"><svg viewBox="0 0 120 120" aria-hidden="true"><path d="M14 66 Q30 28 48 86" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="9" stroke-linecap="round"/><path d="M48 86 Q76 88 106 22" fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="round"/><circle cx="48" cy="86" r="9" class="mo-dot"/></svg><span>朋友圈</span></a>
+  <button type="button" class="mo-theme" id="theme" title="切换深浅色" aria-label="切换深浅色">◐</button>
+</header>
+
+<main class="mo-main">
+  <section class="mo-intake" aria-labelledby="hT">
+    <h1 id="hT">发完 X，点一下搬过去。</h1>
+    <p class="mo-lede">原样搬到小红书小号、抖音小号、公众号贴图：字不改，图用你自己的。</p>
+    <div class="mo-row">
+      <button type="button" class="btn primary" id="check">看看 X 上刚发了什么</button>
+      <form class="mo-form" id="form">
+        <input id="link" type="text" autocomplete="off" spellcheck="false" placeholder="或贴一条 X 链接" aria-label="X 链接">
+        <button type="submit" class="btn" id="add">读这条</button>
+      </form>
+    </div>
+    <p class="mo-msg" id="msg" role="status" aria-live="polite"></p>
+  </section>
+  <ol class="mo-list" id="list" aria-label="X 上发过的"></ol>
+</main>
+
+<script src="/moments/page.js"></script>
+</body>
+</html>

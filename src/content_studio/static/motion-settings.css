@@ -1,0 +1,83 @@
+/* Shared by defaults and each video's draft. Values remain owned by the motion API. */
+:is(#v2SetBody,#v2Defaults) > .motion-settings{width:100%;max-width:none}
+
+.motion-settings{color:var(--ink);font-size:14px;line-height:1.6;min-width:0}
+.motion-settings .ms-fields{border:0;padding:0;margin:0;min-width:0}
+.motion-settings h3{font-size:16px;margin:0 0 8px}
+.motion-settings .ms-help,.motion-settings .ms-detail{font-size:13px;color:var(--ink-2);margin:8px 0}
+.motion-settings .ms-presets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.motion-settings .ms-preset{display:flex;flex-direction:column;gap:4px;text-align:left;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;padding:16px;cursor:pointer;min-width:0;transition:border-color var(--fast) var(--ease),box-shadow var(--mid) var(--ease),transform var(--mid) var(--ease)}
+.motion-settings .ms-preset:hover{border-color:var(--ink-3);box-shadow:var(--shadow);transform:translateY(-1px)}
+.motion-settings .ms-preset b{font-size:16px}
+.motion-settings .ms-preset span{font-size:13px;color:var(--ink-2)}
+.motion-settings .ms-preset[aria-pressed=true]{background:var(--surface);border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.motion-settings .ms-common{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.motion-settings .ms-control{min-width:0}
+.motion-settings .v2s-h{gap:8px;align-items:center}
+.motion-settings .v2s-src{white-space:nowrap;flex-shrink:0;font-size:12px;padding:0;color:var(--ink-3);background:none}
+.motion-settings .v2s-src.edit{color:var(--hot)}
+.motion-settings .ms-segments{display:flex;flex-wrap:wrap;gap:2px;padding:2px;border-radius:10px;background:var(--sunk);border:1px solid var(--line-soft)}
+.motion-settings .ms-segments button{flex:1 0 auto;min-height:32px;padding:4px 12px;border:0;border-radius:6px;background:transparent;color:var(--ink-2);font-size:13px;cursor:pointer;white-space:nowrap}
+.motion-settings .ms-segments button:hover{color:var(--ink);background:var(--hover)}
+.motion-settings .ms-segments button[aria-pressed=true]{background:var(--surface);color:var(--ink);font-weight:500;box-shadow:0 1px 2px rgba(18,21,25,.1),0 0 0 1px var(--line-soft)}
+.motion-settings :is(button,input,select,summary):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.motion-settings :is(button,input,select):disabled{cursor:default;opacity:.6}
+.motion-settings .ms-advanced{border-top:1px solid var(--line);margin:24px 0}
+.motion-settings .ms-advanced > summary{cursor:pointer;padding:16px 0;font-size:14px;font-weight:600}
+.motion-settings .ms-choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px 24px;padding:16px 0}
+.motion-settings .v2s-choice{gap:8px;min-width:0;font-size:14px}
+.motion-settings .v2s-choice > span{flex-wrap:wrap;gap:8px;align-items:center}
+:is(#v2SetBody,#v2Defaults) .motion-settings :is(select,input:not([type]),input[type=number]){font-size:14px;padding:8px 12px;border-radius:6px;min-height:40px;background:var(--surface);color:var(--ink)}
+:is(#v2SetBody,#v2Defaults) .motion-settings input[type=color]{border-radius:6px;padding:4px;height:40px;width:64px}
+.motion-settings .ms-fixed-list{display:grid;gap:12px;padding:16px 0}
+.motion-settings .ms-fixed{display:flex;gap:8px 16px;align-items:baseline;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
+.motion-settings .ms-fixed small{font-size:13px}
+.motion-settings .ms-per{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.motion-settings .ms-savebar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:16px 0 0;margin-top:24px;border-top:1px solid var(--line-soft)}
+.motion-settings .ms-savebar:not(.is-dirty) .ms-save-status b{font-weight:400;color:var(--ink-3);font-size:13px}
+.motion-settings .ms-savebar.is-dirty{position:sticky;bottom:16px;z-index:5;padding:12px 16px;background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);animation:bar-up var(--mid) var(--ease-in)}
+@keyframes bar-up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.motion-settings .ms-save-status{flex:1 1 200px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.motion-settings .ms-save-status span{font-size:12px;color:var(--ink-2);overflow-wrap:anywhere}
+.motion-settings .ms-actions{display:flex;gap:8px;flex-wrap:wrap}
+.motion-settings .ms-feedback{font-size:13px;flex-basis:100%;margin:0;color:var(--ink-2)}
+.motion-settings .ms-feedback:empty{display:none}
+.motion-settings .ms-error{color:var(--warn);font-size:13px}
+.motion-settings .ms-savebar > .ms-help{flex-basis:100%;margin:0}
+@media(max-width:1100px){.motion-settings .ms-common{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .motion-settings .ms-presets{grid-template-columns:1fr;gap:8px}
+  .motion-settings .ms-preset{padding:12px}
+  .motion-settings .ms-savebar{padding:12px;gap:8px}
+  .motion-settings .ms-actions{width:100%}
+  .motion-settings .ms-actions .btn{flex:1 0 auto;white-space:normal}
+}
+
+.motion-settings .ms-legend{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+
+
+.ms-shotcraft{border:1px solid var(--line);border-radius:10px;margin:24px 0;background:var(--surface)}
+.ms-shotcraft > summary{cursor:pointer;padding:16px;font-size:14px;color:var(--ink)}
+.ms-shotcraft > summary > span{font-size:13px;color:var(--ink-2);margin-left:12px}
+.ms-shotcraft > .ms-help,.ms-shotcraft > [data-shotcraft-body],.ms-shotcraft > .sc-reference-category{margin:0;padding:0 16px 16px}
+.ms-shotcraft .ms-help{font-size:13px;color:var(--ink-2);line-height:1.6}
+.sc-reference-category h4{font-size:14px;margin:16px 0 8px;color:var(--ink)}
+.sc-reference-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;align-items:start}
+.sc-tile{display:flex;flex-direction:column;gap:8px;border:1px solid var(--line-soft);border-radius:10px;padding:8px 8px 4px;background:var(--surface);min-width:0;transition:border-color var(--fast) var(--ease),box-shadow var(--mid) var(--ease)}
+.sc-tile:hover{border-color:var(--line);box-shadow:var(--shadow)}
+.sc-thumb{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:0;border-radius:6px;overflow:hidden;background:var(--sunk);cursor:pointer}
+.sc-thumb :is(img,video){position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sc-thumb video{opacity:0;transition:opacity var(--mid) var(--ease)}
+.sc-thumb.playing video{opacity:1}
+.sc-thumb .sc-none{font-size:12px;color:var(--ink-3)}
+.sc-tile-t{display:flex;align-items:center;gap:8px;min-width:0;padding:0 4px}
+.sc-tile-t b{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sc-adapted{flex:none;font-size:12px;padding:0 8px;border-radius:6px;background:var(--out-soft);color:var(--out)}
+.sc-tile p{margin:0;padding:0 4px;font-size:12px;line-height:1.5;color:var(--ink-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sc-tile-acts{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.sc-tile-acts a{font-size:12px;color:var(--ink-3);padding-right:4px}
+.sc-engine{margin:16px 0;padding:16px;border:1px solid var(--line);border-radius:10px}
+.sc-engine > summary{cursor:pointer;font-size:14px}
+.sc-engine-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;font-size:13px}
+.motion-settings .ms-savebar:not(.is-dirty) .ms-actions{display:none}
+.motion-settings .ms-segments.has-slide button[aria-pressed=true]{background:transparent;box-shadow:none}

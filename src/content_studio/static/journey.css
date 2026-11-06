@@ -1,0 +1,122 @@
+/* One primary journey; preparation documents are subordinate to the first step. */
+.journey-steps{display:flex;gap:8px;margin:24px 0 16px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.journey-steps button{display:flex;align-items:center;gap:8px;flex:1;min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink-2);font-size:14px;cursor:pointer;flex-wrap:wrap;text-align:left}
+.journey-steps button > span{font-size:12px;color:var(--ink-2)}
+.journey-steps button small{flex-basis:100%;font-size:12px;color:var(--ink-2)}
+.journey-steps button.on{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.journey-steps button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.journey-prepare{display:flex;align-items:center;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:0 16px}
+.journey-prepare > span{font-size:13px;color:var(--ink-2)}
+.journey-prepare .video-tabs{border:0;margin:0;padding:0}
+.journey-hint{font-size:13px;color:var(--ink-2);padding:12px 16px;margin:0;background:var(--sunk)}
+.journey-save-state{font-size:13px;padding:8px 12px;margin:12px 0;border-radius:6px;background:var(--sunk);color:var(--ink-2)}
+.journey-save-state.bad{color:var(--warn);background:var(--warn-soft)}
+.journey-publish{padding:24px}
+.journey-publish h2{font-size:20px;margin:0 0 12px}
+.journey-publish p{font-size:14px;color:var(--ink-2);margin:0 0 16px}
+
+.pack-navigation{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+.pack-navigation>.back{align-self:flex-start}
+/* 标题和封面页最底下：一个「发布」按钮 + 一行状态 + 各平台一枚小牌子（10/8 作者：不要第 4 步，不要一段说明） */
+.release-handoff{display:flex;flex-direction:column;gap:12px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.release-handoff p{margin:0}
+.release-action{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.release-action>span{font-size:13px;color:var(--ink-2)}
+/* 「发」：这条要发的每个平台一行（pack.js faTable） */
+.fa-table{display:flex;flex-direction:column;gap:12px;padding-top:12px;border-top:1px solid var(--line-soft)}
+.fa-plat{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;align-items:start}
+.fa-name{display:inline-flex;align-items:center;gap:8px;padding-top:8px;font-size:14px;color:var(--ink);text-align:left}
+.fa-older{font-size:13px;color:var(--ink-3)}
+.fa-older summary{cursor:pointer}
+.fa-older[open]{display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.release-action>b{font-size:16px}
+@media (max-width:720px){.fa-plat{grid-template-columns:minmax(0,1fr)}}
+#v-pack .pk2-card.pk2-focus{box-shadow:none}
+/* 标题和封面（10/9 重做）：页头跟录制与剪辑一样，下面几张卡和页头左边对齐、铺满，不再居中缩在中间 */
+#v-pack .pack-navigation+.page-h{display:none}
+#v-pack .pack-navigation{margin-bottom:0}
+#v-pack .pk2{max-width:none;margin:0 0 40px;gap:16px}
+#v-pack .pk2-topic{display:none}
+#v-pack .pk2-card{border-radius:10px;padding:16px 24px}
+#v-pack .pk2-step i.is-done{background:var(--out)}
+#v-pack .pack-size{font-size:13px;color:var(--ink-3)}
+/* 三步导航（骨架 · 录制与剪辑 · 标题和封面）：选中的那步白底 + 强调色描边，不再整块橙色 */
+.journey-steps button.on{background:var(--surface);border-color:var(--accent);box-shadow:0 0 0 1px var(--accent);color:var(--ink);font-weight:600}
+.journey-steps button.on>span{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--on-accent);font-size:12px;line-height:1}
+.journey-steps button>span{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--sunk);font-size:12px;line-height:1}
+.journey-steps button:hover:not(.on){border-color:var(--ink-3)}
+
+/* 选题 →「我的选题」（10/19 拿掉排期）：上面一行正在做的，下面一条一行，右边「做这条 · 不做了」 */
+.my-topics{display:grid;gap:12px;padding:16px}
+.my-now{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:12px 16px;border-radius:10px;background:var(--accent-soft)}
+.my-now small{font-size:12px;color:var(--ink-2)}
+.my-now b{font-size:16px;min-width:0}
+.my-now.empty{background:var(--sunk);color:var(--ink-2);font-size:13px}
+.my-acts{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.my-acts small{font-size:12px;color:var(--ink-3)}
+.my-acts .my-held{color:var(--ink-2)}
+.my-list{display:grid}
+.my-row{display:flex;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--line-soft)}
+.my-t{flex:1;min-width:0;display:grid;gap:4px}
+.my-t b{font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.my-t small{font-size:12px;color:var(--ink-3)}
+.my-t s{color:var(--ink-3)}
+.my-row .linklike{font-size:13px;color:var(--ink-3)}
+.my-empty{margin:0;font-size:13px;color:var(--ink-3)}
+.my-trash>summary{cursor:pointer;font-size:13px;color:var(--ink-3);padding:8px 0}
+
+/* 10/20 左栏 = 找 写 剪 发 盘：一个字一个方块，做完的绿、现在这步橙，没到的灰 */
+.rail .rl>.rail-spacer{flex:1 1 auto;min-height:24px}
+.ri.zx>span{display:inline-flex;align-items:center;gap:8px;min-width:0}
+.zx-k{width:20px;height:20px;border-radius:6px;display:inline-grid;place-items:center;font-style:normal;font-size:12px;font-weight:700;line-height:1;background:var(--rail-2);color:var(--rail-dim);flex:none}
+.ri.zx.done .zx-k{background:var(--out-soft);color:var(--out)}
+.ri.zx.now .zx-k{background:var(--accent);color:var(--on-accent)}
+.ri.zx.idle{opacity:.6}
+.rail-now{display:flex;flex-direction:column;gap:4px;padding:8px 10px 4px;font-size:12px;color:var(--rail-dim);line-height:1.4}
+.rail-now b{color:var(--rail-ink);font-weight:500;font-size:13px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.plats-list{display:flex;flex-direction:column;padding:8px}
+.plats-row{display:flex;align-items:center;gap:12px;padding:12px;border:0;background:transparent;border-radius:6px;font:inherit;font-size:14px;color:var(--ink);cursor:pointer;text-align:left}
+.plats-row:hover{background:var(--hover)}
+.plats-row small{font-size:13px;color:var(--ink-3)}
+.plats-row .spacer{flex:1}
+.rail-foot .plat-strip{flex-direction:column;align-items:stretch;gap:4px}
+.plat-alert{border:0;background:transparent;color:var(--hot);font:inherit;font-size:12px;text-align:left;padding:4px 10px;border-radius:6px;cursor:pointer}
+.plat-alert:hover{background:var(--rail-2)}
+
+/* 10/20 线条：剪页从上到下叠了约 7 道线（步骤格框 + 通栏线 + 大卡 + 「这次怎么剪」框 + 「现在」框 + 3px 粗竖条 + 两条分隔线）。
+   一页只留一层卡片：卡里不再套框，用间距分组；状态靠小标签（chip），不靠左边粗条。 */
+.work-main .cut-plan{border:0;border-radius:0;padding:24px 24px 0;margin:0}
+.work-main .vp{padding:24px 24px 0}
+.work-main .vp-now{border:0;border-radius:0;padding:0;margin:0 0 24px}
+.work-main .vp-now.busy,.work-main .vp-now.ok,.work-main .vp-now.gate,.work-main .vp-now.todo{border-left:0}
+/* 逐字稿 / Hook / 动效 / 成片：以前是四个色块，看不出哪个做完了；现在一行字，做完的打勾，现在这步加粗 */
+.cut-blocks.vp-v2-steps{display:flex;flex-wrap:wrap;gap:4px 16px;margin:8px 0 0}
+.cut-blocks.vp-v2-steps li{flex:none;background:transparent;padding:0;border-radius:0;font-size:13px;color:var(--ink-3)}
+.cut-blocks.vp-v2-steps li.done{background:transparent;color:var(--ink-2)}
+.cut-blocks.vp-v2-steps li.done::after{content:" ✓";color:var(--out)}
+.cut-blocks.vp-v2-steps li.current{background:transparent;color:var(--accent);font-weight:600}
+/* 写 / 剪 / 发 的页头：一个字说是哪一步，下面直接是内容 */
+.zx-h{margin-bottom:24px}
+.zx-h .work-title{align-items:flex-end}
+.work-main>.cut-review{margin:0 24px 8px}
+.cut-review>div{padding-top:8px}
+@media (max-width:760px){.rail .rail-now,.rail .rl>.rail-spacer{display:none}}
+.len-cut{flex-basis:100%;font-size:12px;color:var(--warn)}
+.art-broken{margin:0 0 12px;font-size:13px}
+.release-action .spacer{flex:1}
+#pkCopyNote.warn{color:var(--warn)}
+.pp-fail-raw{font-size:12px;color:var(--ink-3)}.pp-fail-raw small{display:block;overflow-wrap:anywhere}
+.data-gap{display:flex;flex-direction:column;gap:4px;align-items:flex-start;padding:12px 16px;margin:0 0 24px;border-radius:10px;background:var(--warn-soft);color:var(--ink);font-size:14px}
+.data-gap b{color:var(--warn)}
+.data-gap p{margin:0}
+.pp-day{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--ink-3)}
+/* 重新连接（10/20）：一个框，跟着登录窗口的进度走 */
+.rc-dlg{border:0;border-radius:14px;padding:0;max-width:440px;width:calc(100vw - 32px);background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.rc-dlg::backdrop{background:var(--scrim)}
+.rc-box{display:flex;flex-direction:column;gap:12px;padding:24px}
+.rc-box h3{margin:0;font-size:16px}
+.rc-msg{margin:0;font-size:14px}
+.rc-msg.ok{color:var(--out)}
+.rc-box small{font-size:13px;color:var(--ink-3)}
+.rc-acts{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.data-gap-acts{display:flex;gap:12px;align-items:center;margin-top:4px}

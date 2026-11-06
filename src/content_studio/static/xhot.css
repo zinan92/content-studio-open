@@ -1,0 +1,71 @@
+/* X 上在火（10/8 重做）：一张卡片 = 标题行 · 一行筛选 · 一张有分隔的榜单。
+   榜单每行三栏：名次 | 内容 | 动作；动作平时是灰的，鼠标放到这一行才亮起来，读的时候不吵。 */
+.xh { min-width: 0; container-type: inline-size; overflow: hidden; }
+.xh-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 16px 24px 12px; }
+.xh-h h2 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.5; }
+.xh-h small { display: block; margin-top: 4px; color: var(--ink-3); }
+.xh-h small a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); }
+.xh-h small a:hover { color: var(--ink); }
+.xh-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 0 24px 16px; border-bottom: 1px solid var(--line-soft); }
+.xh-filter { display: inline-flex; align-items: center; gap: 8px; min-width: 0; margin: 0; }
+.xh-filter-label { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.xh .xh-cat { min-height: 32px; padding: 4px 32px 4px 12px; font-size: 13px; border: 1px solid var(--line); border-radius: 6px; background-color: var(--surface); cursor: pointer; }
+.xh .xh-cat:hover { border-color: var(--ink-3); }
+
+.xh-list { list-style: none; margin: 0; padding: 0; }
+.xh .xh-row { position: relative; display: grid; grid-template-columns: 32px minmax(0, 1fr) auto; gap: 4px 16px; align-items: start; padding: 16px 24px; border-top: 1px solid var(--line-soft); transition: background-color var(--fast) var(--ease); }
+.xh .xh-list > .xh-row:first-child { border-top: 0; }
+.xh .xh-row:hover { background: var(--hover); }
+.xh .xh-rank { font-size: 16px; font-weight: 600; line-height: 1.5; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.xh .xh-list > .xh-row:nth-child(-n+3) > .xh-rank { color: var(--accent); }
+.xh-main { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.xh .xh-title { font-size: 14px; font-weight: 600; line-height: 1.5; color: var(--ink); text-align: left; }
+.xh button.xh-title { padding: 0; border: 0; background: none; cursor: pointer; min-height: 0; }
+.xh button.xh-title:hover { color: var(--accent); }
+.xh .xh-text { margin: 0; font-size: 13px; line-height: 1.6; color: var(--ink-2); overflow-wrap: anywhere; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.xh .xh-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin-top: 4px; font-size: 12px; color: var(--ink-3); }
+.xh .xh-meta b { font-weight: 500; color: var(--ink-2); }
+.xh .xh-meta i { font-style: normal; }
+.xh .xh-acts { display: flex; align-items: center; gap: 4px; opacity: .55; transition: opacity var(--fast) var(--ease); }
+.xh .xh-row:hover > .xh-acts, .xh .xh-acts:focus-within { opacity: 1; }
+.xh .xh-acts .btn:disabled { opacity: 1; color: var(--out); }
+
+/* 话题展开：子帖缩进一格，浅底，不再套边框 */
+.xh .xh-sub { margin-top: 12px; border-radius: 10px; background: var(--sunk); }
+.xh .xh-sub .xh-row { grid-template-columns: minmax(0, 1fr) auto; padding: 12px 16px; }
+.xh .xh-sub .xh-row:first-child { border-top: 0; }
+.xh .xh-sub .xh-rank { display: none; }
+
+.xh-status { display: flex; align-items: center; gap: 12px; margin: 16px 24px; padding: 12px 16px; border-radius: 6px; background: var(--sunk); color: var(--ink-2); font-size: 13px; }
+.xh-status > div { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.xh-status p { margin: 4px 0 0; }
+.xh-error { border-left: 3px solid var(--warn); background: var(--warn-soft); }
+.xh-error b { color: var(--warn); }
+.xh-empty { padding: 32px 24px; }
+.xh.is-refreshing .xh-list { opacity: .6; transition: opacity var(--mid) var(--ease); }
+.xh-pagination { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 12px 24px 16px; border-top: 1px solid var(--line-soft); font-size: 12px; color: var(--ink-3); }
+.xh-pagination > div { display: flex; gap: 8px; }
+
+/* 第一次读榜：骨架行（形状和真行一样，读到了直接替换，不跳） */
+.xh-skeleton .xh-row > div { display: flex; flex-direction: column; gap: 8px; }
+.sk { display: block; height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--sunk) 0%, var(--line-soft) 50%, var(--sunk) 100%); background-size: 200% 100%; animation: sk-shine 1.2s linear infinite; }
+.sk-rank { width: 16px; height: 16px; }
+.sk-title { width: 60%; height: 14px; }
+.sk-line { width: 92%; }
+.sk-meta { width: 30%; }
+/* 整页占位（app.js skeletonPage），和 X 热榜的占位行同一种闪光 */
+.sk-page{display:flex;flex-direction:column;gap:24px}
+.sk-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.sk-cards:empty{display:none}
+.sk-card,.sk-panel{display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid var(--line-soft);border-radius:10px;background:var(--surface)}
+.sk-panel{padding:16px 24px;gap:0}
+.sk-panel>.sk-title{margin-bottom:16px}
+.sk-row{display:flex;flex-direction:column;gap:8px;padding:16px 0;border-top:1px solid var(--line-soft)}
+.sk-num{width:40%;height:26px}
+@keyframes sk-shine { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+
+@container (max-width: 640px) {
+  .xh-h, .xh-bar { padding-left: 16px; padding-right: 16px; }
+  .xh .xh-row { grid-template-columns: 24px minmax(0, 1fr); padding: 12px 16px; }
+  .xh .xh-acts { grid-column: 2; opacity: 1; flex-wrap: wrap; }
+}

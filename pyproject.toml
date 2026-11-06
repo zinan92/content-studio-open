@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "content-studio"
+version = "0.2.0"
+description = "Local-first content-production workbench for one creator: Obsidian inbox → topics → outline → edit progress → publish → review"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "fastapi>=0.110",
+    "uvicorn>=0.29",
+    "pyyaml>=6.0",
+    "markdown>=3.5",
+    # 咨询录音上传是表单上传，FastAPI 解析表单要它；本机装了所以一直没发现，CI 上没有
+    "python-multipart>=0.0.9",
+    # 证据图（evidence.py）取帧去重、裁剪、拼总览图；本机装了所以没发现，CI 上没有
+    "pillow>=10.0",
+]
+
+[project.scripts]
+content-studio = "content_studio.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+content_studio = ["static/*", "examples/**/*", "native/*.swift"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

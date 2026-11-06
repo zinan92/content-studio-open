@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>内容工作台 · 内容工作台</title>
+<link rel="icon" type="image/svg+xml" href="/static/brand/app-icon.svg">
+<link rel="apple-touch-icon" href="/static/brand/app-icon-180.png">
+<meta name="color-scheme" content="light dark">
+<!-- 字体不挡首屏（10/6）：国内不翻墙时 Google Fonts 可能超时，先用系统字体画出来，字体到了再换 -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@600;900&display=swap"></noscript>
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="stylesheet" href="/static/ux.css">
+<link rel="stylesheet" href="/static/motion-settings.css">
+<link rel="stylesheet" href="/static/motionplan.css">
+<link rel="stylesheet" href="/static/xhot.css">
+<link rel="stylesheet" href="/static/journey.css">
+<link rel="stylesheet" href="/static/inbox.css">
+<link rel="stylesheet" href="/static/publication.css">
+<link rel="stylesheet" href="/static/consult-detail.css">
+<link rel="stylesheet" href="/static/onboarding.css">
+</head>
+<body>
+<div class="app">
+  <aside class="rail">
+    <button type="button" class="brand" data-view="positioning" data-brand-link title="我是谁 · 怎么找到客户 · 卖什么"><svg class="brand-mark" viewBox="0 0 120 120" aria-hidden="true"><path d="M14 66 Q30 28 48 86" fill="none" stroke="#57534B" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 86 Q76 88 106 22" fill="none" stroke="#F4F1EA" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="86" r="9" fill="#E2461F"/></svg><span class="brand-t"><b id="brandName">内容工作台</b><span id="brandSlogan" hidden>一个人的内容生产线</span><small data-feature="positioning">我是谁 · 找到谁 · 卖什么 <i>›</i></small></span></button>
+    <button type="button" class="rail-search" id="railSearch" aria-keyshortcuts="Meta+K Control+K"><span>搜索页面和选题</span><kbd>⌘K</kbd></button>
+    <nav class="rl" id="nav" aria-label="工作台">
+      <!-- 10/20 作者：左栏就是「找 写 剪 发 盘」五个字。一次只做一条，所以写 / 剪 / 发 打开的都是正在做的那条，
+           做完的打勾、现在这步亮着（board.js paintRailStages）。平台不再单独占位：待发在「发」，数据在「盘」。 -->
+      <button type="button" class="ri zx" data-view="input" data-stage="in" data-zx="find"><span><i class="zx-k">找</i>选题</span><b class="count" id="navIn"></b></button>
+      <div class="rail-now" id="railNow" hidden><small>正在做</small><b id="railNowTitle"></b></div>
+      <button type="button" class="ri zx" data-view="work" data-zx="write" title="正在做的这条：口播稿"><span><i class="zx-k">写</i>口播稿</span><b class="count" id="navWrite"></b></button>
+      <button type="button" class="ri zx" data-view="work" data-zx="cut" title="正在做的这条：素材到成片"><span><i class="zx-k">剪</i>成片</span><b class="count" id="navCut"></b></button>
+      <button type="button" class="ri zx" data-view="pack" data-zx="fa" title="正在做的这条：定标题，发到各平台"><span><i class="zx-k">发</i>发到各平台</span><b class="count" id="navFa"></b></button>
+      <button type="button" class="ri zx" data-view="today" data-stage="today" data-zx="pan" title="KPI、Wendy 的结论、出摊月历、每条内容发在哪、各平台数据"><span><i class="zx-k">盘</i>复盘</span><b class="count" id="navToday"></b></button>
+      <!-- 不是流程里的一步：咨询客户、Wendy、产品、素材沉到底下，和上面分开 -->
+      <div class="rail-spacer" aria-hidden="true"></div>
+      <button type="button" class="ri" data-view="consults" data-feature="consults"><span>咨询客户</span><b class="count" id="navConsult"></b></button>
+      <button type="button" class="ri" id="railWendy" data-feature="team"><span><i class="an-dot"></i>Wendy</span><b class="count">负责人</b></button>
+      <button type="button" class="ri" id="railAnna" data-feature="team" hidden><span><i class="an-dot"></i>Anna</span><b class="count">流量 CEO</b></button>
+      <!-- 10/12 作者：产品做成 collapse，一点就展开，默认收起。fold 的键还叫 more，他存过的开合状态不丢 -->
+      <button type="button" class="rail-group rail-toggle" data-rail-fold="more" aria-expanded="false"><span>产品</span><i class="rail-fold-n"></i></button>
+      <div class="rail-fold" data-rail-fold-body="more">
+      <button type="button" class="ri" data-view="portal" data-key="github" data-feature="portal" title="陌生人点开你的 GitHub 看到什么"><span class="pm"><i class="pm-github">GH</i>GitHub</span></button>
+      <button type="button" class="ri" data-view="portal" data-key="site" data-feature="portal" title="陌生人点开你的网站看到什么"><span class="pm"><i class="pm-site">网</i>网站</span></button>
+      <div id="railProducts" class="rail-products" data-feature="products"></div>
+      </div>
+      <!-- 跳出去的（新开一个标签）都在最底下；10/19 作者：和产品一样能收起，默认收起（没存过开合的才按默认） -->
+      <button type="button" class="rail-group rail-toggle" data-rail-fold="out" data-rail-out aria-expanded="false"><span>素材</span><i class="rail-fold-n"></i></button>
+      <div class="rail-fold" data-rail-fold-body="out">
+      <button type="button" class="ri" data-open="/sucai" data-feature="materials" title="出图、风格、视频样片、学一个新的、素材卡、拆过的爆款、好网站"><span>素材</span><b class="count">↗</b></button>
+      <button type="button" class="ri" data-open="/tree" data-feature="tree" title="贴 X / GitHub 链接，收进知识树"><span>知识树</span><b class="count">↗</b></button>
+      <button type="button" class="ri" data-open="/moments" data-feature="moments" title="发完 X，原样搬到小红书小号、抖音小号、公众号贴图"><span>朋友圈</span><b class="count">↗</b></button>
+      <button type="button" class="ri" data-open="/tools" data-feature="tools" title="文字的一进一出：点评、选题打分、标题、口述→口播稿、爆款拆解、去 AI 味"><span>单点功能</span><b class="count">↗</b></button>
+      </div>
+    </nav>
+    <div class="rail-foot">
+      <div class="rail-foot-row"><button type="button" class="ri rail-set" data-view="settings"><span>设置</span></button><button class="theme-btn" id="themeBtn" type="button" title="切换深浅色" aria-label="切换深浅色">◐</button></div>
+      <div class="plat-strip" id="platStrip" aria-label="平台连接状态"></div>
+      <div class="sync" id="syncState"><span class="dot"></span><span>—</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="globalBanner"></div>
+
+    <!-- 01 INPUT -->
+    <section class="view" id="v-input" data-stage="in">
+      <header class="page-h">
+        <div><div class="stage-eyebrow">找 · 选题</div><h1>挑一条做</h1><p id="inIntro">「我的选题」里点「做这条」就开始做它，左栏「写 剪 发」跟着它走。「进来的」是日报、收藏、别人在讲什么，值得做的点「加入选题」。</p></div>
+      </header>
+      <nav class="subnav" data-subnav="in" aria-label="选题"></nav>
+      <div id="inputBody"></div>
+    </section>
+
+
+    <section class="view wide" id="v-work" data-stage="work">
+      <div id="workBody"></div>
+    </section>
+
+    <!-- 03 PACK -->
+    <section class="view wide" id="v-pack" data-stage="work">
+      <div id="packNavigation" class="pack-navigation"></div>
+      <header class="page-h">
+        <div><div class="stage-eyebrow">加工中 · 最后一步</div><h1>标题和封面</h1><p>定标题、准备素材，完成后点一次「发布」，交给所选平台的待发区。</p></div>
+        <div class="page-figs" id="packFigs"></div>
+      </header>
+      <div id="packBody"></div>
+    </section>
+
+
+    <!-- 平台页 -->
+    <section class="view wide" id="v-portal" data-stage="plat">
+      <div id="portalBody"></div>
+    </section>
+    <section class="view wide" id="v-products" data-stage="plat">
+      <div id="productsBody"></div>
+    </section>
+    <section class="view" id="v-plats" data-stage="today">
+      <header class="page-h"><div><div class="stage-eyebrow">盘</div><h1>各平台</h1><p>每个平台的数据、账号和默认发什么。要发的东西在左栏「发」里。</p></div></header>
+      <nav class="subnav" data-subnav="out" aria-label="复盘"></nav>
+      <div id="platsBody"></div>
+    </section>
+
+    <section class="view wide" id="v-platform" data-stage="plat">
+      <div id="platformBody"></div>
+    </section>
+
+    <!-- MINE -->
+    <section class="view" id="v-mine" data-stage="out">
+      <header class="page-h">
+        <div><div class="stage-eyebrow">复盘 · 抖音作品分析</div><h1>抖音作品分析</h1><p>倍数 = 点赞 ÷ 你账号非置顶作品的点赞中位数。涨粉、完播、跳出来自创作者后台（只保留 90 天）。</p></div>
+        <div class="topbar-actions" id="mineActions"></div>
+      </header>
+      <nav class="subnav" data-subnav="out" aria-label="复盘"></nav>
+      <div id="mineBody"></div>
+    </section>
+    <!-- RADAR -->
+    <section class="view" id="v-radar" data-stage="in">
+      <header class="page-h">
+        <div><div class="stage-eyebrow">选题 · 老师和对标</div><h1>老师和对标</h1><p>老师是学理念的，对标是看要不要复刻的；点卡片上的「老师 / 对标」切换。他们新发的视频在「进来的」的「老师」「对标」两栏里，你自己去看。这里不自动拆任何一条：想拆就点那条的「拆解」。</p></div>
+        <div class="topbar-actions sync-box"><button class="btn small" type="button" data-sync-bench>同步老师和对标</button><span class="sync-note">每天 9:30 自动查一次 · 每个号只看最新一页<br>只看有没有新发的，不下载、不拆</span></div>
+      </header>
+      <nav class="subnav" data-subnav="in" aria-label="选题"></nav>
+      <div class="controls">
+        <label for="thr">爆款门槛</label>
+        <input type="range" id="thr" min="2" max="30" step="0.5" value="5">
+        <span class="thr" id="thrV">5×</span>
+        <span class="sync-note" id="thrSaved"></span>
+        <div class="seg-toggle" role="group" aria-label="时间">
+          <button class="on" data-days="7" type="button">这一周</button>
+          <button data-days="30" type="button">30 天</button>
+          <button data-days="0" type="button">全部</button>
+        </div>
+        <div class="seg-toggle" role="group" aria-label="范围">
+          <button class="on" data-scope="hot" type="button">爆款</button>
+          <button data-scope="all" type="button">全部作品</button>
+        </div>
+        <input class="radar-q" id="radarQ" type="search" placeholder="搜标题" autocomplete="off">
+        <div class="seg-toggle" role="group" aria-label="排序">
+          <button class="on" data-sort="multiple" type="button">按倍数</button>
+          <button data-sort="likes" type="button">按点赞</button>
+          <button data-sort="published_at" type="button">按时间</button>
+        </div>
+      </div>
+      <div class="accounts" id="accts"></div>
+      <div class="panel">
+        <div class="panel-h"><h2><span id="outsTitle">爆款样本</span> <span class="num" id="hotN"></span></h2><small>互动结构：<span style="color:var(--save)">■</span> 收藏 <span style="color:var(--share)">■</span> 转发 <span style="color:var(--talk)">■</span> 评论（相对点赞）</small></div>
+        <div class="radar-pick" id="radarPick"></div>
+        <div class="outlist" id="outs"></div>
+      </div>
+    </section>
+    <!-- REPORT -->
+    <section class="view" id="v-report" data-stage="in">
+      <header class="page-h">
+        <div><div class="stage-eyebrow">选题 · 拆解报告</div><h1>拆解报告</h1><p>阅读结论与分段证据。添加视频、查看进度或处理失败，展开下方的拆解队列。</p></div>
+      </header>
+      <nav class="subnav" data-subnav="in" aria-label="选题"></nav>
+      <details class="queue-fold" id="queueFold"><summary><b>拆解队列</b><span id="qSummary"></span></summary>
+      <div class="panel">
+        <form class="linkbox" id="linkForm">
+          <input id="linkIn" placeholder="粘贴抖音视频链接，例如 https://www.douyin.com/video/… 或 v.douyin.com 分享链接" aria-label="视频链接" autocomplete="off">
+          <button class="btn primary" type="submit">加入拆解</button>
+        </form>
+        <div class="hint">长视频转文字需要几分钟；拆解调用本机模型，每条约 1–3 分钟。</div>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><h2>队列</h2><small id="qMeta"></small></div>
+        <div id="qList"></div>
+      </div>
+      </details>
+      <div class="rep-shell">
+        <details class="rep-picker-shell" open><summary>报告目录</summary><aside class="rep-picker" id="repPick"></aside></details>
+        <div id="repBody"></div>
+      </div>
+    </section>
+    <!-- POSITIONING -->
+    <!-- TODAY -->
+    <section class="view" id="v-today" data-stage="today">
+      <header class="page-h">
+        <div><div class="stage-eyebrow" id="todayDay">盘</div><h1>复盘</h1><p>KPI 归 Wendy 背，你照她说的做。每天拍一条、发一条，不商量。<span data-feature="score">没出摊当天减 1 分。</span></p></div>
+        <div class="topbar-actions"><button class="btn small" type="button" data-sync-all>同步全部账号</button></div>
+      </header>
+      <nav class="subnav" data-subnav="out" aria-label="复盘"></nav>
+      <div id="todayBody"></div>
+      <div id="fupanTable"></div>
+      <div id="todayTargets"></div>
+    </section>
+    <section class="view" id="v-swipe" data-stage="swipe">
+      <header class="page-h"><div><div class="stage-eyebrow">流量视频</div><h1>看到就想转的</h1><p>刷到一条一看就想转、想复刻的视频，链接贴进来先存着；拿它做什么，以后再定。</p></div></header>
+      <div id="swipeBody"></div>
+    </section>
+    <section class="view wide" id="v-positioning" data-stage="pos">
+      <div id="positioningBody"></div>
+      <div id="profilesBody"></div>
+    </section>
+    <!-- CONSULTS -->
+    <section class="view wide" id="v-consults" data-stage="set">
+      <header class="page-h">
+        <div><div class="stage-eyebrow">咨询客户</div><h1>客户</h1><p>资料、进度、咨询记录和交付文件都在这一页，修改后按客户保存。</p></div>
+        <div class="page-h-actions"><button class="btn" type="button" id="playbookOpen">诊断流程</button><button class="btn" type="button" id="scriptsOpen">统一话术</button><button class="btn primary" type="button" id="consultUpload">上传咨询录音</button></div>
+      </header>
+      <div id="clientsBody"></div>
+    </section>
+    <!-- SETTINGS -->
+    <section class="view" id="v-settings" data-stage="set">
+      <header class="page-h"><div><div class="stage-eyebrow">设置</div><h1>设置</h1><p>只保存在本机。</p></div></header>
+      <nav class="subnav" id="setTabs" aria-label="设置">
+        <button type="button" data-set="general" class="on">通用</button>
+        <button type="button" data-set="flow">流程</button>
+        <button type="button" data-set="motion" data-feature="motion">视频动效</button>
+        <button type="button" data-set="skills" data-feature="skills">Skills</button>
+        <button type="button" data-set="frames">内容框架</button>
+        <button type="button" data-set="team" data-feature="team">助手读什么</button>
+        <button type="button" data-set="update">版本</button>
+      </nav>
+      <div class="set-tab" data-set-tab="general">
+        <div class="panel">
+          <form class="settings" id="settingsForm">
+            <label><span>Obsidian 库路径</span><input id="setVault" autocomplete="off" placeholder="~/my-vault"><small id="setVaultNote"></small></label>
+            <label><span>作品库目录</span><input id="setArchive" autocomplete="off" placeholder="/Volumes/你的硬盘/视频/作品库"><small>发过的每条抖音视频一个文件夹：成片、中间产物、原始录像。补发时直接用这里的成片。建议放外接硬盘</small></label>
+            <label><span>口播视频项目目录</span><input id="setVideoRoot" autocomplete="off" placeholder="~/Movies/口播项目"><small>剪辑进度从这里读；留空时读 ~/Movies/口播项目</small></label>
+            <label id="writerSkillField"><span>写作方式</span><select id="setWriterSkill"><option value="">不用 skill，只整理我的原话</option></select><small>默认只删口语、可以调句子顺序，不改你的词。可选择当前已配置的写作方式，选好后点「保存通用设置」生效</small></label>
+            <div><button class="btn primary" type="submit">保存通用设置</button></div>
+          </form>
+        </div>
+        <div class="panel" id="tagsPanel">
+          <div class="panel-h"><h2>各平台常用话题</h2><small>活动、扶持计划这类。每条都自动带上，排在这条自己的内容话题前面。只在这里改，平台页和打包页只显示</small></div>
+          <form class="settings" id="tagsForm"><div id="tagsRows"></div><div><button class="btn primary" type="submit">保存常用话题</button></div></form>
+        </div>
+        <div class="panel" id="meLinksPanel">
+          <div class="panel-h"><h2>在哪找到我</h2><small id="meLinksNote">保存 GitHub 和个人网站链接，供已启用的功能读取公开资料。</small></div>
+          <form class="settings" id="meLinksForm">
+            <label><span>GitHub</span><input id="setGithub" autocomplete="off" placeholder="用户名，或 https://github.com/你的用户名"></label>
+            <label><span>个人网站</span><input id="setSite" autocomplete="off" placeholder="https://你的网站.com"><small id="meLinksErr" class="bad"></small></label>
+            <div><button class="btn primary" type="submit">保存公开链接</button></div>
+          </form>
+        </div>
+        <div class="panel">
+          <div class="panel-h"><h2>我的账号</h2><small>数据按账号区分；加第二个号直接粘贴主页链接</small></div>
+          <div id="myAccounts"></div>
+          <form class="linkbox" id="myAcctForm"><input id="myAcctIn" placeholder="我的另一个抖音主页链接 https://www.douyin.com/user/…" aria-label="我的主页链接" autocomplete="off"><button class="btn" type="submit">添加我的账号</button></form>
+        </div>
+      </div>
+      <div class="set-tab" data-set-tab="flow" hidden>
+        <div class="panel">
+          <div class="panel-h"><h2>流程里的组件</h2><small>流程的顺序是固定的，这里只能开关其中的组件。关掉的那一步直接跳过，后面的照常往下走；以前做出来的东西还在</small></div>
+          <form class="settings" id="flowForm"><div id="flowRows"></div><div><button class="btn primary" type="submit">保存流程</button></div></form>
+        </div>
+        <div class="panel" id="wfPanel" data-feature="xline">
+          <div class="panel-h"><h2>写作流程</h2><small>流程在 park-writing 的 module.yaml 里定，这里只开关其中的步骤</small></div>
+          <div id="wfBody"></div>
+        </div>
+        <div class="panel" id="xqaPanel" data-feature="xline">
+          <div class="panel-h"><h2>X 发前 QA 规则</h2><small id="xqaPath"></small></div>
+          <p class="sync-note">X 长文、长帖发之前 QA 按这份改错字、补结尾、加导语、查完整度。改完保存，今天和明天还没发的会按新规则重新过一遍。硬上限（每处改几个字、不许编数字）在代码里，这里改不掉。</p>
+          <form id="xqaForm"><textarea id="xqaText" rows="24" spellcheck="false" aria-label="X 发前 QA 规则"></textarea>
+            <div class="xqa-acts"><button class="btn primary" type="submit">保存规则</button><button class="btn ghost" type="button" id="xqaReset" hidden>恢复成自带的</button><small id="xqaNote" aria-live="polite"></small></div></form>
+        </div>
+      </div>
+      <div class="set-tab" data-set-tab="motion" hidden>
+        <div class="panel">
+          <div class="panel-h"><h2>视频动效默认</h2><small>每条新视频都从这里开始；某一条想不一样，去那条的「剪辑进度」里改</small></div>
+          <div id="v2Defaults"></div>
+        </div>
+      </div>
+      <div class="set-tab" data-set-tab="skills" hidden>
+        <div id="standardBox"></div>
+        <div class="panel set-skills"><div class="panel-h"><h2>Skills</h2><small>做内容用到的 skill 和框架，按步骤分；能加、能改、能删</small></div><div id="skillsBody"></div></div>
+      </div>
+      <div class="set-tab" data-set-tab="frames" hidden>
+        <div class="panel set-skills"><div class="panel-h"><h2>第一层：所有视频都用</h2><small>所有视频的开头、骨架、密度都按这几份写。改了下一次生成就照新的来。</small></div><div id="frameOne" class="soul-list frame-list"></div></div>
+        <div class="panel set-skills"><div class="panel-h"><h2>第二层：按系列</h2><small>没有第二层的系列只用第一层；有的话两层都用，冲突时以第二层为准。</small></div><div id="frameSeries" class="soul-list frame-list"></div></div>
+        <p id="framesMsg" class="sync-note" role="status"></p>
+        <div id="frameEditor" class="panel settings" hidden>
+          <h3 id="frameName"></h3><small id="framePath" class="sync-note"></small>
+          <textarea id="frameText" rows="18" aria-labelledby="frameName"></textarea>
+          <div><button type="button" class="btn primary" id="frameSave">保存</button> <button type="button" class="btn" id="frameCancel">收起</button> <span id="frameMsg" class="sync-note" role="status"></span></div>
+        </div>
+      </div>
+      <div class="set-tab" data-set-tab="team" hidden>
+        <div class="panel set-skills"><div class="panel-h"><h2>助手读什么</h2><small>两位虚拟同事每轮都读的文件：角色、原则、定位、评分标准。改这些 Markdown 就是改他们；这里只读</small></div><div id="soulBody"></div></div>
+      </div>
+      <div class="set-tab" data-set-tab="update" hidden>
+        <div class="panel up-panel">
+          <div class="panel-h"><h2>版本与更新</h2><small>从 GitHub 拉新版本，装好后自动重启</small></div>
+          <div id="updateBody"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="anna" id="anna" hidden aria-label="Anna"></aside>
+</div>
+
+<dialog id="addDlg">
+  <form class="dlg" id="addForm">
+    <h2 id="addTitle">加一个老师或对标</h2>
+    <p id="addDesc">粘贴对方的主页链接。抖音账号加入后会立即同步近期作品、算出他自己的爆款基准。</p>
+    <input id="addIn" placeholder="例如 https://www.douyin.com/user/MS4wLjAB…" aria-label="主页链接" autocomplete="off">
+    <div class="plats" id="addPlats"><span>抖音</span><span>小红书</span><span>X</span><span>视频号</span></div>
+    <div class="detect" id="addDetect">支持以上四个平台的主页链接</div>
+    <div class="dlg-actions"><button type="button" class="btn" id="addCancel">取消</button><button class="btn primary" type="submit" id="addSubmit">加入</button></div>
+  </form>
+</dialog>
+<dialog id="consultDlg" aria-label="上传咨询录音">
+  <form class="dlg" id="consultForm">
+    <h2>上传咨询录音 / 录像</h2>
+    <p>录音或录像都行。本机留原件和转写文字，出两份，放进 Obsidian 010_咨询/ 下这个客户的文件夹：<b>给你的</b>（总结 + 原话逐段分析）和<b>给客户的</b>（PDF + HTML，纪要和 takeaway，不带转写）。</p>
+    <input type="file" id="csFile" accept="audio/*,video/*,.m4a,.mp3,.wav,.aac,.mp4,.mov" aria-label="录音文件">
+    <div class="cs-meta"><input id="csName" placeholder="客户是谁，例如「〇 抖音客户」" aria-label="客户" autocomplete="off"><input type="date" id="csDay" aria-label="咨询日期"></div>
+    <div class="detect" id="csMsg"></div>
+    <div class="dlg-actions"><button type="button" class="btn" id="csCancel">关闭</button><button class="btn primary" type="submit" id="csSubmit">上传并开始</button></div>
+  </form>
+</dialog>
+<dialog id="bwDlg" class="bw-dlg" aria-label="补发工作台">
+  <div class="playbook-bar"><b>补发工作台 <small id="bwStep"></small></b><span><button type="button" class="btn small" id="bwClose">关闭</button></span></div>
+  <div class="bw-body" id="bwBody"></div>
+</dialog>
+<dialog id="playbookDlg" class="playbook-dlg" aria-label="诊断流程">
+  <div class="playbook-bar"><b>诊断流程</b><span><a class="btn small" id="playbookEdit" href="#">在 Obsidian 里改</a><button type="button" class="btn small" id="playbookClose">关闭</button></span></div>
+  <article class="md playbook-md" id="playbookBody"></article>
+</dialog>
+<dialog id="scriptsDlg" class="playbook-dlg" aria-label="统一话术">
+  <div class="playbook-bar"><b>统一话术</b><span><a class="btn small" id="scriptsEdit" href="#">在 Obsidian 里改 / 加一条</a><button type="button" class="btn small" id="scriptsClose">关闭</button></span></div>
+  <div class="playbook-md" id="scriptsBody"></div>
+</dialog>
+<dialog id="motionDlg" class="playbook-dlg motion-dlg" aria-label="动效图鉴">
+  <div class="playbook-bar"><b>动效图鉴</b><span><input type="search" id="motionQ" placeholder="搜：飞轮、数字、对比……"><button type="button" class="btn small" id="motionClose">关闭</button></span></div>
+  <div class="motion-body" id="motionBody"></div>
+</dialog>
+<dialog id="mpDlg" class="playbook-dlg mp-dlg" aria-labelledby="mpTitle">
+  <div class="playbook-bar"><b id="mpTitle">连播预览</b><span><button type="button" class="btn small" id="mpClose">关闭</button></span></div>
+  <div class="mp-body" id="mpBody"></div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/static/vendor/marked.min.js"></script>
+<script src="/static/vendor/purify.min.js"></script>
+<script src="/static/ui-state.js"></script>
+<script src="/static/form-state.js"></script>
+<script src="/static/today.js"></script>
+<script src="/static/kpi.js"></script>
+<script src="/static/input.js"></script>
+<script src="/static/xcompose.js"></script>
+<script src="/static/board.js"></script>
+<script src="/static/mytopics.js"></script>
+<script src="/static/video.js"></script>
+<script src="/static/proof.js"></script>
+<script src="/static/speak.js"></script>
+<script src="/static/videoproject.js"></script>
+<script src="/static/motionplan.js"></script>
+<script src="/static/copypack.js"></script>
+<script src="/static/packparts.js"></script>
+<script src="/static/pack.js"></script>
+<script src="/static/backfilldesk.js"></script>
+<script src="/static/article.js"></script>
+<script src="/static/output.js"></script>
+<script src="/static/skills.js"></script>
+<script src="/static/scripttab.js"></script>
+<script src="/static/reviewtab.js"></script>
+<script src="/static/frames.js"></script>
+<script src="/static/writeflow.js"></script>
+<script src="/static/positioning.js"></script>
+<script src="/static/melinks.js"></script>
+<script src="/static/portal.js"></script>
+<script src="/static/products.js"></script>
+<script src="/static/tracked.js"></script>
+<script src="/static/xline.js"></script>
+<script src="/static/rawtidy.js"></script>
+<script src="/static/xhot.js"></script>
+<script src="/static/xops.js"></script>
+<script src="/static/profiles.js"></script>
+<script src="/static/anna.js"></script>
+<script src="/static/consult.js"></script>
+<script src="/static/platform.js"></script>
+<script src="/static/update.js"></script>
+<script src="/static/persona.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -118,6 +118,26 @@ fail 缺写作 skill / 视频目录   → 那一页说缺什么、去哪设置�
 
 ## 给 AI 的说明
 
+**先看机器**：Apple Silicon（M 芯片）、macOS 14 以上、内存 16GB、硬盘空出 30GB。不够就先告诉用户，别往下装：内存不够，转写时会卡死。
+
+**只有用户本人能给的**（按这个顺序问他，一次问一项。这些你不要自己填、不要猜，也不要替他输密码）
+
+1. 他的名字、抖音主页链接（`https://www.douyin.com/user/…`）→ `profile.yaml` 的 `me.name`、`me.douyin`
+2. Obsidian 库在哪，「我写的东西」放在哪个文件夹 → `vault.path`、`vault.folders.my_writing`
+3. 后台 AI 用 Codex 还是 Claude Code → `ai.backend`。请他自己在终端登录一次（`codex login`，或者打开 `claude` 登录），你不要碰他的账号
+4. 抖音：服务起来以后，请他在页面「开始用」里自己连账号
+5. 对标账号的主页链接，可选，可以先不填，以后在页面里加 → `benchmarks`
+6. 要发哪些平台，可选：
+   - B 站：请他自己扫码登录（命令见下面「已知的坑」）
+   - YouTube：他自己的 Google OAuth client，然后自己授权
+   - 公众号：AppID、AppSecret 写进 secrets 文件的 `wechat:` 段（`appid`、`secret`），并把这台机器的 IP 加进公众号后台白名单
+   - X：`api_key`、`api_secret`、`access_token`、`access_secret` 写进 secrets 文件的 `x:` 段
+   - secrets 文件的权限设成 600。用不上的平台留空就行
+
+1–4 是必填，填完跑 `check`，看到全绿再往下。
+
+**验收单里的「安装负责人」「客户签字」**：这张单原本是作者上门装机时用的。自己装的话，安装负责人就是你和用户，签字那一层可以跳过。单子上说「把验收单发给作者」的，先按那一项写的修法自己修。
+
 **怎么起来**
 
 - 全套：`zsh scripts/install-mac.sh`。装 Python 3.12、Node、ffmpeg、转写模型、Playwright 浏览器，按 `deploy.json` 拉依赖仓库，写 `profile.yaml`，注册开机自启。

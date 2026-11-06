@@ -96,6 +96,10 @@ for d in json.load(open(sys.argv[1]))["deps"]:
     os.makedirs(os.path.dirname(path), exist_ok=True)
     ok = subprocess.run(["git", "clone", "--quiet", "--branch", d["ref"], d["repo"], path]).returncode == 0
     print(f"  {'装好' if ok else '失败'}  {d['name']}" + ("" if ok else f"：{'私有仓库，要先 gh auth login 或让 作者 给权限' if d['access'] == 'private' else '拉不下来'}"))
+    for step in (d.get("setup") or []) if ok else []:
+        argv = [sys.executable if x == "{python}" else x for x in step]
+        if subprocess.run(argv, cwd=path).returncode != 0:
+            print(f"        准备失败：{' '.join(step)}（在 {d['path']} 里手动跑一遍）"); break
     for link in d.get("links") or []:
         at = os.path.expanduser(link["at"])
         if ok and not os.path.lexists(at):

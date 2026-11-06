@@ -96,7 +96,7 @@ secrets_file: ~/.config/content-studio/secrets.yaml   # [可选] 公众号 appid
 #   content_ops: ~/work/content-ops
 #   content_downloader: ~/work/content-downloader
 #   xingqiu: ~/work/xingqiu-shell        # 研习室（小程序）发布
-#   publish_toolkit: ~/content-toolkit/capabilities/publish
+#   publish_toolkit: ~/content-toolkit/capabilities/publish   # social-auto-upload 装在这；content-ops 的脚本也认这个位置
 #   secrets: ~/.config/content-studio/secrets.yaml
 #   youtube_token: ~/.config/park/youtube-token.json
 # skills:

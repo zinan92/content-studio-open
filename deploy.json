@@ -15,13 +15,15 @@
       "required": true
     },
     {
-      "name": "content-toolkit",
-      "feature": "视频号、B 站的登录和检查；抖音半自动上传（填好停在发布前）",
-      "repo": "https://github.com/zinan92/content-toolkit.git",
+      "name": "social-auto-upload",
+      "feature": "B 站的登录和登录检查、B 站数据；content-ops 的视频号脚本也用它",
+      "repo": "https://github.com/zinan92/social-auto-upload.git",
       "ref": "main",
-      "path": "~/content-toolkit",
-      "access": "public",
-      "required": true
+      "path": "~/content-toolkit/capabilities/publish",
+      "access": "fork",
+      "required": true,
+      "upstream": "https://github.com/dreammis/social-auto-upload",
+      "setup": [["{python}", "-m", "venv", ".venv"], [".venv/bin/pip", "install", "--quiet", "-e", "."], ["cp", "-n", "conf.example.py", "conf.py"]]
     },
     {
       "name": "content-ops",

@@ -11,10 +11,11 @@
 | `src/content_studio/extras/tools/styles/mg-styles.json` | [Vincentwei1021/mg-styles-15](https://github.com/Vincentwei1021/mg-styles-15) | MIT | Vincentwei1021 |
 | `src/content_studio/extras/tools/styles/huashu-art-motion.json` | [alchaincyf/huashu-art-motion](https://github.com/alchaincyf/huashu-art-motion) | MIT | 花叔（alchaincyf） |
 
-## 可选依赖
+## 装机时拉的第三方仓库
 
 装机脚本按 `deploy.json` 拉下面这些仓库，它们不在本仓库里，各自的许可证以原仓库为准：
 
+- `social-auto-upload`（必装）：fork 自 [dreammis/social-auto-upload](https://github.com/dreammis/social-auto-upload)，MIT；B 站能力来自 [biliup](https://github.com/biliup/biliup)，首次用时自动下载
 - `ian-xiaohei-illustrations`：fork 自 [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)，MIT
 - `video-shotcraft`：fork 自 [Vincentwei1021/video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft)，Apache-2.0
 

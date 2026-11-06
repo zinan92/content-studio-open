@@ -1,7 +1,7 @@
 """B站 / X / 研习室：每天读一次自己每条内容的累计播放（阅读、曝光），算进「触达」。
 
 9/25 作者：「现在只有抖音的数据是自动的。」逐个试过，这三个能读，而且都用现成的登录或钥匙：
-- B站：投稿时存下的登录（content-toolkit 的 bilibili_creator.json），读创作中心的稿件列表；
+- B站：投稿时存下的登录（social-auto-upload 的 cookies/bilibili_creator.json），读创作中心的稿件列表；
 - X：发文章那套开发者密钥，读自己最近的推文的 impression_count；
 - 研习室：工作台钥匙调 admin-api 的 content.list（只有标题和阅读数，不带正文）。
 视频号、小红书没有开放接口，公众号没认证（datacube 48001），这三个继续手填。
